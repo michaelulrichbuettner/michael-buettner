@@ -1,0 +1,6 @@
+Quellen/
+tmp/
+.agents/
+.codex/
+__pycache__/
+*.pyc
