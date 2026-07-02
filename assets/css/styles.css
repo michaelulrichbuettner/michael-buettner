@@ -469,16 +469,20 @@ h2 {
 
 .experience-section {
   display: grid;
-  grid-template-columns: minmax(180px, 0.34fr) minmax(0, 1fr);
+  grid-template-columns: minmax(360px, 0.34fr) minmax(0, 1fr);
   gap: clamp(1.5rem, 4vw, 3rem);
   padding-top: 1.5rem;
   border-top: 1px solid var(--color-line);
 }
 
 .experience-section__heading {
-  position: sticky;
-  top: 96px;
   align-self: start;
+}
+
+.experience-section__heading h2 {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 .research-grid {
@@ -941,6 +945,12 @@ h2 {
 .article-content li::marker {
   color: var(--color-yellow-dark);
   font-weight: 800;
+}
+
+@media (max-width: 1320px) {
+  .experience-section {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 920px) {
