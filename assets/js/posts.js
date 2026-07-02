@@ -7,6 +7,7 @@ window.sitePosts = [
     excerpt: "Warum KI im Journalismus nicht nur Produktionsprozesse verändert, sondern vor allem die Distributionshoheit der Medien angreift.",
     url: "blog-ki-zerstoert-unsere-jobs.html",
     image: "assets/img/blog-ki-jobs-distribution.jpg",
+    imageAlt: "KI-generiertes Bild mit geteilter Maschinenfigur zwischen grüner Zukunft und dystopischer Industrielandschaft",
     workSample: true
   }
 ];

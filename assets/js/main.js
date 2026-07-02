@@ -15,14 +15,16 @@
 
   function postCard(post) {
     const tags = post.tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
+    const linkTitle = `${post.title} lesen`;
+    const imageAlt = post.imageAlt || `Vorschaubild zum Beitrag ${post.title}`;
     const image = post.image
-      ? `<a class="post-card__image" href="${post.url}" aria-hidden="true" tabindex="-1"><img src="${post.image}" alt=""></a>`
+      ? `<a class="post-card__image" href="${post.url}" title="${linkTitle}" aria-hidden="true" tabindex="-1"><img src="${post.image}" alt="${imageAlt}" title="${imageAlt}"></a>`
       : "";
     return `
       <article class="post-card">
         ${image}
         <div class="post-card__meta">${formatDate(post.date)}${tags ? `<span class="post-card__tags">${tags}</span>` : ""}</div>
-        <h2><a href="${post.url}">${post.title}</a></h2>
+        <h2><a href="${post.url}" title="${linkTitle}">${post.title}</a></h2>
         <p>${post.excerpt}</p>
       </article>
     `;
@@ -136,6 +138,7 @@
         const link = document.createElement("a");
         link.className = "button button--secondary";
         link.href = mailtoUrl;
+        link.title = "Vorbereitete E-Mail an Michael Büttner öffnen";
         link.textContent = "E-Mail jetzt öffnen";
 
         status.append(text, link);
