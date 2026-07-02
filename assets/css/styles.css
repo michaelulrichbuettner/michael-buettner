@@ -182,7 +182,7 @@ h3 {
 
 h1 {
   max-width: 920px;
-  font-size: clamp(2.45rem, 6.2vw, 5.2rem);
+  font-size: clamp(1.96rem, 4.96vw, 4.16rem);
   font-weight: 700;
 }
 
@@ -1001,7 +1001,7 @@ h2 {
   }
 
   h1 {
-    font-size: 2.35rem;
+    font-size: 1.88rem;
   }
 
   .site-footer__inner {
