@@ -138,7 +138,7 @@ def update_html(row: dict, html_path: Path) -> None:
             rf"\g<1>{row['frontdoor_views']}\2",
         ),
         (
-            r'(Quelle: pub H-BRS Statistik, Datenstand )[^.]+(\.)',
+            r'(Quelle: pub H-BRS Statistik, Datenstand )[^<]+(\.)',
             rf"\g<1>{format_display_date(str(row['data_until']))}\2",
         ),
     ]
