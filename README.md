@@ -4,18 +4,18 @@ Eine einfache statische Website für GitHub Pages.
 
 ## Struktur
 
-- `index.html`: Startseite mit Kurzprofil und den drei neuesten Blog-Eintraegen
+- `index.html`: Startseite mit Kurzprofil und den drei neuesten Einblicken
 - `erfahrung.html`: Lebenslauf und berufliche Stationen
 - `masterarbeit.html`: Masterarbeit zu Synthetic Video Journalism
 - `arbeitsproben.html`: Texte, die als Arbeitsproben markiert sind
-- `blog.html`: Blog mit Tag-Filter
+- `blog.html`: Einblicke-Seite mit Tag-Filter
 - `kontakt.html`: Kontaktformular, aktuell als Mailto-Fallback vorbereitet
 - `impressum.html`: Anbieterkennzeichnung, nur im Footer verlinkt
 - `datenschutz.html`: Datenschutzhinweise, im Footer und beim Kontaktformular verlinkt
-- `assets/js/posts.js`: Blog-Daten und Markierung für Arbeitsproben
+- `assets/js/posts.js`: Einblicke-Daten und Markierung für Arbeitsproben
 - `assets/css/styles.css`: Gestaltung der Website
 
-## Neue Blog-Beiträge eintragen
+## Neue Einblicke eintragen
 
 Neue Beiträge werden in `assets/js/posts.js` ergänzt. Ein Eintrag hat diese Felder:
 
