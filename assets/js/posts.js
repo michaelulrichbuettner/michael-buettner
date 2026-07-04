@@ -1,5 +1,16 @@
 window.sitePosts = [
   {
+    title: "Codex-Projekt: Wie ich diese Webseite ohne klassische Coding-Erfahrung gebaut habe",
+    date: "2026-07-04",
+    lang: "de",
+    tags: ["Medien", "Praxis", "Workflow", "KI", "Agile Methoden"],
+    excerpt: "Webseiten-Entwicklung mit Codex - So entstand das MVP.",
+    url: "blog-codex-projekt-webseite-ohne-coding-erfahrung.html",
+    image: "assets/img/low-code-ki-entwicklungspfad.jpg",
+    imageAlt: "Infografik zum Low-Code- und KI-gestützten Entwicklungspfad eines Personal-Branding-MVPs mit Codex, Management-Expertise und agilem Workflow",
+    workSample: true
+  },
+  {
     title: "Skalierung durch Struktur, Workflow und Transparenz - und gegen Verharrungskräfte",
     date: "2026-07-03",
     lang: "de",
