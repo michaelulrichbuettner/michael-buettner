@@ -15,7 +15,7 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 
@@ -25,9 +25,14 @@ DEFAULT_CSV_PATH = Path("assets/data/thesis_stats.csv")
 DEFAULT_HTML_PATH = Path("masterarbeit.html")
 
 
-def build_stats_url(identifier: str) -> str:
+class BlockedStatisticsError(RuntimeError):
+    """Raised when the statistics endpoint returns bot protection instead of JSON."""
+
+
+def build_stats_url(identifier: str, until: str | None = None) -> str:
+    until_date = until or (date.today() - timedelta(days=1)).isoformat()
     params = {
-        "until": "yesterday",
+        "until": until_date,
         "granularity": "month",
         "from": "2020-01-01",
         "informational": "true",
@@ -53,9 +58,16 @@ def fetch_json(url: str, timeout: int) -> dict:
         with urllib.request.urlopen(request, timeout=timeout) as response:
             if response.status != 200:
                 raise RuntimeError(f"Unexpected HTTP status: {response.status}")
+            content_type = response.headers.get("Content-Type", "")
             payload = response.read().decode("utf-8")
     except urllib.error.URLError as exc:
         raise RuntimeError(f"Could not fetch statistics: {exc}") from exc
+
+    stripped_payload = payload.lstrip()
+    if "text/html" in content_type or stripped_payload.startswith("<"):
+        if "Making sure you're not a bot" in payload or "Anubis" in payload:
+            raise BlockedStatisticsError("Statistics endpoint is protected by bot detection.")
+        raise RuntimeError("Statistics endpoint returned HTML instead of JSON.")
 
     try:
         data = json.loads(payload)
@@ -157,10 +169,12 @@ def main() -> int:
     parser.add_argument("--csv", default=str(DEFAULT_CSV_PATH), help="CSV output path.")
     parser.add_argument("--html", default=str(DEFAULT_HTML_PATH), help="HTML file to update.")
     parser.add_argument("--no-html", action="store_true", help="Only write CSV, do not update HTML.")
+    parser.add_argument("--allow-stale", action="store_true", help="Keep existing values if the endpoint is blocked.")
+    parser.add_argument("--until", help="Explicit until date in YYYY-MM-DD format. Defaults to yesterday.")
     parser.add_argument("--timeout", type=int, default=20, help="HTTP timeout in seconds.")
     args = parser.parse_args()
 
-    url = build_stats_url(args.identifier)
+    url = build_stats_url(args.identifier, args.until)
 
     try:
         data = fetch_json(url, args.timeout)
@@ -168,7 +182,16 @@ def main() -> int:
         save_csv(row, Path(args.csv))
         if not args.no_html:
             update_html(row, Path(args.html))
+    except BlockedStatisticsError as exc:
+        if args.allow_stale:
+            print(f"Hinweis: {exc} Bestehende Statistikwerte bleiben unverändert.")
+            return 0
+        print(f"Fehler: {exc}", file=sys.stderr)
+        return 1
     except RuntimeError as exc:
+        if args.allow_stale:
+            print(f"Hinweis: {exc} Bestehende Statistikwerte bleiben unverändert.")
+            return 0
         print(f"Fehler: {exc}", file=sys.stderr)
         return 1
 
