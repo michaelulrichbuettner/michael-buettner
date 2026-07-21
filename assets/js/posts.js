@@ -28,8 +28,8 @@ window.sitePosts = [
     tags: ["KI", "Netzpolitik", "Medien", "Gesellschaft"],
     excerpt: "Warum KI im Journalismus nicht nur Produktionsprozesse verändert, sondern vor allem die Distributionshoheit der Medien angreift.",
     url: "blog-ki-zerstoert-unsere-jobs.html",
-    image: "assets/img/blog-ki-jobs-distribution.jpg",
-    imageAlt: "KI-generiertes Bild mit geteilter Maschinenfigur zwischen grüner Zukunft und dystopischer Industrielandschaft",
+    image: "assets/img/kampf-um-die-distributionshoheit-medien.png",
+    imageAlt: "Infografik zum Kampf um die Distributionshoheit von Medien im KI-Wandel",
     workSample: true
   }
 ];
