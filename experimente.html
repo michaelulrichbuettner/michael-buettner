@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Experimente &amp; Showcases | Michael Büttner</title>
     <meta name="description" content="Experimente, Prototypen und digitale Showcases von Michael Büttner.">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260716">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260721">
     <script src="assets/js/main.js?v=20260702" defer></script>
+    <script src="assets/js/portfolio-news.js?v=20260721" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main" title="Zum Hauptinhalt springen">Zum Inhalt springen</a>
@@ -31,6 +32,56 @@
           <p class="lead">Hier zeige ich Prototypen, Datenexperimente und digitale Anwendungen – als Momentaufnahme auf dem Weg von der Idee zum Produkt.</p>
         </div>
         <div class="wrap showcase-list">
+          <article class="showcase-card portfolio-news-card">
+            <div class="showcase-card__header">
+              <div>
+                <p class="showcase-card__label">Portfolio-Tracker &middot; Zweite Iteration</p>
+                <h2>Unternehmensnews im Überblick</h2>
+                <p>Die neuesten Meldungen aus dem automatisierten Datenlauf – kompakt sortiert, durchsuchbar und direkt hier lesbar.</p>
+              </div>
+            </div>
+            <div class="portfolio-news" data-portfolio-news data-source="data/unternehmensnews.json">
+              <form class="portfolio-news__controls" data-news-controls role="search">
+                <label class="portfolio-news__field portfolio-news__field--search">
+                  <span>News durchsuchen</span>
+                  <input type="search" name="query" placeholder="Unternehmen, Überschrift oder Inhalt" autocomplete="off">
+                </label>
+                <label class="portfolio-news__field">
+                  <span>Sortierung</span>
+                  <select name="sort">
+                    <option value="newest">Neueste zuerst</option>
+                    <option value="name">Unternehmen A–Z</option>
+                  </select>
+                </label>
+                <label class="portfolio-news__toggle">
+                  <input type="checkbox" name="showEmpty">
+                  <span>Auch ohne News anzeigen</span>
+                </label>
+                <button class="button button--secondary portfolio-news__refresh" type="button" data-news-refresh>Aktualisieren</button>
+              </form>
+
+              <div class="portfolio-news__meta">
+                <div class="portfolio-news__legend" aria-label="Farblegende">
+                  <span><i class="portfolio-news__legend-mark is-today" aria-hidden="true"></i>Heute</span>
+                  <span><i class="portfolio-news__legend-mark is-recent" aria-hidden="true"></i>1–5 Tage</span>
+                  <span><i class="portfolio-news__legend-mark is-older" aria-hidden="true"></i>Ab 6 Tagen</span>
+                </div>
+                <p class="portfolio-news__status" data-news-status aria-live="polite">News werden geladen …</p>
+              </div>
+
+              <div class="portfolio-news__table" aria-label="Unternehmensnews">
+                <div class="portfolio-news__table-head" aria-hidden="true">
+                  <span>Unternehmen</span>
+                  <span>Neueste News</span>
+                  <span>Weitere News</span>
+                  <span>Weitere News</span>
+                </div>
+                <div class="portfolio-news__rows" data-news-rows></div>
+              </div>
+              <p class="portfolio-news__empty" data-news-empty hidden>Keine passenden Unternehmen oder Meldungen gefunden.</p>
+            </div>
+          </article>
+
           <article class="showcase-card">
             <div class="showcase-card__header">
               <div>
