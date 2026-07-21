@@ -65,8 +65,8 @@
 
   function ageClass(dateValue) {
     const age = Math.round((berlinTodayValue() - dateValue) / DAY_MS);
-    if (age === 0) return "is-today";
-    if (age >= 1 && age <= 5) return "is-recent";
+    if (age >= 0 && age <= 1) return "is-today";
+    if (age >= 2 && age <= 6) return "is-recent";
     return "is-older";
   }
 
@@ -81,12 +81,12 @@
     }
 
     cell.classList.add(ageClass(news.dateValue));
+    const preview = document.createElement("strong");
     const date = document.createElement("time");
     date.dateTime = new Date(news.dateValue).toISOString().slice(0, 10);
     date.textContent = news.dateLabel;
-    const title = document.createElement("strong");
-    title.textContent = news.title;
-    cell.append(date, title);
+    preview.append(date, ` - ${news.title}`);
+    cell.append(preview);
     return cell;
   }
 
