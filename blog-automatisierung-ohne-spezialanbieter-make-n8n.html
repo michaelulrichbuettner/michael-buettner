@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Automatisierung ohne Spezialanbieter wie Make oder n8n | Michael Büttner</title>
+    <meta name="description" content="Schlanke Automatisierung mit Browser-Plugin und Apps Script.">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260706">
+    <script src="assets/js/main.js?v=20260702" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" title="Zum Hauptinhalt springen">Zum Inhalt springen</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html" title="Zur Startseite von Michael Büttner"><span class="brand__mark">MB</span><span class="brand__text">Michael Büttner</span></a>
+        <nav class="nav" aria-label="Hauptnavigation">
+          <a href="experimente.html" title="Experimente und Showcases von Michael Büttner ansehen">Experimente</a>
+          <a href="erfahrung.html" title="Erfahrung von Michael Büttner ansehen">Erfahrung</a>
+          <a href="masterarbeit.html" title="Masterarbeit von Michael Büttner ansehen">Masterarbeit</a>
+          <a href="arbeitsproben.html" title="Arbeitsproben von Michael Büttner ansehen">Arbeitsproben</a>
+          <a href="blog.html" title="Einblicke von Michael Büttner lesen">Einblicke</a>
+        </nav>
+        <a class="language-link" href="#" title="Englische Version folgt">EN folgt</a>
+      </div>
+    </header>
+
+    <main id="main" class="page">
+      <article class="section article-page">
+        <div class="wrap article-wrap">
+          <a class="back-link" href="blog.html" title="Zur Einblicke-Übersicht zurückkehren">Zurück zu den Einblicken</a>
+          <p class="eyebrow">Praxis · Workflow · KI · Automatisierung</p>
+          <h1>Automatisierung ohne Spezialanbieter wie Make oder n8n</h1>
+          <p class="article-meta">22. Juli 2026</p>
+          <figure class="article-hero">
+            <img src="assets/img/ki-automatisierung-effiziente-workflows.png" alt="Infografik zu einem schlanken Automatisierungsworkflow mit Browser-Plugin, KI-Analyse, Google-Sheets-Transfer und schneller Amortisierung" title="Schlanke Automatisierung: Der KI-Workflow ohne Umwege">
+            <figcaption>Schlanke KI-Automatisierung: vom Browser-Plugin über ChatGPT bis zum Transfer in Google Sheets.</figcaption>
+          </figure>
+
+          <div class="article-content">
+            <p>Neben meiner Weiterbildung bei Skilldrops scanne ich aktuell aktiv den Stellenmarkt. Ich will mich dabei nicht künstlich einschränken und so hat sich ein recht großes Portfolio an Anlaufstellen für meine Recherche ergeben. Job-Börsen, Unternehmensseiten, Social Media-Plattformen, nationale und internationale Behördenseiten und ebensolche Stellenportale bieten dabei eine Fülle an Informationen zu jeder Stelle. Manche Stellenbeschreibungen sind glasklar, manche verklausuliert, manche erschlagen den Interessenten aber auch einfach mit Informationen. Das brachte mich schon lange auf die Idee, einen kleinen KI-gestützten Check jeder für mich sinnvoll klingenden Stelle zu erstellen. Dafür habe ich ein ChatGPT-Projekt erstellt und dem LLM einige Anweisungen gegeben, wie ein solcher Stellen-Check auszusehen hat, welche Daten aufgeschlüsselt, welche zusammengefasst und welche in Beziehung zu meinen Daten gebracht und bewertet werden müssen. Der Workflow lief dabei folgendermaßen:</p>
+
+            <ul>
+              <li>Ich kopierte die URL der Stellenausschreibung und gab sie ChatGPT mit dem Befehl zum Stellen-Check.</li>
+              <li>Falls die KI die URL nicht oder nur teilweise lesen konnte - und das passiert öfter als man denkt -, erstellte ich einen Screenshot oder eine PDF der Stelle und lud sie in den Chat.</li>
+              <li>Aus der Auswertung übernahm ich einige standardisierte Werte und übertrug diese zusammen mit den Stellen-Daten (Name, Unternehmen, Deadline...) in eine Google Tabelle ein, in der ich die Stellen sammelte und für den Bewerbungsablauf priorisierte.</li>
+            </ul>
+
+            <p>Ich kopierte also Daten. Immer wieder die gleichen Daten. Oft mehrmals pro Tag, meistens, ohne meinen Kopf zu benutzen. Da ich aktuell meine zweite Version meines Portfolio-Trackers auf die Seite gesetzt habe und ich in diesem Projekt eine kleine Pause einlegen wollte, dachte ich, dass jetzt die Zeit für die Automatisierung sei.</p>
+
+            <h2>Browser-Plugin statt Make, n8n und Airtable</h2>
+            <p>Machen wir's kurz. Die Entwicklung der Automatisierung hat exakt 2 Stunden und 8 Minuten gedauert. Dabei habe ich mit Codex gearbeitet und den künstlichen Coder zum Start von meiner Idee überzeugt, dass ich das gesamte Projekt ohne Make, n8n und andere große Tools erledigt haben will. Was wir entwickelt haben, beschreibt die KI so:</p>
+
+            <p>“Eine Chrome-Erweiterung nach Manifest V3 erfasst die URL und einen aus mehreren Ansichten zusammengesetzten Ganzseiten-Screenshot einer Stellenanzeige. Anschließend öffnet sie einen neuen Chat in einem definierten ChatGPT-Projekt und befüllt den Prompt, ohne ihn automatisch abzusenden. Ein dort hinterlegter Skill analysiert Anzeige und Bewerberprofil und liefert neben dem Bericht einen validen JSON-Datenblock. Ein Content-Script liest diesen Block aus der ChatGPT-Seite, validiert und normalisiert die Felder und übergibt sie Base64-kodiert an eine als Web-App bereitgestellte Google-Apps-Script-Anwendung. Nach einer Kontrollansicht fügt das Script eine neue, formatierte Zeile an der passenden Position einer Google-Sheets-Tabelle ein. Bestehende Datensätze werden nicht überschrieben.”</p>
+            <figure class="article-hero">
+              <img src="assets/img/chrome-erweiterung-stellen-check.png" alt="Screenshot der Chrome-Erweiterungsverwaltung mit der lokal geladenen Erweiterung Stellen-Check Übergabe" title="Chrome-Erweiterung Stellen-Check Übergabe">
+              <figcaption>Die lokal entwickelte Chrome-Erweiterung übernimmt die Übergabe der Stellenanzeige in das ChatGPT-Projekt.</figcaption>
+            </figure>
+
+            <p>Während sich Codex um die 300 Zeilen Code für das Apps Script und das unter 1 MB kleine Browser-Plugin gekümmert hat, habe ich meinen Stellen-Check bei ChatGPT in einen Skill verwandelt. Damit sind die Regeln jetzt nicht mehr auf das Projekt beschränkt und ich konnte einen festen Datenblock einbauen, der für die Übergabe an die Google-Tabelle nötig war.</p>
+
+            <h2>Fehler, Feinschliff und Erkenntnisse</h2>
+            <p>Die Fehlersuche und der Feinschliff haben rund 30 Minuten gekostet. Nun läuft die Automatisierung rund, stabil und robust für geschätzt rund 90 Prozent der Stellenanzeigen. Grenzbereiche wie unlesbare Screenshots, weil die Stellenanzeige auf mehreren Seiten verteilt oder ungünstig von Werbung oder Pop-Ups verdeckt wird, können so nicht abgedeckt werden. Genauso funktioniert das System praktisch nur lokal und besitzt noch keine Einbindung von Jobbenachrichtigungen per Mail. Als dritte Schwäche zeigt sich die Eintragung des Arbeitsortes in die Stellentabelle. Dort können keine neuen Namen in die Spaltenauswahl eingerichtet werden. Somit sind Stellen, die in Städten verfügbar sind, die bisher noch nicht per Hand in das Dropdown eingetragen wurden, zwar eingetragen, zeigen jedoch einen Fehler in der Tabelle. Die Schwächen sind jedoch zu verdauen, da die Automatisierung sich bei der Zeitersparnis wohl nach rund zehn Tagen bezahlt gemacht hat.</p>
+            <figure class="article-hero">
+              <img src="assets/img/stellen-tabelle-stellen-check.png" alt="Screenshot einer Google-Sheets-Tabelle mit Stellen, Passungsbewertung, strategischem Wert, Institution, Ort, Gehalt, Frist und Bewerbungsstatus" title="Stellen und Bewerbungen in Google Sheets">
+              <figcaption>Die automatisiert befüllte Google-Sheets-Tabelle sammelt und priorisiert die Stelleninformationen für den Bewerbungsablauf.</figcaption>
+            </figure>
+
+            <p>Viel wichtiger als die gesparte Zeit ist mir aber die Erkenntnis, dass es nicht immer eine große grafisch schick dargestellte Make-Automatisierung und eine Airtable-Anbindung sein muss. Oft genügen viel kleinere Tools, die in wenigen Stunden oder gar Minuten einsatzbereit sind, um alltägliche Aufgaben zu automatisieren. Wichtig ist, dass man diese Aufgaben erkennt und eine schlanke Lösung ausprobiert. Wenn diese schon fast alles abdeckt, spart man vielleicht mehr Zeit und Geld, als es zum Start des Projekts aussieht.</p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer"><div class="wrap site-footer__inner"><p>&copy; <span data-current-year></span> Michael Büttner</p><div class="site-footer__links"><a href="kontakt.html" title="Kontakt zu Michael Büttner aufnehmen">Kontakt</a><a href="impressum.html" title="Impressum der Website ansehen">Impressum</a><a href="datenschutz.html" title="Datenschutzhinweise der Website ansehen">Datenschutz</a></div></div></footer>
+  </body>
+</html>

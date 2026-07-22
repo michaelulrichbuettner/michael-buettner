@@ -1,5 +1,16 @@
 window.sitePosts = [
   {
+    title: "Automatisierung ohne Spezialanbieter wie Make oder n8n",
+    date: "2026-07-22",
+    lang: "de",
+    tags: ["Praxis", "Workflow", "KI", "Automatisierung"],
+    excerpt: "Schlanke Automatisierung mit Browser-Plugin und Apps Script.",
+    url: "blog-automatisierung-ohne-spezialanbieter-make-n8n.html",
+    image: "assets/img/ki-automatisierung-effiziente-workflows.png",
+    imageAlt: "Infografik zu einem schlanken Automatisierungsworkflow mit Browser-Plugin, KI-Analyse, Google-Sheets-Transfer und schneller Amortisierung",
+    workSample: true
+  },
+  {
     title: "Codex-Projekt: Wie ich diese Webseite ohne klassische Coding-Erfahrung gebaut habe",
     date: "2026-07-04",
     lang: "de",
