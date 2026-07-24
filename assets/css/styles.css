@@ -1081,6 +1081,106 @@ h2 {
   margin-top: 0.75rem;
 }
 
+.kolloquium-card .visual-card__body {
+  padding: clamp(1.1rem, 2.8vw, 1.75rem);
+}
+
+.kolloquium-card .visual-card__body > h2 {
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+}
+
+.kolloquium-flow {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  margin-top: 1.4rem;
+}
+
+.kolloquium-stage,
+.kolloquium-conclusion {
+  display: grid;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-line-soft);
+}
+
+.kolloquium-stage__copy {
+  max-width: 760px;
+}
+
+.kolloquium-stage h3,
+.kolloquium-conclusion h3 {
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.15;
+}
+
+.youtube-frame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--color-line-soft);
+  background: var(--color-ink);
+}
+
+.youtube-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.pendulum-demo {
+  display: grid;
+  gap: 1rem;
+}
+
+.pendulum-demo figure {
+  margin: 0;
+}
+
+.pendulum-demo video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-line-soft);
+  background: var(--color-ink);
+}
+
+.pendulum-demo figcaption {
+  margin-top: 0.5rem;
+  color: var(--color-muted);
+  font-size: 0.86rem;
+}
+
+.pendulum-demo__wide {
+  display: grid;
+  grid-template-columns: minmax(0, 0.5fr) minmax(260px, 0.5fr);
+  gap: 1rem;
+  align-items: start;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.pendulum-prompt {
+  padding: 1rem;
+  border: 1px solid var(--color-line-soft);
+  background: var(--color-soft);
+}
+
+.pendulum-prompt p:last-child {
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.pendulum-demo__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
 .visual-card__list {
   display: grid;
   gap: 0.35rem;
@@ -1323,7 +1423,12 @@ h2 {
   .insight-grid,
   .research-feature,
   .visual-card__media-grid,
+  .pendulum-demo__grid,
   .visual-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .pendulum-demo__wide {
     grid-template-columns: 1fr;
   }
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Masterarbeit | Michael Büttner</title>
     <meta name="description" content="Masterarbeit zu Synthetic Video Journalism von Michael Büttner.">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260706">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260724">
     <script src="assets/js/main.js?v=20260702" defer></script>
   </head>
   <body>
@@ -169,6 +169,85 @@
                   <p>Die Moderation übernimmt hierbei ein Avatar eines realen journalistischen Mitarbeiters, die Sprecherstimme ist die synthetisierte menschliche Stimme des avatarisierten Protagonisten. Die Inhalte werden komplett aus den vorhandenen Artikeln extrahiert und die Bilduntermalung aus dem redaktionellen Archiv übernommen und wenn nötig angepasst.</p>
                   <p>Das Material für ein KI-Label, Logos, Designs und In- und Outro werden der KI ebenfalls zur Verfügung gestellt. Die Übergaben der Informationen, Ton- und Bildmaterialien, Texte und anderer Inhalte oder Befehle zur Durchführung des nächsten Schrittes werden per API übergeben und bedürfen keiner menschlichen Einflussnahme.</p>
                   <p>So entstünde ein KI-System aus unterschiedlichen KI-Modellen und einer hochgradigen Autonomie. Zu beachten ist, dass diese Skizze keinen detaillierten Ablaufplan abbildet und bewusst auf das Element der menschlichen Kontrolle verzichtet wurde. Sie soll das zur Zeit der Entstehung dieser Arbeit technisch Mögliche und den aktuell maximalen Grad der Autonomie an einem praktisch realisierbaren Ablauf zeigen.</p>
+                </div>
+              </article>
+              <article class="visual-card visual-card--wide kolloquium-card">
+                <div class="visual-card__body">
+                  <p class="eyebrow">Kolloquium</p>
+                  <h2>KI-Avatare und messbare Videoqualität</h2>
+                  <p>Dieser Ausschnitt aus meinem Kolloquium verbindet zwei Ebenen: Die Avatarvideos zeigen, was mit KI-Avataren technisch bereits niedrigschwellig machbar ist. Die Pendel- und Doppelpendelbeispiele zeigen dagegen, dass ein plausibel wirkendes KI-Video nicht automatisch physikalisch korrekt oder journalistisch belastbar ist.</p>
+
+                  <div class="kolloquium-flow" aria-label="Kolloquiums-Ausschnitt zu KI-Avataren und Videoqualität">
+                    <section class="kolloquium-stage" aria-labelledby="avatar-teil-1-title">
+                      <div class="kolloquium-stage__copy">
+                        <h3 id="avatar-teil-1-title">Teil 1: Avatar als Einführung</h3>
+                        <p>Der KI-Avatar führt in das Problem der Messbarkeit von Videoqualität ein und kündigt die Pendelbeispiele als Stresstest für KI-generierte Bewegtbilder an.</p>
+                      </div>
+                      <div class="youtube-frame">
+                        <iframe src="https://www.youtube-nocookie.com/embed/vaxxiakRNjg?origin=https://michaelulrichbuettner.github.io" title="KI-Avatar erklärt die Messbarkeit von Videoqualität - Teil 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div>
+                    </section>
+
+                    <section class="kolloquium-stage" aria-labelledby="pendel-title">
+                      <div class="kolloquium-stage__copy">
+                        <h3 id="pendel-title">Pendel als Stresstest: Wenn KI-Video an Physik scheitert</h3>
+                        <p>Die Beispiele machen sichtbar, dass generative Videos Bewegungen überzeugend aussehen lassen können, ohne die zugrunde liegende Physik stabil zu beherrschen.</p>
+                      </div>
+                      <div class="pendulum-demo">
+                        <div class="pendulum-demo__wide">
+                          <figure>
+                            <video controls preload="metadata">
+                              <source src="assets/video/pendel-sora.mp4" type="video/mp4">
+                              Dein Browser kann dieses Video nicht abspielen.
+                            </video>
+                            <figcaption>Quelle: OpenAI - Sora</figcaption>
+                          </figure>
+                          <div class="pendulum-prompt">
+                            <p class="eyebrow">Prompt</p>
+                            <p>Zeige die Schwingung eines Pendels mit einem Pendelarm von 1m länge und einer Kugel am Ende mit einem Gewicht von 1 Kilogramm. Es ist auf einer Höhe von 1,20 m aufgehangen. Das Pendel soll sich realistisch bewegen. Im Ausgangspunkt der Bewegung soll sich der Pendelarm parallel zum Boden rechts der Aufhängung befinden. Die wirkende Beschleunigung ist 9,81 m/s² in Richtung Boden. Der Pendelarm ist eine nicht flexible Schnur mit vernachlässigbarer Masse. Zur besseren Orientierung soll der Hintergrund ein Raster zeigen.</p>
+                          </div>
+                        </div>
+                        <div class="pendulum-demo__grid">
+                          <figure>
+                            <video controls preload="metadata">
+                              <source src="assets/video/pendel-grok-einfach.mp4" type="video/mp4">
+                              Dein Browser kann dieses Video nicht abspielen.
+                            </video>
+                            <figcaption>Quelle: xAI Grok<br>Prompt: Zeige eine Pendel, das hin und her schwingt</figcaption>
+                          </figure>
+                          <figure>
+                            <video controls preload="metadata">
+                              <source src="assets/video/doppelpendel-grok.mp4" type="video/mp4">
+                              Dein Browser kann dieses Video nicht abspielen.
+                            </video>
+                            <figcaption>Quelle: xAI Grok<br>Prompt: Zeige ein Doppelpendel, das schwingt</figcaption>
+                          </figure>
+                          <figure>
+                            <video controls preload="metadata">
+                              <source src="assets/video/doppelpendel-grok-realistisch.mp4" type="video/mp4">
+                              Dein Browser kann dieses Video nicht abspielen.
+                            </video>
+                            <figcaption>Quelle: xAI Grok<br>Prompt: Zeige ein physikalisch möglichst realistisches Doppelpendel, dass schwingt</figcaption>
+                          </figure>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="kolloquium-stage" aria-labelledby="avatar-teil-2-title">
+                      <div class="kolloquium-stage__copy">
+                        <h3 id="avatar-teil-2-title">Teil 2: Einordnung nach den Beispielen</h3>
+                        <p>Nach den Pendelbeispielen ordnet der Avatar ein, warum visuelle Plausibilität nicht mit physikalischer Korrektheit gleichzusetzen ist.</p>
+                      </div>
+                      <div class="youtube-frame">
+                        <iframe src="https://www.youtube-nocookie.com/embed/Op5o4_P7Jac?origin=https://michaelulrichbuettner.github.io" title="KI-Avatar erklärt die Messbarkeit von Videoqualität - Teil 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                      </div>
+                    </section>
+
+                    <div class="kolloquium-conclusion">
+                      <h3>Warum Messbarkeit schwierig bleibt</h3>
+                      <p>Videoqualität ist mehrdimensional: Ästhetik, technische Glätte, physikalische Konsistenz, Transparenz und journalistische Belastbarkeit lassen sich nicht auf einen einzelnen Qualitätswert reduzieren. Genau darin liegt eine zentrale Herausforderung für Synthetic Video Journalism.</p>
+                    </div>
+                  </div>
                 </div>
               </article>
               <article class="visual-card visual-card--half">
