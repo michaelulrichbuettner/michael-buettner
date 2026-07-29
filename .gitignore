@@ -4,3 +4,4 @@ tmp/
 .codex/
 __pycache__/
 *.pyc
+data/import/

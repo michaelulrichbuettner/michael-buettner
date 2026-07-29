@@ -10,6 +10,7 @@ Eine einfache statische Website für GitHub Pages.
 - `arbeitsproben.html`: Texte, die als Arbeitsproben markiert sind
 - `blog.html`: Einblicke-Seite mit Tag-Filter
 - `kontakt.html`: Kontaktformular, aktuell als Mailto-Fallback vorbereitet
+- `experimente.html`: Experimente, darunter die interaktive Vogelkarte
 - `impressum.html`: Anbieterkennzeichnung, nur im Footer verlinkt
 - `datenschutz.html`: Datenschutzhinweise, im Footer und beim Kontaktformular verlinkt
 - `assets/js/posts.js`: Einblicke-Daten und Markierung für Arbeitsproben
@@ -32,6 +33,21 @@ Neue Beiträge werden in `assets/js/posts.js` ergänzt. Ein Eintrag hat diese Fe
 ```
 
 `workSample: true` bedeutet, dass der Beitrag auch auf der Seite `arbeitsproben.html` erscheint.
+
+## Vogelkarte aktualisieren
+
+Die öffentliche Datei `data/vogelbeobachtungen.json` wird aus einem persönlichen
+eBird-Life-List-Export erzeugt. Der vollständige CSV-Export mit exakten Orten
+darf nicht in das Repository kopiert werden.
+
+```powershell
+python scripts/import_ebird_life_list.py "C:\Pfad\zur\ebird_world_life_list.csv"
+```
+
+Wenn im Export eine neue Stadt vorkommt, muss zuerst ihr öffentlicher
+Stadtmittelpunkt in `data/vogelorte.json` ergänzt werden. Das Importskript
+bricht andernfalls ab, damit keine unbekannten oder exakten Orte versehentlich
+veröffentlicht werden.
 
 ## Mehrsprachigkeit
 

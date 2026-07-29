@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "source": "eBird Life List",
+  "generatedAt": "2026-07-29T12:50:47+00:00",
+  "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
+  "observations": [
+    {
+      "commonName": "Amsel",
+      "scientificName": "Turdus merula",
+      "date": "2026-07-29",
+      "city": "Bonn",
+      "latitude": 50.7374,
+      "longitude": 7.0982
+    },
+    {
+      "commonName": "Blaumeise",
+      "scientificName": "Cyanistes caeruleus",
+      "date": "2026-07-28",
+      "city": "Bonn",
+      "latitude": 50.7374,
+      "longitude": 7.0982
+    },
+    {
+      "commonName": "Halsbandsittich",
+      "scientificName": "Psittacula krameri",
+      "date": "2026-07-29",
+      "city": "Bonn",
+      "latitude": 50.7374,
+      "longitude": 7.0982
+    },
+    {
+      "commonName": "Hausrotschwanz",
+      "scientificName": "Phoenicurus ochruros",
+      "date": "2026-07-29",
+      "city": "Bonn",
+      "latitude": 50.7374,
+      "longitude": 7.0982
+    },
+    {
+      "commonName": "Haussperling",
+      "scientificName": "Passer domesticus",
+      "date": "2026-07-29",
+      "city": "Bonn",
+      "latitude": 50.7374,
+      "longitude": 7.0982
+    },
+    {
+      "commonName": "Rotkehlchen",
+      "scientificName": "Erithacus rubecula",
+      "date": "2026-07-29",
+      "city": "Bonn",
+      "latitude": 50.7374,
+      "longitude": 7.0982
+    },
+    {
+      "commonName": "Silbermöwe",
+      "scientificName": "Larus argentatus",
+      "date": "2026-07-29",
+      "city": "Bonn",
+      "latitude": 50.7374,
+      "longitude": 7.0982
+    }
+  ]
+}
