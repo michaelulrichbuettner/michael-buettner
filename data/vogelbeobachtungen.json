@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "source": "eBird CSV imports via Make",
-  "generatedAt": "2026-07-30T10:12:49.811Z",
+  "generatedAt": "2026-07-30T10:17:42.787Z",
   "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
   "observations": [
     {
@@ -23,13 +23,13 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "29 Jul 2026",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Felsentaube",
       "observerId": "Michael",
-      "scientificName": "Columba livia"
+      "commonName": "Felsentaube",
+      "scientificName": "Columba livia",
+      "date": "2026-07-29",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
@@ -59,13 +59,13 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "30 Jul 2026",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Ringeltaube",
       "observerId": "Michael",
-      "scientificName": "Columba palumbus"
+      "commonName": "Ringeltaube",
+      "scientificName": "Columba palumbus",
+      "date": "2026-07-30",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
