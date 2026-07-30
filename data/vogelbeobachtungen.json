@@ -1,64 +1,89 @@
 {
-  "schemaVersion": 1,
-  "source": "eBird Life List",
-  "generatedAt": "2026-07-29T12:50:47+00:00",
+  "schemaVersion": 2,
+  "source": "eBird CSV imports via Make",
+  "generatedAt": "2026-07-30T10:12:49.811Z",
   "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
   "observations": [
     {
+      "observerId": "Michael",
       "commonName": "Amsel",
       "scientificName": "Turdus merula",
       "date": "2026-07-29",
       "city": "Bonn",
-      "latitude": 50.7374,
-      "longitude": 7.0982
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
+      "observerId": "Michael",
       "commonName": "Blaumeise",
       "scientificName": "Cyanistes caeruleus",
       "date": "2026-07-28",
       "city": "Bonn",
-      "latitude": 50.7374,
-      "longitude": 7.0982
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
+      "city": "Bonn",
+      "date": "29 Jul 2026",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635,
+      "commonName": "Felsentaube",
+      "observerId": "Michael",
+      "scientificName": "Columba livia"
+    },
+    {
+      "observerId": "Michael",
       "commonName": "Halsbandsittich",
       "scientificName": "Psittacula krameri",
       "date": "2026-07-29",
       "city": "Bonn",
-      "latitude": 50.7374,
-      "longitude": 7.0982
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
+      "observerId": "Michael",
       "commonName": "Hausrotschwanz",
       "scientificName": "Phoenicurus ochruros",
       "date": "2026-07-29",
       "city": "Bonn",
-      "latitude": 50.7374,
-      "longitude": 7.0982
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
+      "observerId": "Michael",
       "commonName": "Haussperling",
       "scientificName": "Passer domesticus",
       "date": "2026-07-29",
       "city": "Bonn",
-      "latitude": 50.7374,
-      "longitude": 7.0982
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
+      "city": "Bonn",
+      "date": "30 Jul 2026",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635,
+      "commonName": "Ringeltaube",
+      "observerId": "Michael",
+      "scientificName": "Columba palumbus"
+    },
+    {
+      "observerId": "Michael",
       "commonName": "Rotkehlchen",
       "scientificName": "Erithacus rubecula",
       "date": "2026-07-29",
       "city": "Bonn",
-      "latitude": 50.7374,
-      "longitude": 7.0982
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
+      "observerId": "Michael",
       "commonName": "Silbermöwe",
       "scientificName": "Larus argentatus",
       "date": "2026-07-29",
       "city": "Bonn",
-      "latitude": 50.7374,
-      "longitude": 7.0982
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     }
   ]
 }
