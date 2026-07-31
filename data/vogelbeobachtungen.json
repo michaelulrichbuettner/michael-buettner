@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "source": "eBird CSV imports via Make",
-  "generatedAt": "2026-07-30T10:17:42.787Z",
+  "generatedAt": "2026-07-31T05:09:11.213Z",
   "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
   "observations": [
     {
@@ -57,6 +57,15 @@
       "city": "Bonn",
       "latitude": 50.7352621,
       "longitude": 7.1024635
+    },
+    {
+      "city": "Bonn",
+      "date": "2026-07-31",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635,
+      "commonName": "Kohlmeise",
+      "observerId": "Michael",
+      "scientificName": "Parus major"
     },
     {
       "observerId": "Michael",
