@@ -1,9 +1,18 @@
 {
   "schemaVersion": 2,
   "source": "eBird CSV imports via Make",
-  "generatedAt": "2026-07-31T05:09:11.213Z",
+  "generatedAt": "2026-08-01T08:42:56.737Z",
   "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
   "observations": [
+    {
+      "city": "Bonn",
+      "date": "2026-08-01",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635,
+      "commonName": "Alexandersittich",
+      "observerId": "Michael",
+      "scientificName": "Psittacula eupatria"
+    },
     {
       "observerId": "Michael",
       "commonName": "Amsel",
@@ -60,12 +69,48 @@
     },
     {
       "city": "Bonn",
-      "date": "2026-07-31",
+      "date": "2026-08-01",
       "latitude": 50.7352621,
       "longitude": 7.1024635,
-      "commonName": "Kohlmeise",
+      "commonName": "Heringsmöwe",
       "observerId": "Michael",
-      "scientificName": "Parus major"
+      "scientificName": "Larus fuscus"
+    },
+    {
+      "city": "Bonn",
+      "date": "2026-08-01",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635,
+      "commonName": "Hohltaube",
+      "observerId": "Michael",
+      "scientificName": "Columba oenas"
+    },
+    {
+      "observerId": "Michael",
+      "commonName": "Kohlmeise",
+      "scientificName": "Parus major",
+      "date": "2026-07-31",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
+    },
+    {
+      "city": "Bonn",
+      "date": "2026-08-01",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635,
+      "commonName": "Mehlschwalbe",
+      "observerId": "Michael",
+      "scientificName": "Delichon urbicum"
+    },
+    {
+      "city": "Bonn",
+      "date": "2026-08-01",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635,
+      "commonName": "Mittelmeermöwe",
+      "observerId": "Michael",
+      "scientificName": "Larus michahellis"
     },
     {
       "observerId": "Michael",
