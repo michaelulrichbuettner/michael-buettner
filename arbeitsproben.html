@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Arbeitsproben | Michael Büttner</title>
     <meta name="description" content="Texte, Arbeitsproben und Veröffentlichungen von Michael Büttner.">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260706">
+    <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260802">
     <script src="assets/js/posts.js?v=20260722" defer></script>
     <script src="assets/js/main.js?v=20260702" defer></script>
+    <script src="assets/vendor/leaflet/leaflet.js?v=1.9.4" defer></script>
+    <script src="assets/vendor/topojson/topojson-client.min.js?v=3.1.0" defer></script>
+    <script src="assets/js/event-map.js?v=20260802" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main" title="Zum Hauptinhalt springen">Zum Inhalt springen</a>
@@ -25,11 +29,35 @@
       </div>
     </header>
     <main id="main" class="page">
-      <section class="section">
+      <section class="section event-portfolio">
         <div class="wrap section-heading">
           <p class="eyebrow">Arbeitsproben</p>
-          <h1>Eigene Texte und ausgewählte Veröffentlichungen.</h1>
-          <p class="lead">Hier erscheinen später Texte, die als Arbeitsproben dienen. Einzelne Einblicke können dafür markiert werden.</p>
+          <h1>Messen- und Event-Portfolio</h1>
+          <p class="lead">Ausgewählte Artikel von Events und Messen aus den vergangenen drei Jahren von Michael Büttner</p>
+        </div>
+        <div class="wrap event-portfolio__visual">
+          <div
+            class="event-map"
+            data-event-map
+            data-source="assets/data/event-articles.json"
+            data-world="assets/data/world-countries-110m.json"
+            role="region"
+            aria-label="Weltkarte mit sieben Event-Orten und den zugehörigen Artikeln"
+          ></div>
+          <p class="event-map-status" data-event-map-status aria-live="polite">Event-Karte wird geladen …</p>
+          <div class="event-location-list" data-event-location-list aria-label="Event-Orte"></div>
+          <div class="event-stats" data-event-stats aria-label="Statistik zur Artikelauswahl"></div>
+          <details class="event-topics">
+            <summary>Vormerkung für das spätere Themen-Visual</summary>
+            <div data-event-topics></div>
+          </details>
+          <p class="event-map-source">Kartendaten: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a></p>
+        </div>
+      </section>
+      <section class="section section--soft">
+        <div class="wrap section-heading">
+          <p class="eyebrow">Weitere Arbeitsproben</p>
+          <h2>Eigene Texte und ausgewählte Veröffentlichungen.</h2>
         </div>
         <div class="wrap">
           <div class="post-list" data-work-samples></div>

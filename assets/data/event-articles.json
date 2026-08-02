@@ -1,0 +1,117 @@
+{
+  "events": [
+    {
+      "id": "ces",
+      "name": "CES",
+      "location": "Las Vegas, USA",
+      "latitude": 36.1699,
+      "longitude": -115.1398,
+      "articles": [
+        { "event": "CES 2025", "date": "2025-03-06", "title": "SunLED: Eine kleine Sonne für deinen Bildschirm", "url": "https://www.inside-digital.de/news/sunled-eine-kleine-sonne-fuer-deinen-bildschirm" },
+        { "event": "CES 2025", "date": "2025-01-11", "title": "Keine Chance für Diebe: E-Bikes werden viel sicherer", "url": "https://www.inside-digital.de/news/keine-chance-fuer-diebe-e-bikes-werden-viel-sicherer" },
+        { "event": "CES 2025", "date": "2025-01-08", "title": "Persil, Perwoll und Co. bekommen KI-Upgrade: Deutscher Hersteller will das Waschen revolutionieren", "url": "https://www.inside-digital.de/news/persil-perwoll-und-co-bekommen-ki-upgrade-deutscher-hersteller-will-das-waschen-revolutionieren" },
+        { "event": "CES 2024", "date": "2024-01-22", "title": "Samsung Galaxy S24 Ultra im ersten Test: Lohnt der Stift?", "url": "https://www.inside-digital.de/tests/samsung-galaxy-s24-ultra-im-ersten-test-lohnt-der-stift" },
+        { "event": "CES 2024", "date": "2024-01-21", "title": "Bluetooth: Geniales Feature ist noch vollkommen unbekannt", "url": "https://www.inside-digital.de/ratgeber/bluetooth-auracast-geniales-feature-ist-noch-vollkommen-unbekannt" },
+        { "event": "CES 2024", "date": "2024-01-19", "title": "Samsung Galaxy S24 Plus im Hands-On: Der beste Kompromiss?", "url": "https://www.inside-digital.de/tests/samsung-galaxy-s24-plus-im-hands-on-der-beste-kompromiss" },
+        { "event": "CES 2024", "date": "2024-01-18", "title": "Samsung Galaxy S24 angefasst: Der erste Eindruck überzeugt!", "url": "https://www.inside-digital.de/tests/samsung-galaxy-s24-angefasst-der-erste-eindruck-ueberzeugt" },
+        { "event": "CES 2024", "date": "2024-01-16", "title": "Revolution beim Heimkino: Jetzt ist es egal, wo deine Lautsprecher stehen", "url": "https://www.inside-digital.de/ratgeber/revolution-beim-heimkino-dolby-atmos-flex-connect" },
+        { "event": "CES 2024", "date": "2024-01-15", "title": "Sonnenbrille mit smartem Trick: Das kann noch keine andere Brille", "url": "https://www.inside-digital.de/news/sonnenbrille-mit-smartem-trick-das-kann-noch-keine-andere-brille" },
+        { "event": "CES 2024", "date": "2024-01-12", "title": "Smartes Fernglas: Edelschmiede baut Traum für Outdoor-Fans", "url": "https://www.inside-digital.de/news/smartes-fernglas-edelschmiede-baut-traum-fuer-outdoor-fans" },
+        { "event": "CES 2024", "date": "2024-01-10", "title": "Ein Monat autark: Neue Powerstation machts möglich", "url": "https://www.inside-digital.de/news/ein-monat-autark-neue-powerstation-machts-moeglich" },
+        { "event": "CES 2024", "date": "2024-01-08", "title": "3D mit echtem Comeback: Diese Monitore begeistern auf der CES 2024", "url": "https://www.inside-digital.de/news/3d-mit-echtem-comeback-diese-monitore-und-laptops-begeistern-auf-der-ces-2024" },
+        { "event": "CES 2024", "date": "2024-01-08", "title": "Fieberthermometer auf Steroiden: Withings zeigt BeamO", "url": "https://www.inside-digital.de/news/fieberthermometer-auf-steroiden-withings-zeigt-beamo" },
+        { "event": "CES 2023", "date": "2022-12-15", "title": "Endlich einfach: Diesen Laptop kann jedes Kind reparieren", "url": "https://www.inside-digital.de/news/endlich-einfach-diesen-laptop-kann-jedes-kind-reparieren" }
+      ]
+    },
+    {
+      "id": "mwc",
+      "name": "MWC",
+      "location": "Barcelona, Spanien",
+      "latitude": 41.3874,
+      "longitude": 2.1686,
+      "articles": [
+        { "event": "MWC 2025", "date": "2025-03-05", "title": "MWC 2025: Diese Highlights der Messe sind ausgezeichnet!", "url": "https://www.inside-digital.de/news/mwc-2025-das-sind-die-highlights-der-messe" },
+        { "event": "MWC 2025", "date": "2025-03-03", "title": "Wechselobjektive für Smartphones: realme und Xiaomi gehen neue Wege", "url": "https://www.inside-digital.de/news/wechselobjektive-fuer-smartphones-realme-und-xiaomi-gehen-neue-wege" },
+        { "event": "MWC 2025", "date": "2025-03-02", "title": "Smartphone oder Kamera? Xiaomi bringt 15 Ultra nach Deutschland", "url": "https://www.inside-digital.de/news/smartphone-oder-kamera-xiaomi-bringt-15-ultra-nach-deutschland" },
+        { "event": "MWC 2024", "date": "2024-03-01", "title": "Telekom kündigt revolutionären Dienst an: Milliarden Kundendaten stehen bereit", "url": "https://www.inside-digital.de/news/telekom-kuendigt-revolutionaeren-dienst-an-milliarden-kundendaten-stehen-bereit" },
+        { "event": "MWC 2024", "date": "2024-02-28", "title": "Oppo ist zurück: Doch dieses Highlight gibts für Deutsche nicht", "url": "https://www.inside-digital.de/news/oppo-ist-zurueck-doch-dieses-highlight-gibts-fuer-deutsche-nicht" },
+        { "event": "MWC 2024", "date": "2024-02-28", "title": "Angriff aus China: Müssen sich Samsung und Motorola jetzt Sorgen machen?", "url": "https://www.inside-digital.de/news/angriff-aus-china-muessen-sich-samsung-und-motorola-jetzt-sorgen-machen" },
+        { "event": "MWC 2023", "date": "2023-02-28", "title": "Telekom verbindet Fahrrad mit Auto: Das kommt dabei heraus", "url": "https://www.inside-digital.de/news/telekom-verbindet-fahrrad-mit-auto-das-kommt-dabei-heraus" },
+        { "event": "MWC 2023", "date": "2023-02-27", "title": "Mit Motor: Lenovo erfindet den Laptop neu", "url": "https://www.inside-digital.de/news/mit-motor-lenovo-erfindet-den-laptop-neu" }
+      ]
+    },
+    {
+      "id": "snapdragon-summit",
+      "name": "Snapdragon Summit",
+      "location": "Maui, USA",
+      "latitude": 20.7984,
+      "longitude": -156.3319,
+      "articles": [
+        { "event": "Snapdragon Summit 2025", "date": "2025-09-25", "title": "Achtung Samsung: Hier kommt die Liste der neuen Smartphone-Konkurrenten 2026", "url": "https://www.inside-digital.de/news/achtung-samsung-hier-kommt-die-liste-der-neuen-konkurrenten-2026" },
+        { "event": "Snapdragon Summit 2025", "date": "2025-09-25", "title": "Smartphones 2026: Das sind die neuen Funktionen", "url": "https://www.inside-digital.de/news/smartphones-2026-die-neuen-funktionen" }
+      ]
+    },
+    {
+      "id": "digital-x",
+      "name": "Digital X",
+      "location": "Köln, Deutschland",
+      "latitude": 50.9375,
+      "longitude": 6.9603,
+      "articles": [
+        { "event": "Digital X 2023", "date": "2023-09-22", "title": "Müllfressender Hai: Dieser Roboter macht Gewässer autonom sauber", "url": "https://www.inside-digital.de/news/muellfressender-hai-dieser-roboter-macht-gewaesser-autonom-sauber" }
+      ]
+    },
+    {
+      "id": "eurobike",
+      "name": "Eurobike",
+      "location": "Frankfurt, Deutschland",
+      "latitude": 50.1109,
+      "longitude": 8.6821,
+      "articles": [
+        { "event": "Eurobike 2024", "date": "2024-07-09", "title": "Neuer Konkurrent für Bosch: Deutscher Autozulieferer zeigt E-Bike-Motor", "url": "https://www.inside-digital.de/tests/neuer-konkurrent-fuer-bosch-deutscher-autozulieferer-zeigt-e-bike-motor" },
+        { "event": "Eurobike 2024", "date": "2024-07-06", "title": "Kleine Revolution: Ist das der neue Standard für die E-Bike-Welt?", "url": "https://www.inside-digital.de/news/kleine-revolution-ist-das-der-neue-standard-fuer-die-e-bike-welt" },
+        { "event": "Eurobike 2024", "date": "2024-07-05", "title": "E-Bikes mit satten Rabatten: So entstehen die Angebote", "url": "https://www.inside-digital.de/news/e-bikes-mit-satten-rabatten-so-entstehen-die-angebote" },
+        { "event": "Eurobike 2024", "date": "2024-07-04", "title": "Low-Tech-Bike: Mit diesem Trick wird das Buffalo Utility S2 zur Bergziege", "url": "https://www.inside-digital.de/news/low-tech-bike-mit-diesem-trick-wird-das-buffalo-utility-s2-zur-bergziege" },
+        { "event": "Eurobike 2023", "date": "2023-06-23", "title": "Neues SUV-E-Bike ausprobiert: Damit habe ich nicht gerechnet", "url": "https://www.inside-digital.de/news/neues-suv-e-bike-ausprobiert-damit-habe-ich-nicht-gerechnet" },
+        { "event": "Eurobike 2023", "date": "2023-06-23", "title": "Automatik fürs E-Bike vorgestellt: Nie wieder im falschen Gang", "url": "https://www.inside-digital.de/news/automatik-fuers-e-bike-vorgestellt-nie-wieder-im-falschen-gang" },
+        { "event": "Eurobike 2023", "date": "2023-06-22", "title": "Bosch bringt Mega-Reichweite, E-Schaltung und Diebstahlschutz im Abo", "url": "https://www.inside-digital.de/news/bosch-bringt-mega-reichweite-e-schaltung-und-diebstahlschutz-im-abo" }
+      ]
+    },
+    {
+      "id": "snapdragon-ai",
+      "name": "Snapdragon AI Event",
+      "location": "London, England",
+      "latitude": 51.5074,
+      "longitude": -0.1278,
+      "articles": [
+        { "event": "Snapdragon AI Event 2024", "date": "2024-02-09", "title": "Ohne Internet: Diese KI kommt noch in diesem Jahr auf viele Laptops", "url": "https://www.inside-digital.de/news/ohne-internet-diese-ki-kommt-noch-in-diesem-jahr-auf-viele-laptops" }
+      ]
+    },
+    {
+      "id": "iaa",
+      "name": "IAA",
+      "location": "München, Deutschland",
+      "latitude": 48.1351,
+      "longitude": 11.582,
+      "articles": [
+        { "event": "IAA 2023", "date": "2023-09-12", "title": "VW ID. Buzz: Wie viel Bulli steckt im Elektro-Bus?", "url": "https://www.inside-digital.de/tests/vw-id-buzz-wie-viel-bulli-steckt-im-elektro-bus" },
+        { "event": "IAA 2023", "date": "2023-09-07", "title": "Porsche Taycan 4S Testdrive: So normal kann sich ein Porsche fahren", "url": "https://www.inside-digital.de/tests/porsche-taycan-4s-testdrive-so-normal-kann-sich-ein-porsche-fahren" }
+      ]
+    }
+  ],
+  "statistics": {
+    "includedArticles": 35,
+    "eventLocations": 7,
+    "remainingRelevantArticles": 22,
+    "olderEventArticles": 12,
+    "remainingTopics": [
+      { "name": "E-Bikes, Fahrräder und weitere Mobilität", "count": 9 },
+      { "name": "Smartphones und Consumer Tech", "count": 5 },
+      { "name": "Fitness und Gesundheit", "count": 3 },
+      { "name": "Klemmbausteine und digitales Spielzeug", "count": 2 },
+      { "name": "Audio und Design", "count": 1 },
+      { "name": "Datenvisualisierung", "count": 1 },
+      { "name": "Kamera und Fotografie", "count": 1 }
+    ]
+  }
+}
