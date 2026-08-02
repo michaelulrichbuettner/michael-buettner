@@ -809,6 +809,7 @@ h2 {
 }
 
 .topic-landscape__stage {
+  position: relative;
   overflow: hidden;
   border: 1px solid var(--color-line);
   background:
@@ -821,6 +822,12 @@ h2 {
   display: block;
   width: 100%;
   height: auto;
+  transform-origin: left center;
+  transition: transform 280ms ease;
+}
+
+.topic-landscape__stage--detail-open svg {
+  transform: translateX(-4%) scale(0.76);
 }
 
 .topic-landscape__links line {
@@ -928,6 +935,12 @@ h2 {
   transform: scale(1.24);
 }
 
+.article-node--selected circle {
+  fill: var(--color-yellow);
+  stroke-width: 3;
+  transform: scale(1.24);
+}
+
 .topic-landscape__nodes > *,
 .article-nodes > *,
 .topic-center-node,
@@ -958,13 +971,44 @@ h2 {
 }
 
 .topic-detail {
+  position: absolute;
+  z-index: 2;
+  top: clamp(1rem, 3vw, 2rem);
+  right: clamp(1rem, 3vw, 2rem);
   display: grid;
   gap: 0.45rem;
+  width: min(36%, 380px);
+  max-height: calc(100% - clamp(2rem, 6vw, 4rem));
+  overflow-y: auto;
   padding: clamp(1rem, 3vw, 1.5rem);
   border: 1px solid var(--color-line);
   border-left: 4px solid var(--color-yellow);
   background: var(--color-white);
   box-shadow: var(--shadow);
+}
+
+.topic-detail__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.topic-detail__close {
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  background: transparent;
+  color: var(--color-muted);
+  font: inherit;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.topic-detail__close:hover,
+.topic-detail__close:focus-visible {
+  color: var(--color-ink);
 }
 
 .topic-detail__eyebrow {
@@ -976,22 +1020,19 @@ h2 {
 }
 
 .topic-detail h3 {
-  max-width: 780px;
   margin: 0;
-  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  font-size: clamp(1.08rem, 2vw, 1.4rem);
   line-height: 1.2;
 }
 
 .topic-detail__summary {
-  max-width: 780px;
   margin: 0;
   color: var(--color-muted);
 }
 
 .topic-detail__meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  justify-items: start;
   gap: 1rem;
   margin-top: 0.45rem;
 }
@@ -1038,8 +1079,26 @@ h2 {
   }
 
   .topic-node circle,
-  .article-node circle {
+  .article-node circle,
+  .topic-landscape__stage svg {
     transition: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .topic-landscape__stage--detail-open svg {
+    transform: none;
+  }
+
+  .topic-detail {
+    position: relative;
+    inset: auto;
+    width: auto;
+    max-height: none;
+    border-right: 0;
+    border-bottom: 0;
+    border-left-width: 4px;
+    box-shadow: none;
   }
 }
 

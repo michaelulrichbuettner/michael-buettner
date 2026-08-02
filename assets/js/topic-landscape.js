@@ -6,11 +6,13 @@
   const status = root.querySelector("[data-topic-status]");
   const backButton = root.querySelector("[data-topic-back]");
   const detail = root.querySelector("[data-topic-detail]");
+  const stage = root.querySelector(".topic-landscape__stage");
   const fallback = root.querySelector("[data-topic-fallback]");
   const svgNamespace = "http://www.w3.org/2000/svg";
 
   let data = null;
   let selectedTopicId = null;
+  let selectedArticleNode = null;
   let compact = false;
 
   function svgElement(tagName, attributes = {}) {
@@ -129,8 +131,7 @@
     svg.append(links, createCenterNode(data.center, layout), nodes);
     status.textContent = "Themenfeld auswählen, um die zugehörigen Artikelpunkte zu öffnen.";
     backButton.hidden = true;
-    detail.hidden = true;
-    detail.replaceChildren();
+    clearArticleDetail();
   }
 
   function articlePositions(count, layout) {
@@ -162,10 +163,39 @@
     return positions;
   }
 
-  function renderArticleDetail(article, cluster) {
+  function clearArticleDetail() {
+    if (selectedArticleNode) {
+      selectedArticleNode.classList.remove("article-node--selected");
+      selectedArticleNode.setAttribute("aria-pressed", "false");
+    }
+    selectedArticleNode = null;
+    stage.classList.remove("topic-landscape__stage--detail-open");
+    detail.hidden = true;
+    detail.replaceChildren();
+  }
+
+  function renderArticleDetail(article, cluster, articleNode) {
+    if (selectedArticleNode && selectedArticleNode !== articleNode) {
+      selectedArticleNode.classList.remove("article-node--selected");
+      selectedArticleNode.setAttribute("aria-pressed", "false");
+    }
+    selectedArticleNode = articleNode;
+    selectedArticleNode.classList.add("article-node--selected");
+    selectedArticleNode.setAttribute("aria-pressed", "true");
+
     const eyebrow = document.createElement("p");
     eyebrow.className = "topic-detail__eyebrow";
     eyebrow.textContent = cluster.name;
+
+    const closeButton = document.createElement("button");
+    closeButton.className = "topic-detail__close";
+    closeButton.type = "button";
+    closeButton.textContent = "Schließen";
+    closeButton.setAttribute("aria-label", "Artikeldetails schließen");
+
+    const detailHeader = document.createElement("div");
+    detailHeader.className = "topic-detail__header";
+    detailHeader.append(eyebrow, closeButton);
 
     const title = document.createElement("h3");
     title.textContent = article.title;
@@ -195,8 +225,15 @@
     link.textContent = "Originalartikel öffnen";
     meta.append(link);
 
-    detail.replaceChildren(eyebrow, title, summary, meta);
+    detail.replaceChildren(detailHeader, title, summary, meta);
     detail.hidden = false;
+    stage.classList.add("topic-landscape__stage--detail-open");
+
+    closeButton.addEventListener("click", () => {
+      const nodeToFocus = selectedArticleNode;
+      clearArticleDetail();
+      nodeToFocus?.focus();
+    });
   }
 
   function createArticleNode(article, cluster, position, index) {
@@ -205,6 +242,7 @@
       transform: `translate(${position.x} ${position.y})`,
       tabindex: "0",
       role: "button",
+      "aria-pressed": "false",
       "aria-label": `Artikel ${index + 1}: ${article.title}`
     });
     group.append(svgElement("circle", { r: compact ? 12 : 13 }));
@@ -212,9 +250,7 @@
     number.textContent = index + 1;
     group.append(number);
 
-    const showDetail = () => renderArticleDetail(article, cluster);
-    group.addEventListener("mouseenter", showDetail);
-    group.addEventListener("focus", showDetail);
+    const showDetail = () => renderArticleDetail(article, cluster, group);
     activateWithKeyboard(group, showDetail);
     return group;
   }
@@ -238,8 +274,7 @@
     svg.append(orbits, createTopicNode(cluster, layout.centerX, layout.centerY, compact ? 72 : 82, true), articleNodes);
     status.textContent = `${cluster.articles.length} Artikel in „${cluster.name}“. Artikelpunkt auswählen oder das Themenfeld erneut anklicken.`;
     backButton.hidden = false;
-    detail.hidden = true;
-    detail.replaceChildren();
+    clearArticleDetail();
   }
 
   function selectTopic(topicId) {
