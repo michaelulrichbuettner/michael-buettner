@@ -777,6 +777,272 @@ h2 {
   text-underline-offset: 0.18em;
 }
 
+.topic-landscape {
+  display: grid;
+  gap: 1rem;
+}
+
+.topic-landscape [hidden] {
+  display: none;
+}
+
+.topic-landscape__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 48px;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.topic-landscape__toolbar p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.topic-landscape__back {
+  min-height: 40px;
+  padding-block: 0.5rem;
+  flex: 0 0 auto;
+}
+
+.topic-landscape__stage {
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  background:
+    radial-gradient(circle at center, rgba(255, 242, 199, 0.42), transparent 34%),
+    var(--color-white);
+  box-shadow: var(--shadow);
+}
+
+.topic-landscape__stage svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.topic-landscape__links line {
+  stroke: var(--color-line);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.topic-center-node circle {
+  fill: var(--color-ink);
+  stroke: var(--color-ink);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.topic-center-node__name,
+.topic-center-node__label,
+.topic-node__label,
+.topic-node__count,
+.article-node text {
+  pointer-events: none;
+  user-select: none;
+}
+
+.topic-center-node__name {
+  fill: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.topic-center-node__label {
+  fill: var(--color-line);
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.topic-node,
+.article-node {
+  cursor: pointer;
+  outline: none;
+}
+
+.topic-node circle {
+  fill: var(--color-yellow-soft);
+  stroke: var(--color-ink);
+  stroke-width: 1.6;
+  vector-effect: non-scaling-stroke;
+  transition: fill 180ms ease, stroke-width 180ms ease, transform 180ms ease;
+}
+
+.topic-node:hover circle,
+.topic-node:focus circle {
+  fill: var(--color-yellow);
+  stroke-width: 3;
+  transform: scale(1.035);
+}
+
+.topic-node--selected circle {
+  fill: var(--color-yellow);
+  stroke-width: 2.5;
+}
+
+.topic-node__label {
+  fill: var(--color-ink);
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.topic-node__count {
+  fill: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.topic-landscape__orbits circle {
+  fill: none;
+  stroke: var(--color-line);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.article-node circle {
+  fill: var(--color-white);
+  stroke: var(--color-ink);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+  transition: fill 160ms ease, stroke-width 160ms ease, transform 160ms ease;
+}
+
+.article-node text {
+  fill: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.article-node:hover circle,
+.article-node:focus circle {
+  fill: var(--color-yellow);
+  stroke-width: 3;
+  transform: scale(1.24);
+}
+
+.topic-landscape__nodes > *,
+.article-nodes > *,
+.topic-center-node,
+.topic-node--selected {
+  animation: topic-node-enter 240ms ease-out both;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.article-nodes > *:nth-child(3n + 2) {
+  animation-delay: 35ms;
+}
+
+.article-nodes > *:nth-child(3n) {
+  animation-delay: 70ms;
+}
+
+@keyframes topic-node-enter {
+  from {
+    opacity: 0;
+    scale: 0.88;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.topic-detail {
+  display: grid;
+  gap: 0.45rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid var(--color-line);
+  border-left: 4px solid var(--color-yellow);
+  background: var(--color-white);
+  box-shadow: var(--shadow);
+}
+
+.topic-detail__eyebrow {
+  margin: 0;
+  color: var(--color-yellow-dark);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.topic-detail h3 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  line-height: 1.2;
+}
+
+.topic-detail__summary {
+  max-width: 780px;
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.topic-detail__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.45rem;
+}
+
+.topic-detail__event {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.topic-detail__event svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--color-yellow-dark);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.topic-detail__link {
+  min-height: 40px;
+  padding-block: 0.5rem;
+  flex: 0 0 auto;
+}
+
+.topic-landscape__fallback {
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-white);
+  color: #8b1e1e;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topic-landscape__nodes > *,
+  .article-nodes > *,
+  .topic-center-node,
+  .topic-node--selected {
+    animation: none;
+  }
+
+  .topic-node circle,
+  .article-node circle {
+    transition: none;
+  }
+}
+
 .portfolio-news {
   padding: 0 clamp(0.75rem, 2vw, 1.25rem) clamp(1.25rem, 3vw, 2rem);
 }
@@ -1985,6 +2251,24 @@ h2 {
 
   .event-popup {
     max-height: 54vh;
+  }
+
+  .topic-landscape__toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .topic-landscape__back {
+    width: 100%;
+  }
+
+  .topic-detail__meta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .topic-detail__link {
+    width: 100%;
   }
 
   .bird-species-list li {

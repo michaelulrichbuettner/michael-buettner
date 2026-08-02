@@ -6,12 +6,13 @@
     <title>Arbeitsproben | Michael Büttner</title>
     <meta name="description" content="Texte, Arbeitsproben und Veröffentlichungen von Michael Büttner.">
     <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260802-2">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260802-4">
     <script src="assets/js/posts.js?v=20260722" defer></script>
     <script src="assets/js/main.js?v=20260702" defer></script>
     <script src="assets/vendor/leaflet/leaflet.js?v=1.9.4" defer></script>
     <script src="assets/vendor/topojson/topojson-client.min.js?v=3.1.0" defer></script>
     <script src="assets/js/event-map.js?v=20260802-2" defer></script>
+    <script src="assets/js/topic-landscape.js?v=20260802-2" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main" title="Zum Hauptinhalt springen">Zum Inhalt springen</a>
@@ -49,7 +50,34 @@
           <p class="event-map-source">Kartendaten: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a></p>
         </div>
       </section>
-      <section class="section section--soft">
+      <section class="section section--soft topic-portfolio">
+        <div class="wrap section-heading">
+          <p class="eyebrow">Thematische Bandbreite</p>
+          <h2>Themen und Schwerpunkte</h2>
+          <p class="lead">Ausgewählte Artikel nach Themen und Schwerpunkten - von Michael Büttner</p>
+        </div>
+        <div
+          class="wrap topic-landscape"
+          data-topic-landscape
+          data-source="assets/data/topic-articles.json"
+        >
+          <div class="topic-landscape__toolbar">
+            <p data-topic-status aria-live="polite">Themenfelder werden geladen …</p>
+            <button class="button button--secondary topic-landscape__back" type="button" data-topic-back hidden>Zur Übersicht</button>
+          </div>
+          <div class="topic-landscape__stage">
+            <svg
+              data-topic-svg
+              role="group"
+              aria-label="Interaktive Themenlandschaft mit acht Themenfeldern"
+              preserveAspectRatio="xMidYMid meet"
+            ></svg>
+          </div>
+          <article class="topic-detail" data-topic-detail aria-live="polite" hidden></article>
+          <p class="topic-landscape__fallback" data-topic-fallback hidden>Die Themenlandschaft konnte nicht geladen werden.</p>
+        </div>
+      </section>
+      <section class="section">
         <div class="wrap section-heading">
           <p class="eyebrow">Weitere Arbeitsproben</p>
           <h2>Eigene Texte und ausgewählte Veröffentlichungen.</h2>

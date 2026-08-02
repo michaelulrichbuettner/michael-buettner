@@ -1,0 +1,724 @@
+{
+  "center": {
+    "name": "Michael Büttner",
+    "label": "Journalist · Stratege · Produktdenker"
+  },
+  "clusters": [
+    {
+      "id": "smartphones-imaging",
+      "name": "Smartphones, Wearables & Imaging",
+      "shortName": "Smartphones & Imaging",
+      "description": "Mobile Geräte, neue Formfaktoren und visuelle Technologien",
+      "articles": [
+        {
+          "title": "Wechselobjektive für Smartphones: realme und Xiaomi gehen neue Wege",
+          "summary": "Eine redaktionelle Einordnung zu Smartphones, Kameratechnik und den dahinterliegenden Markt- oder Techniktrends.",
+          "url": "https://www.inside-digital.de/news/wechselobjektive-fuer-smartphones-realme-und-xiaomi-gehen-neue-wege",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "MWC 2025",
+          "location": "Barcelona",
+          "year": 2025
+        },
+        {
+          "title": "Smartphone oder Kamera? Xiaomi bringt 15 Ultra nach Deutschland",
+          "summary": "Eine praxisnahe Einordnung zu Smartphones, Kameratechnik, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/smartphone-oder-kamera-xiaomi-bringt-15-ultra-nach-deutschland",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "MWC 2025",
+          "location": "Barcelona",
+          "year": 2025
+        },
+        {
+          "title": "Oppo ist zurück: Doch dieses Highlight gibts für Deutsche nicht",
+          "summary": "Eine praxisnahe Einordnung zu Smartphones, Smart Glasses, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/oppo-ist-zurueck-doch-dieses-highlight-gibts-fuer-deutsche-nicht",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "MWC 2024",
+          "location": "Barcelona",
+          "year": 2024
+        },
+        {
+          "title": "Angriff aus China: Müssen sich Samsung und Motorola jetzt Sorgen machen?",
+          "summary": "Eine redaktionelle Einordnung zu Foldables, Smartphones und den dahinterliegenden Markt- oder Techniktrends.",
+          "url": "https://www.inside-digital.de/news/angriff-aus-china-muessen-sich-samsung-und-motorola-jetzt-sorgen-machen",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "MWC 2024",
+          "location": "Barcelona",
+          "year": 2024
+        },
+        {
+          "title": "Sonnenbrille mit smartem Trick: Das kann noch keine andere Brille",
+          "summary": "Eine praxisnahe Einordnung zu Smart Glasses, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/sonnenbrille-mit-smartem-trick-das-kann-noch-keine-andere-brille",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "CES 2024",
+          "location": "Las Vegas",
+          "year": 2024
+        },
+        {
+          "title": "Smartes Fernglas: Edelschmiede baut Traum für Outdoor-Fans",
+          "summary": "Eine praxisnahe Einordnung zu Optik, Bilderkennung, Outdoor, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/smartes-fernglas-edelschmiede-baut-traum-fuer-outdoor-fans",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "CES 2024",
+          "location": "Las Vegas",
+          "year": 2024
+        },
+        {
+          "title": "LG G8X ThinQ: Dual-Screen-Smartphone zum Anstecken",
+          "summary": "Eine praxisnahe Einordnung zu Smartphones, Dual Screen, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/lg-g8x-thinq-dual-screen-smartphone-zum-anstecken",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "IFA 2019",
+          "location": "Berlin",
+          "year": 2019
+        },
+        {
+          "title": "Nokia 7.2 vorgestellt: Dicker Kerl mit Zeiss-Augen",
+          "summary": "Eine kompakte Produktvorstellung aus dem Bereich Smartphones, Kamera mit Blick auf die wichtigsten Besonderheiten.",
+          "url": "https://www.inside-digital.de/news/nokia-7-2-vorgestellt-dicker-kerl-mit-zeiss-augen",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "IFA 2019",
+          "location": "Berlin",
+          "year": 2019
+        },
+        {
+          "title": "WhatsApp für die Silver Surfer: Klappsmartphone mit speziellem Button",
+          "summary": "Eine kompakte Produktvorstellung aus dem Bereich Smartphones, Senioren mit Blick auf die wichtigsten Besonderheiten.",
+          "url": "https://www.inside-digital.de/news/whatsapp-fuer-die-silver-surfer-klappsmartphone-mit-speziellem-button",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "MWC 2019",
+          "location": "Barcelona",
+          "year": 2019
+        },
+        {
+          "title": "Falthandy für alle: TCL probt den Display-Aufstand gegen Samsung und LG",
+          "summary": "Eine redaktionelle Einordnung zu Foldables, Displays und den dahinterliegenden Markt- oder Techniktrends.",
+          "url": "https://www.inside-digital.de/news/falthandy-fuer-alle-tcl-probt-den-display-aufstand-gegen-samsung-und-lg",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "MWC 2019",
+          "location": "Barcelona",
+          "year": 2019
+        },
+        {
+          "title": "Essential Phone im Hands-On: Harte Kanten, weiche Kurven",
+          "summary": "Eine praxisnahe Einordnung zu Smartphones, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/47716-essential-phone-hands-on",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "CES 2018",
+          "location": "Las Vegas",
+          "year": 2018
+        },
+        {
+          "title": "Alcatel-Chef Theumer: „Nummer Vier ist ein Ziel, das keinen zufrieden stellen kann“",
+          "summary": "Ein Interview, das Markt- und Produktperspektiven rund um Unternehmensstrategie, Smartphones verbindet.",
+          "url": "https://www.inside-digital.de/news/46366-alcatel-strategie",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "IFA 2017",
+          "location": "Berlin",
+          "year": 2017
+        },
+        {
+          "title": "Samsung Galaxy S24 angefasst: Der erste Eindruck überzeugt!",
+          "summary": "Eine praxisnahe Einordnung zu Smartphones, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/samsung-galaxy-s24-angefasst-der-erste-eindruck-ueberzeugt",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "CES 2024",
+          "location": "Las Vegas",
+          "year": 2024
+        },
+        {
+          "title": "Samsung Galaxy S24 Plus im Hands-On: Der beste Kompromiss?",
+          "summary": "Eine praxisnahe Einordnung zu Smartphones, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/samsung-galaxy-s24-plus-im-hands-on-der-beste-kompromiss",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "CES 2024",
+          "location": "Las Vegas",
+          "year": 2024
+        },
+        {
+          "title": "Samsung Galaxy S24 Ultra im ersten Test: Lohnt der Stift?",
+          "summary": "Eine praxisnahe Einordnung zu Smartphones, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/samsung-galaxy-s24-ultra-im-ersten-test-lohnt-der-stift",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "CES 2024",
+          "location": "Las Vegas",
+          "year": 2024
+        },
+        {
+          "title": "Nokia 8110 im Schnelltest: Die Banane ist zurück",
+          "summary": "Eine praxisnahe Einordnung zu Feature Phones, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/34700-nokia-8110-4g-im-schnelltest",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "MWC 2018",
+          "location": "Barcelona",
+          "year": 2018
+        },
+        {
+          "title": "Apple iPhone 16 Pro im Test: Top-Smartphone – aber ohne KI",
+          "summary": "Eine praxisnahe Einordnung zu Smartphones, KI, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/apple-iphone-16-pro-im-test",
+          "topic": "smartphones-imaging",
+          "eventBased": false
+        },
+        {
+          "title": "Beste Kamera-Objektive: Das ist die aktuelle Top 10",
+          "summary": "Ein kompakter Ratgeber zu Kamera, Objektive mit konkreter Orientierung für Leserinnen und Leser.",
+          "url": "https://www.inside-digital.de/ratgeber/beste-kamera-objektive",
+          "topic": "smartphones-imaging",
+          "eventBased": false
+        },
+        {
+          "title": "Achtung Samsung: Hier kommt die Liste der neuen Smartphone-Konkurrenten 2026",
+          "summary": "Eine redaktionelle Einordnung zu Smartphones, Qualcomm, Wettbewerb und den dahinterliegenden Markt- oder Techniktrends.",
+          "url": "https://www.inside-digital.de/news/achtung-samsung-hier-kommt-die-liste-der-neuen-konkurrenten-2026",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "Snapdragon Summit Hawaii 2025",
+          "location": "Maui",
+          "year": 2025
+        },
+        {
+          "title": "Smartphones 2026: Das sind die neuen Funktionen",
+          "summary": "Eine redaktionelle Einordnung zu Smartphones, KI, On-Device-AI, Qualcomm und den dahinterliegenden Markt- oder Techniktrends.",
+          "url": "https://www.inside-digital.de/news/smartphones-2026-die-neuen-funktionen",
+          "topic": "smartphones-imaging",
+          "eventBased": true,
+          "eventName": "Snapdragon Summit Hawaii 2025",
+          "location": "Maui",
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "id": "ebikes",
+      "name": "E-Bikes & Fahrradtechnik",
+      "shortName": "E-Bikes & Fahrradtechnik",
+      "description": "Antriebe, Komponenten, Sicherheit und Mobilität auf zwei Rädern",
+      "articles": [
+        {
+          "title": "Keine Chance für Diebe: E-Bikes werden viel sicherer",
+          "summary": "Eine redaktionelle Einordnung zu E-Bikes, Diebstahlschutz und den dahinterliegenden Markt- oder Techniktrends.",
+          "url": "https://www.inside-digital.de/news/keine-chance-fuer-diebe-e-bikes-werden-viel-sicherer",
+          "topic": "ebikes",
+          "eventBased": true,
+          "eventName": "CES 2025",
+          "location": "Las Vegas",
+          "year": 2025
+        },
+        {
+          "title": "Brompton Electric G Line: Revolution zum Klappen",
+          "summary": "Eine praxisnahe Einordnung zu E-Bikes, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/brompton-electric-g-line-revolution-zum-klappen",
+          "topic": "ebikes",
+          "eventBased": false
+        },
+        {
+          "title": "Kleine Revolution: Ist das der neue Standard für die E-Bike-Welt?",
+          "summary": "Eine redaktionelle Einordnung zu E-Bikes, Reifen und den dahinterliegenden Markt- oder Techniktrends.",
+          "url": "https://www.inside-digital.de/news/kleine-revolution-ist-das-der-neue-standard-fuer-die-e-bike-welt",
+          "topic": "ebikes",
+          "eventBased": true,
+          "eventName": "Eurobike 2024",
+          "location": "Frankfurt",
+          "year": 2024
+        },
+        {
+          "title": "E-Bikes mit satten Rabatten: So entstehen die Angebote",
+          "summary": "Ein Interview, das Markt- und Produktperspektiven rund um E-Bikes, Gebrauchtmarkt verbindet.",
+          "url": "https://www.inside-digital.de/news/e-bikes-mit-satten-rabatten-so-entstehen-die-angebote",
+          "topic": "ebikes",
+          "eventBased": true,
+          "eventName": "Eurobike 2024",
+          "location": "Frankfurt",
+          "year": 2024
+        },
+        {
+          "title": "Low-Tech-Bike: Mit diesem Trick wird das Buffalo Utility S2 zur Bergziege",
+          "summary": "Ein Beitrag über eine technische Neuerung aus dem Bereich Fahrrad, Nachhaltigkeit und ihre praktische Bedeutung.",
+          "url": "https://www.inside-digital.de/news/low-tech-bike-mit-diesem-trick-wird-das-buffalo-utility-s2-zur-bergziege",
+          "topic": "ebikes",
+          "eventBased": true,
+          "eventName": "Eurobike 2024",
+          "location": "Frankfurt",
+          "year": 2024
+        },
+        {
+          "title": "Nicht verpassen: Neue E-Bikes und die wichtigsten Trends 2024",
+          "summary": "Eine redaktionelle Einordnung zu E-Bikes und den dahinterliegenden Markt- oder Techniktrends.",
+          "url": "https://www.inside-digital.de/news/nicht-verpassen-neue-e-bikes-und-die-wichtigsten-trends-2024",
+          "topic": "ebikes",
+          "eventBased": false
+        },
+        {
+          "title": "Neues SUV-E-Bike ausprobiert: Damit habe ich nicht gerechnet",
+          "summary": "Eine praxisnahe Einordnung zu E-Bikes, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/neues-suv-e-bike-ausprobiert-damit-habe-ich-nicht-gerechnet",
+          "topic": "ebikes",
+          "eventBased": true,
+          "eventName": "Eurobike 2023",
+          "location": "Frankfurt",
+          "year": 2023
+        },
+        {
+          "title": "Automatik fürs E-Bike vorgestellt: Nie wieder im falschen Gang",
+          "summary": "Eine praxisnahe Einordnung zu E-Bikes, Schaltung, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/automatik-fuers-e-bike-vorgestellt-nie-wieder-im-falschen-gang",
+          "topic": "ebikes",
+          "eventBased": true,
+          "eventName": "Eurobike 2023",
+          "location": "Frankfurt",
+          "year": 2023
+        },
+        {
+          "title": "Bosch bringt Mega-Reichweite, E-Schaltung und Diebstahlschutz im Abo",
+          "summary": "Ein kuratierter Überblick über relevante Neuheiten und Entwicklungen im Bereich E-Bikes, Bosch.",
+          "url": "https://www.inside-digital.de/news/bosch-bringt-mega-reichweite-e-schaltung-und-diebstahlschutz-im-abo",
+          "topic": "ebikes",
+          "eventBased": true,
+          "eventName": "Eurobike 2023",
+          "location": "Frankfurt",
+          "year": 2023
+        },
+        {
+          "title": "Testfahrt mit superkompaktem E-Bike: Keiner klappt kleiner",
+          "summary": "Eine praxisnahe Einordnung zu E-Bikes, Klappräder, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/testfahrt-mit-superkompaktem-e-bike-keiner-klappt-kleiner",
+          "topic": "ebikes",
+          "eventBased": false
+        },
+        {
+          "title": "E-Bike: Reifendruckkontrolle per Bluetooth aufs Handy oder die Smartwatch",
+          "summary": "Ein Beitrag über eine technische Neuerung aus dem Bereich E-Bikes, Sensorik und ihre praktische Bedeutung.",
+          "url": "https://www.inside-digital.de/news/e-bike-reifendruckkontrolle-per-bluetooth-aufs-handy-oder-die-smartwatch",
+          "topic": "ebikes",
+          "eventBased": true,
+          "eventName": "Eurobike 2022",
+          "location": "Frankfurt",
+          "year": 2022
+        },
+        {
+          "title": "Porsche-E-Bike: So fährt sich das Edel-Rad mit Rückfahrkamera",
+          "summary": "Eine praxisnahe Einordnung zu E-Bikes, Kameratechnik, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/porsche-e-bike-so-faehrt-sich-das-edel-rad-mit-rueckfahrkamera",
+          "topic": "ebikes",
+          "eventBased": true,
+          "eventName": "Eurobike 2022",
+          "location": "Frankfurt",
+          "year": 2022
+        },
+        {
+          "title": "Automatik fürs E-Bike: Radeln ohne Schalten ausprobiert",
+          "summary": "Eine praxisnahe Einordnung zu E-Bikes, Schaltung, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/automatik-fuers-e-bike-radeln-ohne-schalten-ausprobiert",
+          "topic": "ebikes",
+          "eventBased": true,
+          "eventName": "Eurobike 2022",
+          "location": "Frankfurt",
+          "year": 2022
+        },
+        {
+          "title": "E-Bikes mit ABS von Bosch und Shimano: So fährt sich die Technik",
+          "summary": "Eine praxisnahe Einordnung zu E-Bikes, Sicherheit, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/e-bikes-mit-abs-von-bosch-und-shimano-so-faehrt-sich-die-technik",
+          "topic": "ebikes",
+          "eventBased": true,
+          "eventName": "Eurobike 2022",
+          "location": "Frankfurt",
+          "year": 2022
+        },
+        {
+          "title": "Ausprobiert: So fährt sich die neue Berganfahrhilfe für E-Bikes von Bosch",
+          "summary": "Eine praxisnahe Einordnung zu E-Bikes, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/ausprobiert-so-faehrt-sich-die-neue-berganfahrhilfe-fuer-e-bikes-von-bosch",
+          "topic": "ebikes",
+          "eventBased": true,
+          "eventName": "Bosch E-Bike Event 2024",
+          "year": 2024
+        },
+        {
+          "title": "Neues E-Bike, neue Schaltung: So fährt sich die 3×3 Nine im Vello Sub",
+          "summary": "Eine praxisnahe Einordnung zu E-Bikes, Schaltung, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/3x3-nine-vello-sub-test",
+          "topic": "ebikes",
+          "eventBased": false
+        },
+        {
+          "title": "Neuer Konkurrent für Bosch: Deutscher Autozulieferer zeigt E-Bike-Motor",
+          "summary": "Eine praxisnahe Einordnung zu E-Bikes, Motoren, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/neuer-konkurrent-fuer-bosch-deutscher-autozulieferer-zeigt-e-bike-motor",
+          "topic": "ebikes",
+          "eventBased": true,
+          "eventName": "Eurobike 2024",
+          "location": "Frankfurt",
+          "year": 2024
+        },
+        {
+          "title": "Neues Gravel-E-Bike ausprobiert: Schickes Design und clevere Details",
+          "summary": "Eine praxisnahe Einordnung zu E-Bikes, Gravel, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/gravel-e-bike-ausprobiert",
+          "topic": "ebikes",
+          "eventBased": false
+        }
+      ]
+    },
+    {
+      "id": "computing-ai",
+      "name": "Computing, KI & Konnektivität",
+      "shortName": "Computing, KI & Netze",
+      "description": "Laptops, künstliche Intelligenz und vernetzte Infrastrukturen",
+      "articles": [
+        {
+          "title": "MWC 2025: Diese Highlights der Messe sind ausgezeichnet!",
+          "summary": "Ein kuratierter Überblick über relevante Neuheiten und Entwicklungen im Bereich Consumer Electronics.",
+          "url": "https://www.inside-digital.de/news/mwc-2025-das-sind-die-highlights-der-messe",
+          "topic": "computing-ai",
+          "eventBased": true,
+          "eventName": "MWC 2025",
+          "location": "Barcelona",
+          "year": 2025
+        },
+        {
+          "title": "Die Highlights der IFA 2024: Mehr als nur KI",
+          "summary": "Ein kuratierter Überblick über relevante Neuheiten und Entwicklungen im Bereich Consumer Electronics, KI.",
+          "url": "https://www.inside-digital.de/news/die-highlight-der-ifa-2024-mehr-als-nur-ki",
+          "topic": "computing-ai",
+          "eventBased": true,
+          "eventName": "IFA 2024",
+          "location": "Berlin",
+          "year": 2024
+        },
+        {
+          "title": "Telekom kündigt revolutionären Dienst an: Milliarden Kundendaten stehen bereit",
+          "summary": "Eine redaktionelle Einordnung zu Telekommunikation, Daten und den dahinterliegenden Markt- oder Techniktrends.",
+          "url": "https://www.inside-digital.de/news/telekom-kuendigt-revolutionaeren-dienst-an-milliarden-kundendaten-stehen-bereit",
+          "topic": "computing-ai",
+          "eventBased": true,
+          "eventName": "MWC 2024",
+          "location": "Barcelona",
+          "year": 2024
+        },
+        {
+          "title": "3D mit echtem Comeback: Diese Monitore begeistern auf der CES 2024",
+          "summary": "Eine praxisnahe Einordnung zu Displays, Laptops, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/3d-mit-echtem-comeback-diese-monitore-und-laptops-begeistern-auf-der-ces-2024",
+          "topic": "computing-ai",
+          "eventBased": true,
+          "eventName": "CES 2024",
+          "location": "Las Vegas",
+          "year": 2024
+        },
+        {
+          "title": "Mit Motor: Lenovo erfindet den Laptop neu",
+          "summary": "Eine praxisnahe Einordnung zu Laptops, Displays, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/mit-motor-lenovo-erfindet-den-laptop-neu",
+          "topic": "computing-ai",
+          "eventBased": true,
+          "eventName": "MWC 2023",
+          "location": "Barcelona",
+          "year": 2023
+        },
+        {
+          "title": "Endlich einfach: Diesen Laptop kann jedes Kind reparieren",
+          "summary": "Ein Beitrag über eine technische Neuerung aus dem Bereich Laptops, Reparierbarkeit und ihre praktische Bedeutung.",
+          "url": "https://www.inside-digital.de/news/endlich-einfach-diesen-laptop-kann-jedes-kind-reparieren",
+          "topic": "computing-ai",
+          "eventBased": true,
+          "eventName": "CES 2023",
+          "location": "Las Vegas",
+          "year": 2023
+        },
+        {
+          "title": "WLAN 7 und Bluetooth 5.3: Qualcomm zeigt neue Funkstandards",
+          "summary": "Ein redaktioneller Beitrag aus dem Bereich Funkstandards, der Technik und Nutzwert verständlich zusammenführt.",
+          "url": "https://www.inside-digital.de/news/wlan-7-und-bluetooth-5-3-qualcomm-zeigt-neue-funkstandards",
+          "topic": "computing-ai",
+          "eventBased": true,
+          "eventName": "MWC 2022",
+          "location": "Barcelona",
+          "year": 2022
+        },
+        {
+          "title": "Niu RQi Sport: So leichtfüßig fährt sich das E-Motorrad für den 125er-Schein",
+          "summary": "Eine praxisnahe Einordnung zu E-Motorräder, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/niu-rqi-sport-test",
+          "topic": "computing-ai",
+          "eventBased": false
+        },
+        {
+          "title": "125er-Führerschein fürs E-Motorrad: Diese Grenzen gibt es",
+          "summary": "Ein kompakter Ratgeber zu E-Motorräder, Führerschein mit konkreter Orientierung für Leserinnen und Leser.",
+          "url": "https://www.inside-digital.de/ratgeber/125er-fuehrerschein-fuers-e-motorrad-diese-fuehrerscheine-gibt-es",
+          "topic": "computing-ai",
+          "eventBased": false,
+          "year": 2025
+        },
+        {
+          "title": "Ohne Internet: Diese KI kommt noch in diesem Jahr auf viele Laptops",
+          "summary": "Eine praxisnahe Einordnung zu KI, On-Device-AI, Laptops, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/ohne-internet-diese-ki-kommt-noch-in-diesem-jahr-auf-viele-laptops",
+          "topic": "computing-ai",
+          "eventBased": true,
+          "eventName": "Snapdragon AI Event London 2024",
+          "location": "London",
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "id": "mobility",
+      "name": "Autos, E-Motorräder & vernetzte Mobilität",
+      "shortName": "Vernetzte Mobilität",
+      "description": "Elektromobilität, Fahrberichte und neue Verkehrskonzepte",
+      "articles": [
+        {
+          "title": "Yamaha präsentiert: Alien-Bikes und irre Autos",
+          "summary": "Eine redaktionelle Einordnung zu Mobilität, Konzeptfahrzeuge und den dahinterliegenden Markt- oder Techniktrends.",
+          "url": "https://www.inside-digital.de/news/yamaha-alien-bike-und-verrueckte-autos",
+          "topic": "mobility",
+          "eventBased": true,
+          "eventName": "Japan Mobility Show 2023",
+          "location": "Tokio",
+          "year": 2023
+        },
+        {
+          "title": "Telekom verbindet Fahrrad mit Auto: Das kommt dabei heraus",
+          "summary": "Ein Beitrag über eine technische Neuerung aus dem Bereich Vernetzte Mobilität und ihre praktische Bedeutung.",
+          "url": "https://www.inside-digital.de/news/telekom-verbindet-fahrrad-mit-auto-das-kommt-dabei-heraus",
+          "topic": "mobility",
+          "eventBased": true,
+          "eventName": "MWC 2023",
+          "location": "Barcelona",
+          "year": 2023
+        },
+        {
+          "title": "Auto aufrüsten: Dieses neue System macht dein altes Auto smart und sicher",
+          "summary": "Ein Beitrag über eine technische Neuerung aus dem Bereich Auto, Assistenzsysteme und ihre praktische Bedeutung.",
+          "url": "https://www.inside-digital.de/news/auto-aufruesten-dieses-neue-system-macht-dein-altes-auto-smart-und-sicher",
+          "topic": "mobility",
+          "eventBased": true,
+          "eventName": "CES 2022",
+          "location": "Las Vegas",
+          "year": 2022
+        },
+        {
+          "title": "Porsche Taycan 4S Testdrive: So normal kann sich ein Porsche fahren",
+          "summary": "Eine praxisnahe Einordnung zu E-Autos, Sportwagen, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/porsche-taycan-4s-testdrive-so-normal-kann-sich-ein-porsche-fahren",
+          "topic": "mobility",
+          "eventBased": true,
+          "eventName": "IAA 2023",
+          "location": "München",
+          "year": 2023
+        },
+        {
+          "title": "VW ID. Buzz: Wie viel Bulli steckt im Elektro-Bus?",
+          "summary": "Eine praxisnahe Einordnung zu E-Autos, Vans, Mobilität, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/vw-id-buzz-wie-viel-bulli-steckt-im-elektro-bus",
+          "topic": "mobility",
+          "eventBased": true,
+          "eventName": "IAA 2023",
+          "location": "München",
+          "year": 2023
+        }
+      ]
+    },
+    {
+      "id": "audio-leisure",
+      "name": "Audio, Entertainment & digitale Freizeit",
+      "shortName": "Audio & digitale Freizeit",
+      "description": "Klang, Heimkino, Spielwaren und digital erweiterte Freizeit",
+      "articles": [
+        {
+          "title": "Ankers Model Zero und der Monsterakku PowerHouse 200 im Hands-On",
+          "summary": "Eine praxisnahe Einordnung zu Zubehör, Energie, Audio, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/47680-anker-monsterakku-im-kurztest",
+          "topic": "audio-leisure",
+          "eventBased": true,
+          "eventName": "CES 2018",
+          "location": "Las Vegas",
+          "year": 2018
+        },
+        {
+          "title": "Carrera Hybrid im Test: Wie digital geht analog?",
+          "summary": "Eine praxisnahe Einordnung zu Spielwaren, Digitalisierung, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/carrera-hybrid-im-test-wie-digital-geht-analog",
+          "topic": "audio-leisure",
+          "eventBased": false,
+          "year": 2025
+        },
+        {
+          "title": "Samsung Music Frame: Lohnt sich der 500-Euro-Bilderrahmen?",
+          "summary": "Eine praxisnahe Einordnung zu Audio, Design, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/tests/samsung-music-frame-test",
+          "topic": "audio-leisure",
+          "eventBased": false
+        },
+        {
+          "title": "Bluetooth: Geniales Feature ist noch vollkommen unbekannt",
+          "summary": "Ein kompakter Ratgeber zu Bluetooth, Audio mit konkreter Orientierung für Leserinnen und Leser.",
+          "url": "https://www.inside-digital.de/ratgeber/bluetooth-auracast-geniales-feature-ist-noch-vollkommen-unbekannt",
+          "topic": "audio-leisure",
+          "eventBased": true,
+          "eventName": "CES 2024",
+          "location": "Las Vegas",
+          "year": 2024
+        },
+        {
+          "title": "Lego 2025: Diese Alternativen gibt es zum beliebten Hersteller",
+          "summary": "Ein kompakter Ratgeber zu Klemmbausteine mit konkreter Orientierung für Leserinnen und Leser.",
+          "url": "https://www.inside-digital.de/ratgeber/lego-alternativen",
+          "topic": "audio-leisure",
+          "eventBased": false
+        },
+        {
+          "title": "Revolution beim Heimkino: Jetzt ist es egal, wo deine Lautsprecher stehen",
+          "summary": "Ein kompakter Ratgeber zu Audio, Heimkino, Dolby Atmos mit konkreter Orientierung für Leserinnen und Leser.",
+          "url": "https://www.inside-digital.de/ratgeber/revolution-beim-heimkino-dolby-atmos-flex-connect",
+          "topic": "audio-leisure",
+          "eventBased": true,
+          "eventName": "CES 2024",
+          "location": "Las Vegas",
+          "year": 2024
+        }
+      ]
+    },
+    {
+      "id": "health-fitness",
+      "name": "Digital Health & Fitness",
+      "shortName": "Digital Health & Fitness",
+      "description": "Digitale Gesundheit, Training und intelligente Fitnesslösungen",
+      "articles": [
+        {
+          "title": "SunLED: Eine kleine Sonne für deinen Bildschirm",
+          "summary": "Eine praxisnahe Einordnung zu Digital Health, Lichttechnik, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/sunled-eine-kleine-sonne-fuer-deinen-bildschirm",
+          "topic": "health-fitness",
+          "eventBased": true,
+          "eventName": "CES 2025",
+          "location": "Las Vegas",
+          "year": 2025
+        },
+        {
+          "title": "Schluss mit hässlichen Gewichten: Dieses Fitnessstudio passt hinter deine Tür",
+          "summary": "Eine praxisnahe Einordnung zu Fitness-Technik, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/schluss-mit-haesslichen-gewichten-dieses-fitnessstudio-passt-hinter-deine-tuer",
+          "topic": "health-fitness",
+          "eventBased": true,
+          "eventName": "FIBO 2024",
+          "location": "Köln",
+          "year": 2024
+        },
+        {
+          "title": "Fitnessstudio für die Jackentasche: Das kann das Unitree Pump",
+          "summary": "Eine praxisnahe Einordnung zu Fitness-Technik, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/fitnessstudio-fuer-die-jackentasche-das-kann-das-unitree-pump",
+          "topic": "health-fitness",
+          "eventBased": true,
+          "eventName": "FIBO 2024",
+          "location": "Köln",
+          "year": 2024
+        },
+        {
+          "title": "Fieberthermometer auf Steroiden: Withings zeigt BeamO",
+          "summary": "Ein Beitrag über eine technische Neuerung aus dem Bereich Digital Health und ihre praktische Bedeutung.",
+          "url": "https://www.inside-digital.de/news/fieberthermometer-auf-steroiden-withings-zeigt-beamo",
+          "topic": "health-fitness",
+          "eventBased": true,
+          "eventName": "CES 2024",
+          "location": "Las Vegas",
+          "year": 2024
+        },
+        {
+          "title": "Smartphone wird zum Trainer: Diese App passt jetzt auf, dass du richtig trainierst",
+          "summary": "Eine praxisnahe Einordnung zu Fitness-App, KI, gestützt auf eigene Produkt- oder Nutzungserfahrung.",
+          "url": "https://www.inside-digital.de/news/smartphone-wird-zum-trainer-jrny-app-passt-jetzt-auf-dass-du-richtig-trainierst",
+          "topic": "health-fitness",
+          "eventBased": true,
+          "eventName": "FIBO 2023",
+          "location": "Köln",
+          "year": 2023
+        }
+      ]
+    },
+    {
+      "id": "smart-sustainable",
+      "name": "Smart Home, Robotik & nachhaltige Technik",
+      "shortName": "Smart & nachhaltige Technik",
+      "description": "Vernetztes Wohnen, Robotik und ressourcenschonende Innovationen",
+      "articles": [
+        {
+          "title": "Persil, Perwoll und Co. bekommen KI-Upgrade: Deutscher Hersteller will das Waschen revolutionieren",
+          "summary": "Ein Beitrag über eine technische Neuerung aus dem Bereich KI, Haushalt und ihre praktische Bedeutung.",
+          "url": "https://www.inside-digital.de/news/persil-perwoll-und-co-bekommen-ki-upgrade-deutscher-hersteller-will-das-waschen-revolutionieren",
+          "topic": "smart-sustainable",
+          "eventBased": true,
+          "eventName": "CES 2025",
+          "location": "Las Vegas",
+          "year": 2025
+        },
+        {
+          "title": "Ein Monat autark: Neue Powerstation machts möglich",
+          "summary": "Ein Beitrag über eine technische Neuerung aus dem Bereich Stromspeicher, Energie und ihre praktische Bedeutung.",
+          "url": "https://www.inside-digital.de/news/ein-monat-autark-neue-powerstation-machts-moeglich",
+          "topic": "smart-sustainable",
+          "eventBased": true,
+          "eventName": "CES 2024",
+          "location": "Las Vegas",
+          "year": 2024
+        },
+        {
+          "title": "Müllfressender Hai: Dieser Roboter macht Gewässer autonom sauber",
+          "summary": "Ein redaktioneller Beitrag aus dem Bereich Robotik, Nachhaltigkeit, der Technik und Nutzwert verständlich zusammenführt.",
+          "url": "https://www.inside-digital.de/news/muellfressender-hai-dieser-roboter-macht-gewaesser-autonom-sauber",
+          "topic": "smart-sustainable",
+          "eventBased": true,
+          "eventName": "Digital X 2023",
+          "location": "Köln",
+          "year": 2023
+        },
+        {
+          "title": "Netatmo: Intelligente Videotürklingel für Apple Homekit vorgestellt",
+          "summary": "Eine kompakte Produktvorstellung aus dem Bereich Smart Home, Sicherheit mit Blick auf die wichtigsten Besonderheiten.",
+          "url": "https://www.inside-digital.de/news/netatmo-intelligente-videotuerklingel-vorgestellt",
+          "topic": "smart-sustainable",
+          "eventBased": true,
+          "eventName": "CES 2019",
+          "location": "Las Vegas",
+          "year": 2019
+        }
+      ]
+    },
+    {
+      "id": "data-orientation",
+      "name": "Datenvisualisierung & digitale Orientierung",
+      "shortName": "Daten & Orientierung",
+      "description": "Werkzeuge, die komplexe Daten verständlich und nutzbar machen",
+      "articles": [
+        {
+          "title": "Wie weit kommst du mit der Bahn in welcher Zeit? Diese Karte zeigt es dir",
+          "summary": "Ein kompakter Ratgeber zu Bahn, Datenvisualisierung mit konkreter Orientierung für Leserinnen und Leser.",
+          "url": "https://www.inside-digital.de/ratgeber/wie-weit-kommst-du-mit-der-bahn-karte",
+          "topic": "data-orientation",
+          "eventBased": false
+        }
+      ]
+    }
+  ]
+}
