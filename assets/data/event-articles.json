@@ -98,20 +98,5 @@
         { "event": "IAA 2023", "date": "2023-09-07", "title": "Porsche Taycan 4S Testdrive: So normal kann sich ein Porsche fahren", "url": "https://www.inside-digital.de/tests/porsche-taycan-4s-testdrive-so-normal-kann-sich-ein-porsche-fahren" }
       ]
     }
-  ],
-  "statistics": {
-    "includedArticles": 35,
-    "eventLocations": 7,
-    "remainingRelevantArticles": 22,
-    "olderEventArticles": 12,
-    "remainingTopics": [
-      { "name": "E-Bikes, Fahrräder und weitere Mobilität", "count": 9 },
-      { "name": "Smartphones und Consumer Tech", "count": 5 },
-      { "name": "Fitness und Gesundheit", "count": 3 },
-      { "name": "Klemmbausteine und digitales Spielzeug", "count": 2 },
-      { "name": "Audio und Design", "count": 1 },
-      { "name": "Datenvisualisierung", "count": 1 },
-      { "name": "Kamera und Fotografie", "count": 1 }
-    ]
-  }
+  ]
 }

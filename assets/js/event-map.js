@@ -2,10 +2,8 @@
   const mapElement = document.querySelector("[data-event-map]");
   const statusElement = document.querySelector("[data-event-map-status]");
   const locationListElement = document.querySelector("[data-event-location-list]");
-  const statsElement = document.querySelector("[data-event-stats]");
-  const topicsElement = document.querySelector("[data-event-topics]");
 
-  if (!mapElement || !statusElement || !locationListElement || !statsElement || !topicsElement) return;
+  if (!mapElement || !statusElement || !locationListElement) return;
 
   function escapeHtml(value) {
     return String(value)
@@ -49,22 +47,39 @@
     `;
   }
 
-  function renderStatistics(statistics) {
-    statsElement.innerHTML = `
-      <span><strong>${statistics.includedArticles}</strong> Artikel eingebaut</span>
-      <span><strong>${statistics.eventLocations}</strong> Event-Orte</span>
-      <span><strong>${statistics.remainingRelevantArticles}</strong> Artikel für das Themen-Visual vorgemerkt</span>
-    `;
+  function unwrapRing(ring) {
+    let offset = 0;
+    let previousLongitude = ring[0]?.[0] || 0;
 
-    topicsElement.innerHTML = `
-      <p>${statistics.remainingRelevantArticles} relevante Artikel sind keinem der sieben Event-Orte zugeordnet und bleiben für das zweite Visual vorgemerkt.</p>
-      <ul>
-        ${statistics.remainingTopics
-          .map((topic) => `<li><span>${escapeHtml(topic.name)}</span><strong>${topic.count}</strong></li>`)
-          .join("")}
-      </ul>
-      <p class="event-topics__note">Zusätzlich liegen ${statistics.olderEventArticles} relevante Event-Artikel außerhalb des hier verwendeten Zeitraums.</p>
-    `;
+    return ring.map((position, index) => {
+      let longitude = position[0] + offset;
+      if (index > 0) {
+        const difference = longitude - previousLongitude;
+        if (difference > 180) {
+          offset -= 360;
+          longitude -= 360;
+        } else if (difference < -180) {
+          offset += 360;
+          longitude += 360;
+        }
+      }
+      previousLongitude = longitude;
+      return [longitude, position[1]];
+    });
+  }
+
+  function unwrapGeometry(geometry) {
+    if (!geometry) return geometry;
+    if (geometry.type === "Polygon") {
+      return { ...geometry, coordinates: geometry.coordinates.map(unwrapRing) };
+    }
+    if (geometry.type === "MultiPolygon") {
+      return {
+        ...geometry,
+        coordinates: geometry.coordinates.map((polygon) => polygon.map(unwrapRing))
+      };
+    }
+    return geometry;
   }
 
   async function initializeMap() {
@@ -89,8 +104,6 @@
       throw new Error("Für die Karte liegen keine vollständigen Daten vor.");
     }
 
-    renderStatistics(payload.statistics);
-
     const styles = getComputedStyle(document.documentElement);
     const colors = {
       ink: styles.getPropertyValue("--color-ink").trim(),
@@ -112,7 +125,13 @@
     });
 
     const countries = window.topojson.feature(world, world.objects.countries);
-    window.L.geoJSON(countries, {
+    const leafletCountries = {
+      ...countries,
+      features: countries.features
+        .filter((feature) => feature.properties?.name !== "Antarctica")
+        .map((feature) => ({ ...feature, geometry: unwrapGeometry(feature.geometry) }))
+    };
+    window.L.geoJSON(leafletCountries, {
       interactive: false,
       style: {
         color: colors.line,
@@ -197,8 +216,6 @@
   initializeMap().catch((error) => {
     mapElement.hidden = true;
     locationListElement.hidden = true;
-    statsElement.hidden = true;
-    topicsElement.closest("details").hidden = true;
     statusElement.classList.add("event-map-status--error");
     statusElement.textContent = error.message;
   });
