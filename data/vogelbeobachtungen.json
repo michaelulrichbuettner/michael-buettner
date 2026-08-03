@@ -1,17 +1,17 @@
 {
   "schemaVersion": 2,
   "source": "eBird CSV imports via Make",
-  "generatedAt": "2026-08-01T08:42:56.737Z",
+  "generatedAt": "2026-08-03T05:54:28.273Z",
   "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
   "observations": [
     {
-      "city": "Bonn",
-      "date": "2026-08-01",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Alexandersittich",
       "observerId": "Michael",
-      "scientificName": "Psittacula eupatria"
+      "commonName": "Alexandersittich",
+      "scientificName": "Psittacula eupatria",
+      "date": "2026-08-01",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
@@ -41,6 +41,15 @@
       "longitude": 7.1024635
     },
     {
+      "city": "Bonn",
+      "date": "2026-08-03",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635,
+      "commonName": "Grauschnäpper",
+      "observerId": "Michael",
+      "scientificName": "Muscicapa striata"
+    },
+    {
       "observerId": "Michael",
       "commonName": "Halsbandsittich",
       "scientificName": "Psittacula krameri",
@@ -68,22 +77,22 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-08-01",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Heringsmöwe",
       "observerId": "Michael",
-      "scientificName": "Larus fuscus"
+      "commonName": "Heringsmöwe",
+      "scientificName": "Larus fuscus",
+      "date": "2026-08-01",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-08-01",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Hohltaube",
       "observerId": "Michael",
-      "scientificName": "Columba oenas"
+      "commonName": "Hohltaube",
+      "scientificName": "Columba oenas",
+      "date": "2026-08-01",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
@@ -95,22 +104,31 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-08-01",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Mehlschwalbe",
       "observerId": "Michael",
-      "scientificName": "Delichon urbicum"
+      "commonName": "Mehlschwalbe",
+      "scientificName": "Delichon urbicum",
+      "date": "2026-08-01",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
+    },
+    {
+      "observerId": "Michael",
+      "commonName": "Mittelmeermöwe",
+      "scientificName": "Larus michahellis",
+      "date": "2026-08-01",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "city": "Bonn",
-      "date": "2026-08-01",
+      "date": "2026-08-03",
       "latitude": 50.7352621,
       "longitude": 7.1024635,
-      "commonName": "Mittelmeermöwe",
+      "commonName": "Rabenkrähe",
       "observerId": "Michael",
-      "scientificName": "Larus michahellis"
+      "scientificName": "Corvus corone"
     },
     {
       "observerId": "Michael",
