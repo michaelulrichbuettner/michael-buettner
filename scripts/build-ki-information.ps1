@@ -47,7 +47,6 @@ $topicGroups = $rows | Group-Object -Property $columnTopic
 foreach ($topicGroup in $topicGroups) {
   $topicText = $topicGroup.Name
   $title = [regex]::Replace($topicText, '^[^\p{L}\p{N}]+', '').Trim()
-  $icon = $topicText.Substring(0, $topicText.Length - $title.Length).Trim()
   $topicId = ConvertTo-Slug $title
   $filters = [System.Collections.Generic.List[object]]::new()
 
@@ -91,7 +90,6 @@ foreach ($topicGroup in $topicGroups) {
   $topics.Add([ordered]@{
     id = $topicId
     title = $title
-    icon = $icon
     filters = $filters
   })
 }

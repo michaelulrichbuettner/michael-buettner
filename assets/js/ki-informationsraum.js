@@ -12,6 +12,8 @@
     status: root.querySelector("[data-ki-status]"),
     entities: root.querySelector("[data-ki-entities]"),
     detail: root.querySelector("[data-ki-detail]"),
+    all: root.querySelector("[data-ki-all]"),
+    allLabel: root.querySelector("[data-ki-all-label]"),
     overview: root.querySelector("[data-ki-overview]"),
     message: root.querySelector("[data-ki-message]")
   };
@@ -49,24 +51,22 @@
   }
 
   function renderTopics() {
+    elements.topics.classList.toggle("is-condensed", Boolean(selectedTopic));
     elements.topics.replaceChildren(...topics.map((topic) => {
       const button = document.createElement("button");
       button.className = "ki-topic";
       button.type = "button";
       button.setAttribute("aria-pressed", String(selectedTopic?.id === topic.id));
-      const icon = document.createElement("span");
-      icon.className = "ki-topic__icon";
-      icon.setAttribute("aria-hidden", "true");
-      icon.textContent = topic.icon;
       const label = document.createElement("span");
       label.textContent = topic.title;
-      button.append(icon, label);
+      button.append(label);
       button.addEventListener("click", () => selectTopic(topic));
       return button;
     }));
   }
 
   function selectTopic(topic, updateUrl = true) {
+    elements.browser.classList.remove("is-searching");
     selectedTopic = topic;
     selectedFilter = "all";
     selectedEntity = null;
@@ -74,6 +74,7 @@
     elements.searchInput.value = "";
     elements.browser.hidden = false;
     elements.selectionTitle.textContent = topic.title;
+    elements.allLabel.textContent = "Alle Einträge";
     elements.detail.hidden = true;
     renderTopics();
     renderFilters();
@@ -83,12 +84,18 @@
   }
 
   function renderFilters() {
-    const filters = [{ id: "all", title: "Alle" }, ...selectedTopic.filters];
-    elements.filters.replaceChildren(...filters.map((filter) => {
+    const filters = selectedTopic.filters;
+    elements.all.setAttribute("aria-pressed", String(selectedFilter === "all"));
+    elements.filters.replaceChildren(...filters.map((filter, index) => {
       const button = document.createElement("button");
       button.type = "button";
       button.className = `ki-filter${selectedFilter === filter.id ? " is-active" : ""}`;
       button.textContent = filter.title;
+      const angle = -Math.PI / 2 + (index * Math.PI * 2) / filters.length;
+      const radiusX = filters.length < 4 ? 37 : 41;
+      const radiusY = filters.length < 4 ? 34 : 39;
+      button.style.left = `${50 + Math.cos(angle) * radiusX}%`;
+      button.style.top = `${50 + Math.sin(angle) * radiusY}%`;
       button.setAttribute("aria-pressed", String(selectedFilter === filter.id));
       button.addEventListener("click", () => {
         selectedFilter = filter.id;
@@ -103,8 +110,8 @@
   }
 
   function currentEntities() {
+    if (query) return searchResults;
     if (!selectedTopic) return [];
-    if (selectedTopic.id === "search") return searchResults;
     return selectedTopic.filters
       .filter((filter) => selectedFilter === "all" || filter.id === selectedFilter)
       .flatMap((filter) => filter.entities.map((entity) => ({ filter, entity })))
@@ -145,12 +152,14 @@
   }
 
   function showDetail(item, updateUrl = true) {
-    if (item.topic && selectedTopic?.id === "search") {
+    if (item.topic && !selectedTopic && query) {
       selectedTopic = item.topic;
       selectedFilter = item.filter.id;
       query = "";
       elements.searchInput.value = "";
+      elements.browser.classList.remove("is-searching");
       elements.selectionTitle.textContent = item.topic.title;
+      elements.allLabel.textContent = "Alle Einträge";
       renderTopics();
       renderFilters();
     }
@@ -210,6 +219,7 @@
             selectedTopic = match.topic;
             selectedFilter = match.filter.id;
             elements.selectionTitle.textContent = match.topic.title;
+            elements.allLabel.textContent = "Alle Einträge";
             renderTopics();
             renderFilters();
             showDetail({ filter: match.filter, entity: match.entity });
@@ -230,21 +240,27 @@
   function searchAcrossTopics() {
     query = elements.searchInput.value.trim();
     if (!query) {
-      if (selectedTopic) renderEntities();
+      searchResults = [];
+      selectedEntity = null;
+      elements.detail.hidden = true;
+      elements.browser.classList.remove("is-searching");
+      if (selectedTopic) {
+        renderFilters();
+        renderEntities();
+      } else {
+        elements.browser.hidden = true;
+        renderTopics();
+      }
       return;
     }
     searchResults = allEntities().filter(({ entity }) => entitySearchText(entity).includes(normalize(query)));
-    selectedTopic = {
-      id: "search",
-      title: `Suchergebnisse für „${query}“`,
-      filters: []
-    };
+    selectedTopic = null;
     selectedFilter = "all";
     selectedEntity = null;
     elements.browser.hidden = false;
-    elements.selectionTitle.textContent = selectedTopic.title;
+    elements.browser.classList.add("is-searching");
     elements.detail.hidden = true;
-    renderFilters();
+    renderTopics();
     renderEntities();
   }
 
@@ -275,16 +291,27 @@
   });
   elements.searchForm.addEventListener("reset", () => setTimeout(() => {
     query = "";
+    searchResults = [];
     selectedTopic = null;
     selectedEntity = null;
+    elements.browser.classList.remove("is-searching");
     elements.browser.hidden = true;
     elements.detail.hidden = true;
     renderTopics();
     history.pushState(null, "", window.location.pathname + window.location.search);
   }));
+  elements.all.addEventListener("click", () => {
+    selectedFilter = "all";
+    selectedEntity = null;
+    elements.detail.hidden = true;
+    renderFilters();
+    renderEntities();
+    writeHash();
+  });
   elements.overview.addEventListener("click", () => {
     selectedTopic = null;
     selectedEntity = null;
+    elements.browser.classList.remove("is-searching");
     elements.browser.hidden = true;
     renderTopics();
     history.pushState(null, "", window.location.pathname + window.location.search);
@@ -293,6 +320,7 @@
   window.addEventListener("popstate", () => {
     selectedTopic = null;
     selectedEntity = null;
+    elements.browser.classList.remove("is-searching");
     elements.browser.hidden = true;
     restoreHash();
   });

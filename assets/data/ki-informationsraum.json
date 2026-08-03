@@ -4,7 +4,6 @@
                    {
                        "id":  "modelle-und-modell-ubersichten",
                        "title":  "Modelle und Modell-Übersichten",
-                       "icon":  "🤖",
                        "filters":  [
                                        {
                                            "id":  "modellfamilien",
@@ -164,7 +163,6 @@
                    {
                        "id":  "recht",
                        "title":  "Recht",
-                       "icon":  "⚖️",
                        "filters":  [
                                        {
                                            "id":  "eu-verordnungen",
@@ -324,7 +322,6 @@
                    {
                        "id":  "governance",
                        "title":  "Governance",
-                       "icon":  "🛡️",
                        "filters":  [
                                        {
                                            "id":  "risikomanagement",
@@ -484,7 +481,6 @@
                    {
                        "id":  "datenschutz",
                        "title":  "Datenschutz",
-                       "icon":  "🔒",
                        "filters":  [
                                        {
                                            "id":  "rechtsgrundlagen",
@@ -644,7 +640,6 @@
                    {
                        "id":  "standards",
                        "title":  "Standards",
-                       "icon":  "🏛️",
                        "filters":  [
                                        {
                                            "id":  "management-und-risiko",
@@ -804,7 +799,6 @@
                    {
                        "id":  "grundlagen-und-technik",
                        "title":  "Grundlagen und Technik",
-                       "icon":  "🧠",
                        "filters":  [
                                        {
                                            "id":  "grundbegriffe",
@@ -964,7 +958,6 @@
                    {
                        "id":  "agenten-und-automation",
                        "title":  "Agenten und Automation",
-                       "icon":  "⚙️",
                        "filters":  [
                                        {
                                            "id":  "agentenframeworks",
@@ -1124,7 +1117,6 @@
                    {
                        "id":  "anwendungsfalle",
                        "title":  "Anwendungsfälle",
-                       "icon":  "💼",
                        "filters":  [
                                        {
                                            "id":  "wissensarbeit",

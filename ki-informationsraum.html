@@ -45,13 +45,16 @@
 
           <section class="ki-space__browser" data-ki-browser hidden aria-labelledby="ki-selection-title">
             <div class="ki-space__selection-header">
-              <div>
-                <p class="eyebrow" data-ki-selection-eyebrow>Ausgewähltes Oberthema</p>
-                <h2 id="ki-selection-title" data-ki-selection-title></h2>
-              </div>
+              <p class="eyebrow" data-ki-selection-eyebrow>Ausgewähltes Oberthema</p>
               <button class="button button--secondary" type="button" data-ki-overview>Zur Themenübersicht</button>
             </div>
-            <div class="ki-space__filters" aria-label="Filter" data-ki-filters></div>
+            <div class="ki-space__constellation">
+              <div class="ki-space__selected-topic">
+                <h2 id="ki-selection-title" data-ki-selection-title></h2>
+                <button class="ki-space__all" type="button" data-ki-all aria-pressed="true" data-ki-all-label>Alle Einträge</button>
+              </div>
+              <div class="ki-space__filters" aria-label="Filter" data-ki-filters></div>
+            </div>
             <p class="ki-space__result-status" data-ki-status aria-live="polite"></p>
             <div class="ki-space__content">
               <div class="ki-space__entities" data-ki-entities aria-label="Einträge"></div>
