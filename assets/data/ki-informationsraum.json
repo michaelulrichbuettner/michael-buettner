@@ -1,0 +1,1285 @@
+{
+    "title":  "KI-Informationsraum",
+    "topics":  [
+                   {
+                       "id":  "modelle-und-modell-ubersichten",
+                       "title":  "Modelle und Modell-Übersichten",
+                       "icon":  "🤖",
+                       "filters":  [
+                                       {
+                                           "id":  "modellfamilien",
+                                           "title":  "Modellfamilien",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "gpt",
+                                                                "name":  "GPT",
+                                                                "type":  "Modellfamilie",
+                                                                "description":  "OpenAI-Modelle für Text, multimodale Aufgaben, Reasoning und Werkzeugnutzung.",
+                                                                "importance":  "Weit verbreitete Referenz für generative KI und API-Anwendungen.",
+                                                                "source":  "OpenAI",
+                                                                "url":  "https://platform.openai.com/docs/models",
+                                                                "relatedTopics":  [
+                                                                                      "Claude",
+                                                                                      "Gemini",
+                                                                                      "APIs"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "claude",
+                                                                "name":  "Claude",
+                                                                "type":  "Modellfamilie",
+                                                                "description":  "Anthropic-Modelle für Text, Coding, multimodale Aufgaben und Agenten.",
+                                                                "importance":  "Wichtige Alternative mit eigenem Sicherheits- und Tooling-Ansatz.",
+                                                                "source":  "Anthropic",
+                                                                "url":  "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+                                                                "relatedTopics":  [
+                                                                                      "GPT",
+                                                                                      "Gemini",
+                                                                                      "MCP"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "gemini",
+                                                                "name":  "Gemini",
+                                                                "type":  "Modellfamilie",
+                                                                "description":  "Google-Modelle für Text, Bild, Audio, Video, Coding und lange Kontexte.",
+                                                                "importance":  "Eng mit Google Cloud und Workspace verbunden.",
+                                                                "source":  "Google AI for Developers",
+                                                                "url":  "https://ai.google.dev/gemini-api/docs/models",
+                                                                "relatedTopics":  [
+                                                                                      "GPT",
+                                                                                      "Claude",
+                                                                                      "Vertex AI"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "open-weight-modelle",
+                                           "title":  "Open-Weight-Modelle",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "llama",
+                                                                "name":  "Llama",
+                                                                "type":  "Open-Weight-Modellfamilie",
+                                                                "description":  "Meta-Modellfamilie mit verfügbaren Gewichten unter eigener Lizenz.",
+                                                                "importance":  "Relevant für lokale, angepasste und souveräne KI-Anwendungen.",
+                                                                "source":  "Meta",
+                                                                "url":  "https://www.llama.com/",
+                                                                "relatedTopics":  [
+                                                                                      "Hugging Face",
+                                                                                      "Fine-Tuning",
+                                                                                      "lokale Modelle"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "mistral",
+                                                                "name":  "Mistral",
+                                                                "type":  "Modellfamilie / Anbieter",
+                                                                "description":  "Europäischer Anbieter mit offenen und proprietären Modellen.",
+                                                                "importance":  "Relevant als europäische Alternative und für flexible Bereitstellung.",
+                                                                "source":  "Mistral AI",
+                                                                "url":  "https://docs.mistral.ai/",
+                                                                "relatedTopics":  [
+                                                                                      "Llama",
+                                                                                      "Europa",
+                                                                                      "Open Weight"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "qwen",
+                                                                "name":  "Qwen",
+                                                                "type":  "Open-Weight-Modellfamilie",
+                                                                "description":  "Alibaba-Modellfamilie für Sprache, Code und multimodale Aufgaben.",
+                                                                "importance":  "Große offene Familie mit vielen Größen und Spezialisierungen.",
+                                                                "source":  "Qwen",
+                                                                "url":  "https://github.com/QwenLM",
+                                                                "relatedTopics":  [
+                                                                                      "Hugging Face",
+                                                                                      "Modellkarten",
+                                                                                      "Fine-Tuning"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "verzeichnisse-und-vergleiche",
+                                           "title":  "Verzeichnisse und Vergleiche",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "hugging-face-models",
+                                                                "name":  "Hugging Face Models",
+                                                                "type":  "Modellverzeichnis",
+                                                                "description":  "Plattform zum Suchen und Dokumentieren von Modellen, Datensätzen und Demos.",
+                                                                "importance":  "Zentrale Anlaufstelle für Open-Weight-Modelle und Model Cards.",
+                                                                "source":  "Hugging Face",
+                                                                "url":  "https://huggingface.co/models",
+                                                                "relatedTopics":  [
+                                                                                      "Model Cards",
+                                                                                      "Datasets",
+                                                                                      "Spaces"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "artificial-analysis",
+                                                                "name":  "Artificial Analysis",
+                                                                "type":  "Modellvergleich",
+                                                                "description":  "Vergleicht Modelle nach Leistung, Preis, Geschwindigkeit und weiteren Messwerten.",
+                                                                "importance":  "Hilft bei einer nüchternen Modellauswahl jenseits von Herstellerangaben.",
+                                                                "source":  "Artificial Analysis",
+                                                                "url":  "https://artificialanalysis.ai/",
+                                                                "relatedTopics":  [
+                                                                                      "Benchmarks",
+                                                                                      "Kosten",
+                                                                                      "Latenz"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "openrouter-models",
+                                                                "name":  "OpenRouter Models",
+                                                                "type":  "Modellkatalog / API",
+                                                                "description":  "Katalog mit vielen Modellen, Preisen, Kontextlängen und Verfügbarkeit.",
+                                                                "importance":  "Erleichtert den schnellen Vergleich und Zugang über eine gemeinsame API.",
+                                                                "source":  "OpenRouter",
+                                                                "url":  "https://openrouter.ai/models",
+                                                                "relatedTopics":  [
+                                                                                      "APIs",
+                                                                                      "Rankings",
+                                                                                      "Kosten"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       }
+                                   ]
+                   },
+                   {
+                       "id":  "recht",
+                       "title":  "Recht",
+                       "icon":  "⚖️",
+                       "filters":  [
+                                       {
+                                           "id":  "eu-verordnungen",
+                                           "title":  "EU-Verordnungen",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "eu-ai-act",
+                                                                "name":  "EU AI Act",
+                                                                "type":  "EU-Verordnung",
+                                                                "description":  "Risikobasierte Regeln für Entwicklung, Bereitstellung und Nutzung von KI-Systemen.",
+                                                                "importance":  "Zentrale KI-Regulierung der Europäischen Union.",
+                                                                "source":  "EUR-Lex",
+                                                                "url":  "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+                                                                "relatedTopics":  [
+                                                                                      "Hochrisiko-KI",
+                                                                                      "GPAI",
+                                                                                      "Transparenz"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "data-act",
+                                                                "name":  "Data Act",
+                                                                "type":  "EU-Verordnung",
+                                                                "description":  "Regelt Zugang zu und Nutzung von Daten vernetzter Produkte und Dienste.",
+                                                                "importance":  "Wichtig für Datenzugang, Cloud-Wechsel und datenbasierte KI.",
+                                                                "source":  "EUR-Lex",
+                                                                "url":  "https://eur-lex.europa.eu/eli/reg/2023/2854/oj",
+                                                                "relatedTopics":  [
+                                                                                      "Datenzugang",
+                                                                                      "Cloud",
+                                                                                      "IoT"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "digital-services-act",
+                                                                "name":  "Digital Services Act",
+                                                                "type":  "EU-Verordnung",
+                                                                "description":  "Pflichten für digitale Vermittlungsdienste und Plattformen.",
+                                                                "importance":  "Relevant für KI-Inhalte, Empfehlungssysteme und Plattformrisiken.",
+                                                                "source":  "EUR-Lex",
+                                                                "url":  "https://eur-lex.europa.eu/eli/reg/2022/2065/oj",
+                                                                "relatedTopics":  [
+                                                                                      "Plattformen",
+                                                                                      "Empfehlungen",
+                                                                                      "Transparenz"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "urheberrecht-und-inhalte",
+                                           "title":  "Urheberrecht und Inhalte",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "dsm-richtlinie",
+                                                                "name":  "DSM-Richtlinie",
+                                                                "type":  "EU-Richtlinie",
+                                                                "description":  "Modernisiert das Urheberrecht und enthält Regeln zum Text-und-Data-Mining.",
+                                                                "importance":  "Wichtig für Trainingsdaten und Rechtevorbehalte.",
+                                                                "source":  "EUR-Lex",
+                                                                "url":  "https://eur-lex.europa.eu/eli/dir/2019/790/oj",
+                                                                "relatedTopics":  [
+                                                                                      "TDM",
+                                                                                      "Trainingsdaten",
+                                                                                      "Rechtevorbehalt"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "urheberrechtsgesetz-urhg",
+                                                                "name":  "Urheberrechtsgesetz – UrhG",
+                                                                "type":  "Deutsches Gesetz",
+                                                                "description":  "Regelt Schutz und Nutzung urheberrechtlicher Werke in Deutschland.",
+                                                                "importance":  "Relevant für Training, Lizenzen und generierte Inhalte.",
+                                                                "source":  "Gesetze im Internet",
+                                                                "url":  "https://www.gesetze-im-internet.de/urhg/",
+                                                                "relatedTopics":  [
+                                                                                      "DSM-Richtlinie",
+                                                                                      "TDM",
+                                                                                      "Lizenzen"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "euipo-copyright-resources",
+                                                                "name":  "EUIPO Copyright Resources",
+                                                                "type":  "Institutionenquelle",
+                                                                "description":  "Materialien zu geistigem Eigentum und digitalen Technologien.",
+                                                                "importance":  "Hilft bei der Einordnung aktueller Schutzrechtsfragen.",
+                                                                "source":  "EUIPO",
+                                                                "url":  "https://www.euipo.europa.eu/en/observatory/observatory-publications",
+                                                                "relatedTopics":  [
+                                                                                      "Urheberrecht",
+                                                                                      "Marken",
+                                                                                      "generative KI"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "haftung-und-verantwortung",
+                                           "title":  "Haftung und Verantwortung",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "produkthaftungsrichtlinie-eu-2024-2853",
+                                                                "name":  "Produkthaftungsrichtlinie (EU) 2024/2853",
+                                                                "type":  "EU-Richtlinie",
+                                                                "description":  "Modernisierte Produkthaftung, die auch Software und digitale Elemente erfasst.",
+                                                                "importance":  "Relevant für Schäden durch fehlerhafte KI-Produkte.",
+                                                                "source":  "EUR-Lex",
+                                                                "url":  "https://eur-lex.europa.eu/eli/dir/2024/2853/oj",
+                                                                "relatedTopics":  [
+                                                                                      "Softwarefehler",
+                                                                                      "Herstellerhaftung",
+                                                                                      "Sicherheit"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "burgerliches-gesetzbuch-bgb",
+                                                                "name":  "Bürgerliches Gesetzbuch – BGB",
+                                                                "type":  "Deutsches Gesetz",
+                                                                "description":  "Allgemeine Regeln zu Verträgen, Schadensersatz und Verantwortlichkeit.",
+                                                                "importance":  "Bleibt für KI-Verträge und Schäden relevant.",
+                                                                "source":  "Gesetze im Internet",
+                                                                "url":  "https://www.gesetze-im-internet.de/bgb/",
+                                                                "relatedTopics":  [
+                                                                                      "Verträge",
+                                                                                      "Schadensersatz",
+                                                                                      "AGB"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "ecommerce-richtlinie",
+                                                                "name":  "eCommerce-Richtlinie",
+                                                                "type":  "EU-Richtlinie",
+                                                                "description":  "Grundregeln für Dienste der Informationsgesellschaft und Vermittlerhaftung.",
+                                                                "importance":  "Historische Grundlage für Hosting- und Plattformhaftung.",
+                                                                "source":  "EUR-Lex",
+                                                                "url":  "https://eur-lex.europa.eu/eli/dir/2000/31/oj",
+                                                                "relatedTopics":  [
+                                                                                      "DSA",
+                                                                                      "Hosting",
+                                                                                      "Plattformhaftung"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       }
+                                   ]
+                   },
+                   {
+                       "id":  "governance",
+                       "title":  "Governance",
+                       "icon":  "🛡️",
+                       "filters":  [
+                                       {
+                                           "id":  "risikomanagement",
+                                           "title":  "Risikomanagement",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "nist-ai-rmf-1-0",
+                                                                "name":  "NIST AI RMF 1.0",
+                                                                "type":  "Governance-Rahmen",
+                                                                "description":  "Rahmen mit Govern, Map, Measure und Manage für KI-Risiken.",
+                                                                "importance":  "Übersetzt Prinzipien in organisatorische Risikopraxis.",
+                                                                "source":  "NIST",
+                                                                "url":  "https://www.nist.gov/itl/ai-risk-management-framework",
+                                                                "relatedTopics":  [
+                                                                                      "ISO 42001",
+                                                                                      "Risikoanalyse",
+                                                                                      "GenAI Profile"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "nist-generative-ai-profile",
+                                                                "name":  "NIST Generative AI Profile",
+                                                                "type":  "Ergänzungsprofil",
+                                                                "description":  "Ergänzt das AI RMF um Risiken und Maßnahmen für generative KI.",
+                                                                "importance":  "Behandelt typische GenAI-Risiken systematisch.",
+                                                                "source":  "NIST",
+                                                                "url":  "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+                                                                "relatedTopics":  [
+                                                                                      "Halluzinationen",
+                                                                                      "Missbrauch",
+                                                                                      "Informationsintegrität"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "iso-iec-23894",
+                                                                "name":  "ISO/IEC 23894",
+                                                                "type":  "Norm",
+                                                                "description":  "Leitlinie zum Risikomanagement bei KI-Systemen.",
+                                                                "importance":  "Strukturiert Risikoidentifikation, Bewertung und Behandlung.",
+                                                                "source":  "ISO",
+                                                                "url":  "https://www.iso.org/standard/77304.html",
+                                                                "relatedTopics":  [
+                                                                                      "ISO 42001",
+                                                                                      "AI RMF",
+                                                                                      "Risikoregister"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "prinzipien-und-leitlinien",
+                                           "title":  "Prinzipien und Leitlinien",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "oecd-ai-principles",
+                                                                "name":  "OECD AI Principles",
+                                                                "type":  "Prinzipien",
+                                                                "description":  "Prinzipien für innovative und vertrauenswürdige KI.",
+                                                                "importance":  "International verbreiteter Orientierungsrahmen.",
+                                                                "source":  "OECD",
+                                                                "url":  "https://www.oecd.org/en/topics/sub-issues/ai-principles.html",
+                                                                "relatedTopics":  [
+                                                                                      "Menschenrechte",
+                                                                                      "Transparenz",
+                                                                                      "Verantwortung"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "unesco-recommendation-on-the-ethics-of-ai",
+                                                                "name":  "UNESCO Recommendation on the Ethics of AI",
+                                                                "type":  "UN-Empfehlung",
+                                                                "description":  "Globaler ethischer Orientierungsrahmen für KI.",
+                                                                "importance":  "Verknüpft Governance mit Menschenrechten, Bildung und Umwelt.",
+                                                                "source":  "UNESCO",
+                                                                "url":  "https://www.unesco.org/en/artificial-intelligence/recommendation-ethics",
+                                                                "relatedTopics":  [
+                                                                                      "Ethik",
+                                                                                      "Menschenrechte",
+                                                                                      "Nachhaltigkeit"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "ethics-guidelines-for-trustworthy-ai",
+                                                                "name":  "Ethics Guidelines for Trustworthy AI",
+                                                                "type":  "EU-Leitlinien",
+                                                                "description":  "Sieben Anforderungen an vertrauenswürdige KI.",
+                                                                "importance":  "Prägt die europäische Governance-Diskussion.",
+                                                                "source":  "Europäische Kommission",
+                                                                "url":  "https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai",
+                                                                "relatedTopics":  [
+                                                                                      "ALTAI",
+                                                                                      "Human Oversight",
+                                                                                      "Fairness"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "institutionen-und-aufsicht",
+                                           "title":  "Institutionen und Aufsicht",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "european-ai-office",
+                                                                "name":  "European AI Office",
+                                                                "type":  "EU-Institution",
+                                                                "description":  "Einheit der Kommission zur Umsetzung des AI Acts.",
+                                                                "importance":  "Zentrale Stelle für GPAI, Leitlinien und Codes of Practice.",
+                                                                "source":  "Europäische Kommission",
+                                                                "url":  "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+                                                                "relatedTopics":  [
+                                                                                      "AI Act",
+                                                                                      "GPAI",
+                                                                                      "Aufsicht"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "bundesnetzagentur",
+                                                                "name":  "Bundesnetzagentur",
+                                                                "type":  "Deutsche Behörde",
+                                                                "description":  "Deutsche Regulierungsbehörde mit Aufgaben bei digitaler Marktaufsicht.",
+                                                                "importance":  "Relevante Anlaufstelle für nationale Umsetzungs- und Aufsichtsfragen.",
+                                                                "source":  "Bundesnetzagentur",
+                                                                "url":  "https://www.bundesnetzagentur.de/",
+                                                                "relatedTopics":  [
+                                                                                      "AI Act",
+                                                                                      "Marktüberwachung",
+                                                                                      "Deutschland"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "nist-ai-program",
+                                                                "name":  "NIST AI Program",
+                                                                "type":  "US-Bundesinstitut",
+                                                                "description":  "Programm zu Messung, Standards, Sicherheit und Risikomanagement für KI.",
+                                                                "importance":  "Wichtige frei zugängliche technische Governance-Quelle.",
+                                                                "source":  "NIST",
+                                                                "url":  "https://www.nist.gov/artificial-intelligence",
+                                                                "relatedTopics":  [
+                                                                                      "AI RMF",
+                                                                                      "Benchmarks",
+                                                                                      "Sicherheit"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       }
+                                   ]
+                   },
+                   {
+                       "id":  "datenschutz",
+                       "title":  "Datenschutz",
+                       "icon":  "🔒",
+                       "filters":  [
+                                       {
+                                           "id":  "rechtsgrundlagen",
+                                           "title":  "Rechtsgrundlagen",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "dsgvo",
+                                                                "name":  "DSGVO",
+                                                                "type":  "EU-Verordnung",
+                                                                "description":  "Regelt die Verarbeitung personenbezogener Daten in der EU.",
+                                                                "importance":  "Grundlage für fast jede KI-Anwendung mit personenbezogenen Daten.",
+                                                                "source":  "EUR-Lex",
+                                                                "url":  "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+                                                                "relatedTopics":  [
+                                                                                      "Rechtsgrundlage",
+                                                                                      "Profiling",
+                                                                                      "Betroffenenrechte"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "bundesdatenschutzgesetz-bdsg",
+                                                                "name":  "Bundesdatenschutzgesetz – BDSG",
+                                                                "type":  "Deutsches Gesetz",
+                                                                "description":  "Ergänzt und konkretisiert die DSGVO in Deutschland.",
+                                                                "importance":  "Relevant für Beschäftigtendaten und nationale Sonderregeln.",
+                                                                "source":  "Gesetze im Internet",
+                                                                "url":  "https://www.gesetze-im-internet.de/bdsg_2018/",
+                                                                "relatedTopics":  [
+                                                                                      "DSGVO",
+                                                                                      "Beschäftigtendaten",
+                                                                                      "Aufsicht"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "tdddg",
+                                                                "name":  "TDDDG",
+                                                                "type":  "Deutsches Gesetz",
+                                                                "description":  "Regelt Datenschutz und Privatsphäre bei digitalen Diensten und Endgeräten.",
+                                                                "importance":  "Wichtig für Tracking, Cookies und Endgerätezugriffe.",
+                                                                "source":  "Gesetze im Internet",
+                                                                "url":  "https://www.gesetze-im-internet.de/tdddg/",
+                                                                "relatedTopics":  [
+                                                                                      "Cookies",
+                                                                                      "Telemedien",
+                                                                                      "Einwilligung"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "aufsichtsbehorden-und-leitlinien",
+                                           "title":  "Aufsichtsbehörden und Leitlinien",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "edpb",
+                                                                "name":  "EDPB",
+                                                                "type":  "EU-Datenschutzausschuss",
+                                                                "description":  "Veröffentlicht Leitlinien zur einheitlichen Anwendung der DSGVO.",
+                                                                "importance":  "Zentrale europäische Auslegungshilfe.",
+                                                                "source":  "EDPB",
+                                                                "url":  "https://www.edpb.europa.eu/",
+                                                                "relatedTopics":  [
+                                                                                      "DSGVO",
+                                                                                      "Leitlinien",
+                                                                                      "Aufsicht"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "bfdi",
+                                                                "name":  "BfDI",
+                                                                "type":  "Deutsche Bundesbehörde",
+                                                                "description":  "Bundesbeauftragte Stelle für Datenschutz und Informationsfreiheit.",
+                                                                "importance":  "Relevante Quelle für Bundesbehörden und Grundsatzfragen.",
+                                                                "source":  "BfDI",
+                                                                "url":  "https://www.bfdi.bund.de/",
+                                                                "relatedTopics":  [
+                                                                                      "DSGVO",
+                                                                                      "Bundesbehörden",
+                                                                                      "Informationsfreiheit"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "cnil-ai-guidance",
+                                                                "name":  "CNIL AI Guidance",
+                                                                "type":  "Nationale Leitlinien",
+                                                                "description":  "Umfangreiche praktische Hilfen zu KI und Datenschutz.",
+                                                                "importance":  "Eine der detailliertesten europäischen Praxissammlungen.",
+                                                                "source":  "CNIL",
+                                                                "url":  "https://www.cnil.fr/en/artificial-intelligence",
+                                                                "relatedTopics":  [
+                                                                                      "Training",
+                                                                                      "Rechtsgrundlage",
+                                                                                      "DSFA"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "praxisinstrumente",
+                                           "title":  "Praxisinstrumente",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "datenschutz-folgenabschatzung-dsfa",
+                                                                "name":  "Datenschutz-Folgenabschätzung – DSFA",
+                                                                "type":  "Methode / Pflicht",
+                                                                "description":  "Strukturierte Prüfung besonders risikoreicher Verarbeitungen.",
+                                                                "importance":  "Bei vielen KI-Projekten zentrales Risiko- und Dokumentationsinstrument.",
+                                                                "source":  "EDPB",
+                                                                "url":  "https://www.edpb.europa.eu/our-work-tools/our-documents/guidelines/data-protection-impact-assessments-high-risk-processing_en",
+                                                                "relatedTopics":  [
+                                                                                      "Risiko",
+                                                                                      "Profiling",
+                                                                                      "Dokumentation"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "anonymisierung",
+                                                                "name":  "Anonymisierung",
+                                                                "type":  "Datenschutztechnik",
+                                                                "description":  "Daten werden so verändert, dass Personen nicht mehr identifizierbar sind.",
+                                                                "importance":  "Kann den DSGVO-Anwendungsbereich reduzieren, ist aber schwer sicher umzusetzen.",
+                                                                "source":  "ENISA",
+                                                                "url":  "https://www.enisa.europa.eu/publications/data-pseudonymisation-advanced-techniques-and-use-cases",
+                                                                "relatedTopics":  [
+                                                                                      "Pseudonymisierung",
+                                                                                      "Re-Identifikation",
+                                                                                      "Trainingsdaten"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "pseudonymisierung",
+                                                                "name":  "Pseudonymisierung",
+                                                                "type":  "Datenschutztechnik",
+                                                                "description":  "Direkte Identifikatoren werden durch Kennzeichen ersetzt.",
+                                                                "importance":  "Wichtige Schutzmaßnahme, beseitigt den Personenbezug aber nicht vollständig.",
+                                                                "source":  "ENISA",
+                                                                "url":  "https://www.enisa.europa.eu/publications/data-pseudonymisation-advanced-techniques-and-use-cases",
+                                                                "relatedTopics":  [
+                                                                                      "Anonymisierung",
+                                                                                      "Zugriffsschutz",
+                                                                                      "Datenminimierung"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       }
+                                   ]
+                   },
+                   {
+                       "id":  "standards",
+                       "title":  "Standards",
+                       "icon":  "🏛️",
+                       "filters":  [
+                                       {
+                                           "id":  "management-und-risiko",
+                                           "title":  "Management und Risiko",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "iso-iec-42001",
+                                                                "name":  "ISO/IEC 42001",
+                                                                "type":  "Managementsystemnorm",
+                                                                "description":  "Anforderungen an Aufbau und Verbesserung eines KI-Managementsystems.",
+                                                                "importance":  "Zentraler Standard für organisatorische KI-Governance.",
+                                                                "source":  "ISO",
+                                                                "url":  "https://www.iso.org/standard/42001",
+                                                                "relatedTopics":  [
+                                                                                      "Governance",
+                                                                                      "Audit",
+                                                                                      "Verantwortlichkeiten"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "iso-iec-23894",
+                                                                "name":  "ISO/IEC 23894",
+                                                                "type":  "Leitlinie",
+                                                                "description":  "Leitlinie zum Risikomanagement für KI.",
+                                                                "importance":  "Ergänzt Managementsysteme um einen KI-Risikoprozess.",
+                                                                "source":  "ISO",
+                                                                "url":  "https://www.iso.org/standard/77304.html",
+                                                                "relatedTopics":  [
+                                                                                      "ISO 42001",
+                                                                                      "Kontrollen",
+                                                                                      "Risiko"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "iso-iec-42005",
+                                                                "name":  "ISO/IEC 42005",
+                                                                "type":  "Folgenabschätzungsstandard",
+                                                                "description":  "Orientierung für Folgenabschätzungen von KI-Systemen.",
+                                                                "importance":  "Relevant für Auswirkungen auf Menschen und Organisationen.",
+                                                                "source":  "ISO AI Standards",
+                                                                "url":  "https://www.iso.org/sectors/it-technologies/ai",
+                                                                "relatedTopics":  [
+                                                                                      "Impact Assessment",
+                                                                                      "AI Act",
+                                                                                      "Risiko"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "begriffe-und-architektur",
+                                           "title":  "Begriffe und Architektur",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "iso-iec-22989",
+                                                                "name":  "ISO/IEC 22989",
+                                                                "type":  "Begriffsstandard",
+                                                                "description":  "Definiert zentrale Konzepte und Terminologie für KI.",
+                                                                "importance":  "Schafft gemeinsame Sprache zwischen Technik, Recht und Management.",
+                                                                "source":  "ISO",
+                                                                "url":  "https://www.iso.org/standard/74296.html",
+                                                                "relatedTopics":  [
+                                                                                      "Definitionen",
+                                                                                      "KI-System",
+                                                                                      "ML"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "iso-iec-23053",
+                                                                "name":  "ISO/IEC 23053",
+                                                                "type":  "Architekturstandard",
+                                                                "description":  "Konzeptioneller Rahmen für KI-Systeme mit Machine Learning.",
+                                                                "importance":  "Hilft, Komponenten und Datenflüsse strukturiert zu beschreiben.",
+                                                                "source":  "ISO",
+                                                                "url":  "https://www.iso.org/standard/74438.html",
+                                                                "relatedTopics":  [
+                                                                                      "ML-Lebenszyklus",
+                                                                                      "Architektur",
+                                                                                      "Daten"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "iso-iec-5338",
+                                                                "name":  "ISO/IEC 5338",
+                                                                "type":  "Lebenszyklusstandard",
+                                                                "description":  "Beschreibt Prozesse des KI-System-Lebenszyklus.",
+                                                                "importance":  "Nützlich für Rollen und Kontrollen von Planung bis Außerbetriebnahme.",
+                                                                "source":  "ISO AI Standards",
+                                                                "url":  "https://www.iso.org/sectors/it-technologies/ai",
+                                                                "relatedTopics":  [
+                                                                                      "Lifecycle",
+                                                                                      "MLOps",
+                                                                                      "Governance"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "vertrauenswurdigkeit-und-qualitat",
+                                           "title":  "Vertrauenswürdigkeit und Qualität",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "iso-iec-tr-24028",
+                                                                "name":  "ISO/IEC TR 24028",
+                                                                "type":  "Technischer Bericht",
+                                                                "description":  "Überblick zu Vertrauenswürdigkeit in KI-Systemen.",
+                                                                "importance":  "Ordnet Robustheit, Transparenz und Sicherheit ein.",
+                                                                "source":  "ISO",
+                                                                "url":  "https://www.iso.org/standard/77608.html",
+                                                                "relatedTopics":  [
+                                                                                      "Trustworthiness",
+                                                                                      "Robustheit",
+                                                                                      "Transparenz"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "iso-iec-25059",
+                                                                "name":  "ISO/IEC 25059",
+                                                                "type":  "Qualitätsmodell",
+                                                                "description":  "Qualitätsmodell für KI-Systeme.",
+                                                                "importance":  "Hilft, Qualitätsanforderungen systematisch zu prüfen.",
+                                                                "source":  "ISO",
+                                                                "url":  "https://www.iso.org/standard/80655.html",
+                                                                "relatedTopics":  [
+                                                                                      "Softwarequalität",
+                                                                                      "Test",
+                                                                                      "Qualitätsmerkmale"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "ieee-7000",
+                                                                "name":  "IEEE 7000",
+                                                                "type":  "IEEE-Standard",
+                                                                "description":  "Bindet ethische Werte in Systementwicklungsprozesse ein.",
+                                                                "importance":  "Verknüpft Werte mit konkreter Systementwicklung.",
+                                                                "source":  "IEEE Standards Association",
+                                                                "url":  "https://standards.ieee.org/ieee/7000/6781/",
+                                                                "relatedTopics":  [
+                                                                                      "Ethik",
+                                                                                      "Requirements",
+                                                                                      "Governance"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       }
+                                   ]
+                   },
+                   {
+                       "id":  "grundlagen-und-technik",
+                       "title":  "Grundlagen und Technik",
+                       "icon":  "🧠",
+                       "filters":  [
+                                       {
+                                           "id":  "grundbegriffe",
+                                           "title":  "Grundbegriffe",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "machine-learning",
+                                                                "name":  "Machine Learning",
+                                                                "type":  "Technisches Konzept",
+                                                                "description":  "Systeme lernen Muster aus Daten statt nur festen Regeln zu folgen.",
+                                                                "importance":  "Grundlage vieler heutiger KI-Systeme.",
+                                                                "source":  "Google ML Crash Course",
+                                                                "url":  "https://developers.google.com/machine-learning/crash-course",
+                                                                "relatedTopics":  [
+                                                                                      "Training",
+                                                                                      "Modelle",
+                                                                                      "Daten"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "deep-learning",
+                                                                "name":  "Deep Learning",
+                                                                "type":  "Technisches Konzept",
+                                                                "description":  "Machine Learning mit mehrschichtigen neuronalen Netzen.",
+                                                                "importance":  "Grundlage moderner Sprach-, Bild-, Audio- und Videomodelle.",
+                                                                "source":  "IBM",
+                                                                "url":  "https://www.ibm.com/think/topics/deep-learning",
+                                                                "relatedTopics":  [
+                                                                                      "Neuronale Netze",
+                                                                                      "Transformer",
+                                                                                      "Training"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "generative-ki",
+                                                                "name":  "Generative KI",
+                                                                "type":  "Technisches Konzept",
+                                                                "description":  "KI-Systeme erzeugen neue Texte, Bilder, Audio, Video oder Code.",
+                                                                "importance":  "Zentrale Kategorie aktueller Anwendungen und Regulierung.",
+                                                                "source":  "NIST",
+                                                                "url":  "https://www.nist.gov/artificial-intelligence",
+                                                                "relatedTopics":  [
+                                                                                      "Foundation Models",
+                                                                                      "LLM",
+                                                                                      "Diffusion"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "modellarchitektur",
+                                           "title":  "Modellarchitektur",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "transformer",
+                                                                "name":  "Transformer",
+                                                                "type":  "Modellarchitektur",
+                                                                "description":  "Neuronale Architektur mit Attention für Sequenzen.",
+                                                                "importance":  "Technische Grundlage vieler großer Sprachmodelle.",
+                                                                "source":  "Originalpaper",
+                                                                "url":  "https://arxiv.org/abs/1706.03762",
+                                                                "relatedTopics":  [
+                                                                                      "Attention",
+                                                                                      "LLM",
+                                                                                      "Token"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "embeddings",
+                                                                "name":  "Embeddings",
+                                                                "type":  "Datenrepräsentation",
+                                                                "description":  "Vektordarstellungen, die semantische Ähnlichkeiten abbilden.",
+                                                                "importance":  "Grundlage für Suche, Empfehlungen und RAG.",
+                                                                "source":  "TensorFlow",
+                                                                "url":  "https://www.tensorflow.org/text/guide/word_embeddings",
+                                                                "relatedTopics":  [
+                                                                                      "Vektordatenbank",
+                                                                                      "RAG",
+                                                                                      "Suche"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "diffusionsmodelle",
+                                                                "name":  "Diffusionsmodelle",
+                                                                "type":  "Modellarchitektur",
+                                                                "description":  "Generative Modelle rekonstruieren Daten schrittweise aus Rauschen.",
+                                                                "importance":  "Wichtige Grundlage moderner Bild- und Videoerzeugung.",
+                                                                "source":  "Originalpaper DDPM",
+                                                                "url":  "https://arxiv.org/abs/2006.11239",
+                                                                "relatedTopics":  [
+                                                                                      "Bild",
+                                                                                      "Video",
+                                                                                      "Latent Diffusion"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "anpassung-und-wissenszugriff",
+                                           "title":  "Anpassung und Wissenszugriff",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "rag",
+                                                                "name":  "RAG",
+                                                                "type":  "Architekturmuster",
+                                                                "description":  "Verbindet ein Modell mit externer Suche und bereitgestellten Quellen.",
+                                                                "importance":  "Kann Aktualität und Nachvollziehbarkeit verbessern.",
+                                                                "source":  "Originalpaper RAG",
+                                                                "url":  "https://arxiv.org/abs/2005.11401",
+                                                                "relatedTopics":  [
+                                                                                      "Embeddings",
+                                                                                      "Vektordatenbank",
+                                                                                      "Quellen"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "fine-tuning",
+                                                                "name":  "Fine-Tuning",
+                                                                "type":  "Modellanpassung",
+                                                                "description":  "Weitertraining eines Modells auf zusätzlichen Daten.",
+                                                                "importance":  "Ermöglicht Spezialisierung, verlangt aber Evaluation.",
+                                                                "source":  "Hugging Face",
+                                                                "url":  "https://huggingface.co/docs/transformers/training",
+                                                                "relatedTopics":  [
+                                                                                      "LoRA",
+                                                                                      "Trainingsdaten",
+                                                                                      "Evaluation"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "lora-peft",
+                                                                "name":  "LoRA / PEFT",
+                                                                "type":  "Effiziente Modellanpassung",
+                                                                "description":  "Nur kleine Zusatzparameter werden statt des gesamten Modells trainiert.",
+                                                                "importance":  "Reduziert Rechen- und Speicherbedarf.",
+                                                                "source":  "Hugging Face PEFT",
+                                                                "url":  "https://huggingface.co/docs/peft/",
+                                                                "relatedTopics":  [
+                                                                                      "Fine-Tuning",
+                                                                                      "Adapter",
+                                                                                      "Open Weight"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       }
+                                   ]
+                   },
+                   {
+                       "id":  "agenten-und-automation",
+                       "title":  "Agenten und Automation",
+                       "icon":  "⚙️",
+                       "filters":  [
+                                       {
+                                           "id":  "agentenframeworks",
+                                           "title":  "Agentenframeworks",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "langgraph",
+                                                                "name":  "LangGraph",
+                                                                "type":  "Open-Source-Framework",
+                                                                "description":  "Framework für zustandsbehaftete mehrstufige Agenten und Workflows.",
+                                                                "importance":  "Geeignet für kontrollierte Abläufe und Human-in-the-loop.",
+                                                                "source":  "LangGraph",
+                                                                "url":  "https://langchain-ai.github.io/langgraph/",
+                                                                "relatedTopics":  [
+                                                                                      "Agenten",
+                                                                                      "Zustände",
+                                                                                      "Freigaben"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "microsoft-autogen",
+                                                                "name":  "Microsoft AutoGen",
+                                                                "type":  "Open-Source-Framework",
+                                                                "description":  "Framework für Anwendungen mit zusammenarbeitenden KI-Agenten.",
+                                                                "importance":  "Nützlich für Multi-Agenten-Experimente.",
+                                                                "source":  "Microsoft",
+                                                                "url":  "https://microsoft.github.io/autogen/",
+                                                                "relatedTopics":  [
+                                                                                      "Multi-Agent",
+                                                                                      "Tools",
+                                                                                      "Orchestrierung"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "crewai",
+                                                                "name":  "CrewAI",
+                                                                "type":  "Open-Source-Framework",
+                                                                "description":  "Organisiert spezialisierte Agenten in Rollen und Aufgaben.",
+                                                                "importance":  "Niedrige Einstiegshürde für rollenbasierte Prototypen.",
+                                                                "source":  "CrewAI",
+                                                                "url":  "https://docs.crewai.com/",
+                                                                "relatedTopics":  [
+                                                                                      "Multi-Agent",
+                                                                                      "Rollen",
+                                                                                      "Workflows"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "no-code-und-low-code",
+                                           "title":  "No-Code und Low-Code",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "n8n",
+                                                                "name":  "n8n",
+                                                                "type":  "Workflow-Automation",
+                                                                "description":  "Visuelle Automationsplattform mit Integrationen und Self-Hosting.",
+                                                                "importance":  "Geeignet für kontrollierte KI-Automationen auf eigener Infrastruktur.",
+                                                                "source":  "n8n",
+                                                                "url":  "https://docs.n8n.io/",
+                                                                "relatedTopics":  [
+                                                                                      "Workflows",
+                                                                                      "Self-Hosting",
+                                                                                      "Agenten"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "make",
+                                                                "name":  "Make",
+                                                                "type":  "Workflow-Automation",
+                                                                "description":  "Cloud-Plattform zur visuellen Verbindung von Apps, APIs und KI-Diensten.",
+                                                                "importance":  "Schnell für Prototypen ohne eigenes Backend.",
+                                                                "source":  "Make",
+                                                                "url":  "https://www.make.com/en/help",
+                                                                "relatedTopics":  [
+                                                                                      "APIs",
+                                                                                      "Szenarien",
+                                                                                      "Webhooks"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "zapier",
+                                                                "name":  "Zapier",
+                                                                "type":  "Workflow-Automation",
+                                                                "description":  "Cloud-Dienst für App-Integrationen und automatisierte Abläufe.",
+                                                                "importance":  "Breite App-Abdeckung und einfacher Einstieg.",
+                                                                "source":  "Zapier",
+                                                                "url":  "https://help.zapier.com/",
+                                                                "relatedTopics":  [
+                                                                                      "Integrationen",
+                                                                                      "Trigger",
+                                                                                      "Actions"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "protokolle-und-werkzeuge",
+                                           "title":  "Protokolle und Werkzeuge",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "model-context-protocol-mcp",
+                                                                "name":  "Model Context Protocol – MCP",
+                                                                "type":  "Offenes Protokoll",
+                                                                "description":  "Standardisierte Verbindung zwischen KI-Anwendungen und Tools oder Datenquellen.",
+                                                                "importance":  "Kann Integrationen vereinheitlichen.",
+                                                                "source":  "Model Context Protocol",
+                                                                "url":  "https://modelcontextprotocol.io/",
+                                                                "relatedTopics":  [
+                                                                                      "Tools",
+                                                                                      "Ressourcen",
+                                                                                      "Agenten"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "openapi-specification",
+                                                                "name":  "OpenAPI Specification",
+                                                                "type":  "Offener API-Standard",
+                                                                "description":  "Maschinenlesbare Beschreibung von HTTP-APIs.",
+                                                                "importance":  "Ermöglicht strukturierte Tool- und API-Aufrufe.",
+                                                                "source":  "OpenAPI Initiative",
+                                                                "url":  "https://spec.openapis.org/oas/latest.html",
+                                                                "relatedTopics":  [
+                                                                                      "APIs",
+                                                                                      "Function Calling",
+                                                                                      "Tools"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "function-calling-tool-use",
+                                                                "name":  "Function Calling / Tool Use",
+                                                                "type":  "Interaktionsmuster",
+                                                                "description":  "Modelle erzeugen strukturierte Aufrufe definierter Funktionen.",
+                                                                "importance":  "Grundlage für verlässliche Aktionen und Datenabfragen.",
+                                                                "source":  "OpenAI",
+                                                                "url":  "https://platform.openai.com/docs/guides/function-calling",
+                                                                "relatedTopics":  [
+                                                                                      "MCP",
+                                                                                      "JSON Schema",
+                                                                                      "Agenten"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       }
+                                   ]
+                   },
+                   {
+                       "id":  "anwendungsfalle",
+                       "title":  "Anwendungsfälle",
+                       "icon":  "💼",
+                       "filters":  [
+                                       {
+                                           "id":  "wissensarbeit",
+                                           "title":  "Wissensarbeit",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "recherche-und-zusammenfassung",
+                                                                "name":  "Recherche und Zusammenfassung",
+                                                                "type":  "Anwendungsfall",
+                                                                "description":  "KI unterstützt beim Sichten und Strukturieren großer Informationsmengen.",
+                                                                "importance":  "Hoher Produktivitätshebel, aber Quellenprüfung bleibt nötig.",
+                                                                "source":  "NIST AI RMF",
+                                                                "url":  "https://www.nist.gov/itl/ai-risk-management-framework",
+                                                                "relatedTopics":  [
+                                                                                      "RAG",
+                                                                                      "Halluzinationen",
+                                                                                      "Quellenprüfung"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "unternehmenssuche-und-wissenszugriff",
+                                                                "name":  "Unternehmenssuche und Wissenszugriff",
+                                                                "type":  "Anwendungsfall",
+                                                                "description":  "Natürliche Sprache erschließt interne Dokumente und Richtlinien.",
+                                                                "importance":  "Kann Suchzeiten reduzieren, benötigt Berechtigungen und aktuelle Quellen.",
+                                                                "source":  "Microsoft Learn",
+                                                                "url":  "https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview",
+                                                                "relatedTopics":  [
+                                                                                      "RAG",
+                                                                                      "Datenschutz",
+                                                                                      "Rechte"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "ubersetzung-und-sprachliche-uberarbeitung",
+                                                                "name":  "Übersetzung und sprachliche Überarbeitung",
+                                                                "type":  "Anwendungsfall",
+                                                                "description":  "KI übersetzt, kürzt, vereinfacht oder überarbeitet Texte.",
+                                                                "importance":  "Breit nutzbar, bei Fachsprache ist menschliche Prüfung nötig.",
+                                                                "source":  "EU eTranslation",
+                                                                "url":  "https://commission.europa.eu/resources-partners/etranslation_en",
+                                                                "relatedTopics":  [
+                                                                                      "Mehrsprachigkeit",
+                                                                                      "Qualität",
+                                                                                      "Datenschutz"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "software-und-it",
+                                           "title":  "Software und IT",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "codeassistenz",
+                                                                "name":  "Codeassistenz",
+                                                                "type":  "Anwendungsfall",
+                                                                "description":  "KI schlägt Code vor, erklärt oder dokumentiert ihn.",
+                                                                "importance":  "Kann Entwicklung beschleunigen, erzeugt aber Sicherheits- und Lizenzrisiken.",
+                                                                "source":  "GitHub Copilot Docs",
+                                                                "url":  "https://docs.github.com/en/copilot",
+                                                                "relatedTopics":  [
+                                                                                      "Testing",
+                                                                                      "Sicherheit",
+                                                                                      "Lizenzen"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "softwaretests",
+                                                                "name":  "Softwaretests",
+                                                                "type":  "Anwendungsfall",
+                                                                "description":  "KI unterstützt bei Testfällen, Testdaten und Fehleranalyse.",
+                                                                "importance":  "Kann Testabdeckung verbessern, ersetzt keine Teststrategie.",
+                                                                "source":  "NIST SSDF",
+                                                                "url":  "https://csrc.nist.gov/Projects/ssdf",
+                                                                "relatedTopics":  [
+                                                                                      "Codeassistenz",
+                                                                                      "Qualität",
+                                                                                      "Sicherheit"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "it-support-und-incident-analyse",
+                                                                "name":  "IT-Support und Incident-Analyse",
+                                                                "type":  "Anwendungsfall",
+                                                                "description":  "KI strukturiert Tickets und unterstützt bei technischen Vorfällen.",
+                                                                "importance":  "Kann Reaktionszeiten senken, benötigt sichere Zugriffe.",
+                                                                "source":  "NIST Cybersecurity Framework",
+                                                                "url":  "https://www.nist.gov/cyberframework",
+                                                                "relatedTopics":  [
+                                                                                      "Cybersecurity",
+                                                                                      "Agenten",
+                                                                                      "Wissenszugriff"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       },
+                                       {
+                                           "id":  "kommunikation-und-medien",
+                                           "title":  "Kommunikation und Medien",
+                                           "entities":  [
+                                                            {
+                                                                "id":  "redaktionelle-assistenz",
+                                                                "name":  "Redaktionelle Assistenz",
+                                                                "type":  "Anwendungsfall",
+                                                                "description":  "KI unterstützt bei Themenstruktur, Metadaten, Transkription und Produktion.",
+                                                                "importance":  "Kann Routinearbeit reduzieren; Verantwortung bleibt beim Menschen.",
+                                                                "source":  "Council of Europe",
+                                                                "url":  "https://www.coe.int/en/web/freedom-expression/artificial-intelligence-and-journalism",
+                                                                "relatedTopics":  [
+                                                                                      "Journalismus",
+                                                                                      "Transparenz",
+                                                                                      "Human-in-the-loop"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "social-media-und-content-produktion",
+                                                                "name":  "Social-Media- und Content-Produktion",
+                                                                "type":  "Anwendungsfall",
+                                                                "description":  "KI unterstützt Text-, Bild-, Audio- und Videoformate.",
+                                                                "importance":  "Bringt Kennzeichnungs-, Rechte- und Qualitätsfragen mit sich.",
+                                                                "source":  "EU AI Act",
+                                                                "url":  "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+                                                                "relatedTopics":  [
+                                                                                      "Deepfakes",
+                                                                                      "Urheberrecht",
+                                                                                      "Transparenz"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            },
+                                                            {
+                                                                "id":  "monitoring-und-themenanalyse",
+                                                                "name":  "Monitoring und Themenanalyse",
+                                                                "type":  "Anwendungsfall",
+                                                                "description":  "KI kategorisiert und bewertet Meldungen, Beiträge oder Dokumente.",
+                                                                "importance":  "Nützlich für Früherkennung, birgt aber Bias- und Fehlklassifikationsrisiken.",
+                                                                "source":  "OECD AI Principles",
+                                                                "url":  "https://www.oecd.org/en/topics/sub-issues/ai-principles.html",
+                                                                "relatedTopics":  [
+                                                                                      "Klassifikation",
+                                                                                      "Bias",
+                                                                                      "Medienbeobachtung"
+                                                                                  ],
+                                                                "updated":  "2026-08-03"
+                                                            }
+                                                        ]
+                                       }
+                                   ]
+                   }
+               ]
+}

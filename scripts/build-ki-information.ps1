@@ -1,0 +1,97 @@
+param(
+  [Parameter(Mandatory = $true)]
+  [string]$SourceCsv,
+  [string]$OutputJson = ''
+)
+
+$ErrorActionPreference = 'Stop'
+if (-not $OutputJson) {
+  $OutputJson = Join-Path $PSScriptRoot '..\assets\data\ki-informationsraum.json'
+}
+$rows = Import-Csv -LiteralPath $SourceCsv -Encoding utf8
+$columns = @($rows[0].PSObject.Properties.Name)
+$columnTopic = $columns[0]
+$columnFilter = $columns[1]
+$columnEntity = $columns[2]
+$columnType = $columns[3]
+$columnDescription = $columns[4]
+$columnImportance = $columns[5]
+$columnSource = $columns[6]
+$columnUrl = $columns[7]
+$columnRelated = $columns[8]
+$columnUpdated = $columns[10]
+
+function ConvertTo-Slug([string]$Value) {
+  $normalized = $Value.Normalize([Text.NormalizationForm]::FormD)
+  $builder = [Text.StringBuilder]::new()
+  foreach ($character in $normalized.ToCharArray()) {
+    if ([Globalization.CharUnicodeInfo]::GetUnicodeCategory($character) -ne [Globalization.UnicodeCategory]::NonSpacingMark) {
+      [void]$builder.Append($character)
+    }
+  }
+  $slug = $builder.ToString().ToLowerInvariant() -replace '[^a-z0-9]+', '-'
+  return $slug.Trim('-')
+}
+
+$topics = [System.Collections.Generic.List[object]]::new()
+$topicGroups = $rows | Group-Object -Property $columnTopic
+
+foreach ($topicGroup in $topicGroups) {
+  $topicText = $topicGroup.Name
+  $title = [regex]::Replace($topicText, '^[^\p{L}\p{N}]+', '').Trim()
+  $icon = $topicText.Substring(0, $topicText.Length - $title.Length).Trim()
+  $topicId = ConvertTo-Slug $title
+  $filters = [System.Collections.Generic.List[object]]::new()
+
+  foreach ($filterGroup in ($topicGroup.Group | Group-Object -Property $columnFilter)) {
+    $filterTitle = $filterGroup.Name.Trim()
+    $entities = [System.Collections.Generic.List[object]]::new()
+    $usedIds = @{}
+
+    foreach ($row in $filterGroup.Group) {
+      $baseId = ConvertTo-Slug $row.($columnEntity)
+      $entityId = $baseId
+      $suffix = 2
+      while ($usedIds.ContainsKey($entityId)) {
+        $entityId = "$baseId-$suffix"
+        $suffix += 1
+      }
+      $usedIds[$entityId] = $true
+
+      $related = @($row.($columnRelated) -split ';' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+      $entities.Add([ordered]@{
+        id = $entityId
+        name = $row.($columnEntity)
+        type = $row.($columnType)
+        description = $row.($columnDescription)
+        importance = $row.($columnImportance)
+        source = $row.($columnSource)
+        url = $row.($columnUrl)
+        relatedTopics = $related
+        updated = $row.($columnUpdated)
+      })
+    }
+
+    $filters.Add([ordered]@{
+      id = ConvertTo-Slug $filterTitle
+      title = $filterTitle
+      entities = $entities
+    })
+  }
+
+  $topics.Add([ordered]@{
+    id = $topicId
+    title = $title
+    icon = $icon
+    filters = $filters
+  })
+}
+
+$result = [ordered]@{
+  title = 'KI-Informationsraum'
+  topics = $topics
+}
+
+$json = $result | ConvertTo-Json -Depth 10
+[IO.File]::WriteAllText((Resolve-Path (Split-Path $OutputJson -Parent)).Path + '\' + (Split-Path $OutputJson -Leaf), $json, [Text.UTF8Encoding]::new($false))
+Write-Output "$($rows.Count) Datensätze nach $OutputJson übertragen."
