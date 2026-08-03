@@ -21,6 +21,14 @@ $columnUrl = $columns[7]
 $columnRelated = $columns[8]
 $columnUpdated = $columns[10]
 
+# Offizielle Nachfolgeziele für Quellen, deren ursprüngliche URL nicht mehr existiert.
+$urlOverrides = @{
+  'Bundesnetzagentur' = 'https://www.bundesnetzagentur.de/DE/Home/home_node.htm'
+  'TDDDG' = 'https://www.gesetze-im-internet.de/ttdsg/BJNR198210021.html'
+  'CNIL AI Guidance' = 'https://www.cnil.fr/en/topics/artificial-intelligence-ai'
+  'Redaktionelle Assistenz' = 'https://www.coe.int/en/web/freedom-expression/-/guidelines-on-the-responsible-implementation-of-artificial-intelligence-ai-systems-in-journalism'
+}
+
 function ConvertTo-Slug([string]$Value) {
   $normalized = $Value.Normalize([Text.NormalizationForm]::FormD)
   $builder = [Text.StringBuilder]::new()
@@ -50,6 +58,7 @@ foreach ($topicGroup in $topicGroups) {
 
     foreach ($row in $filterGroup.Group) {
       $baseId = ConvertTo-Slug $row.($columnEntity)
+      $entityName = $row.($columnEntity)
       $entityId = $baseId
       $suffix = 2
       while ($usedIds.ContainsKey($entityId)) {
@@ -61,12 +70,12 @@ foreach ($topicGroup in $topicGroups) {
       $related = @($row.($columnRelated) -split ';' | ForEach-Object { $_.Trim() } | Where-Object { $_ })
       $entities.Add([ordered]@{
         id = $entityId
-        name = $row.($columnEntity)
+        name = $entityName
         type = $row.($columnType)
         description = $row.($columnDescription)
         importance = $row.($columnImportance)
         source = $row.($columnSource)
-        url = $row.($columnUrl)
+        url = if ($urlOverrides.ContainsKey($entityName)) { $urlOverrides[$entityName] } else { $row.($columnUrl) }
         relatedTopics = $related
         updated = $row.($columnUpdated)
       })
