@@ -269,6 +269,10 @@
   }
 
   elements.searchInput.addEventListener("input", searchAcrossTopics);
+  elements.searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    searchAcrossTopics();
+  });
   elements.searchForm.addEventListener("reset", () => setTimeout(() => {
     query = "";
     selectedTopic = null;
