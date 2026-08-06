@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "source": "eBird CSV imports via Make",
-  "generatedAt": "2026-08-06T12:10:25.656Z",
+  "generatedAt": "2026-08-06T12:12:51.388Z",
   "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
   "observations": [
     {
@@ -113,13 +113,13 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-08-06",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Kolkrabe",
       "observerId": "Michael",
-      "scientificName": "Corvus corax"
+      "commonName": "Kolkrabe",
+      "scientificName": "Corvus corax",
+      "date": "2026-08-06",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
@@ -185,13 +185,13 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-08-06",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Türkentaube",
       "observerId": "Michael",
-      "scientificName": "Streptopelia decaocto"
+      "commonName": "Türkentaube",
+      "scientificName": "Streptopelia decaocto",
+      "date": "2026-08-06",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     }
   ]
 }
