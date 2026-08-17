@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "source": "eBird CSV imports via Make",
-  "generatedAt": "2026-08-07T06:01:52.356Z",
+  "generatedAt": "2026-08-17T05:51:20.218Z",
   "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
   "observations": [
     {
@@ -41,13 +41,13 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-08-07",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Gartenbaumläufer",
       "observerId": "Michael",
-      "scientificName": "Certhia brachydactyla"
+      "commonName": "Gartenbaumläufer",
+      "scientificName": "Certhia brachydactyla",
+      "date": "2026-08-07",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
