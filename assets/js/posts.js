@@ -1,5 +1,15 @@
 window.sitePosts = [
   {
+    title: "Portfolio Tracker: Unternehmensmeldungen ohne RSS oder Scraping bündeln",
+    date: "2026-08-27",
+    lang: "de",
+    tags: ["Medien", "Praxis", "Workflow", "KI"],
+    excerpt: "Wie ein automatisierter Datenfluss Unternehmensmeldungen per E-Mail bündelt und im eigenen Webdesign darstellt.",
+    url: "blog-portfolio-tracker-unternehmensmeldungen-ohne-rss-scraping.html",
+    image: "assets/img/automatisierter-portfolio-tracker-datenfluss.png",
+    imageAlt: "Infografik zum automatisierten Datenfluss des Portfolio-Trackers von Unternehmens-E-Mails über Gmail, Airtable und GitHub bis zur eigenen Webdarstellung"
+  },
+  {
     title: "Automatisierung ohne Spezialanbieter wie Make oder n8n",
     date: "2026-07-22",
     lang: "de",

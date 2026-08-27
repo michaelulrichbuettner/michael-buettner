@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Tracker: Unternehmensmeldungen ohne RSS oder Scraping bündeln | Michael Büttner</title>
+    <meta name="description" content="Wie ein automatisierter Datenfluss Unternehmensmeldungen per E-Mail bündelt und im eigenen Webdesign darstellt.">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260706">
+    <script src="assets/js/main.js?v=20260702" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" title="Zum Hauptinhalt springen">Zum Inhalt springen</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html" title="Zur Startseite von Michael Büttner"><span class="brand__mark">MB</span><span class="brand__text">Michael Büttner</span></a>
+        <nav class="nav" aria-label="Hauptnavigation">
+          <a href="experimente.html" title="Experimente und Showcases von Michael Büttner ansehen">Experimente</a>
+          <a href="erfahrung.html" title="Erfahrung von Michael Büttner ansehen">Erfahrung</a>
+          <a href="masterarbeit.html" title="Masterarbeit von Michael Büttner ansehen">Masterarbeit</a>
+          <a href="arbeitsproben.html" title="Arbeitsproben von Michael Büttner ansehen">Arbeitsproben</a>
+          <a href="blog.html" title="Einblicke von Michael Büttner lesen">Einblicke</a>
+        </nav>
+        <a class="language-link" href="#" title="Englische Version folgt">EN folgt</a>
+      </div>
+    </header>
+
+    <main id="main" class="page">
+      <article class="section article-page">
+        <div class="wrap article-wrap">
+          <a class="back-link" href="blog.html" title="Zur Einblicke-Übersicht zurückkehren">Zurück zu den Einblicken</a>
+          <p class="eyebrow">Medien · Praxis · Workflow · KI</p>
+          <h1>Portfolio Tracker: Unternehmensmeldungen ohne RSS oder Scraping bündeln</h1>
+          <p class="article-meta">27. August 2026</p>
+          <figure class="article-hero">
+            <img src="assets/img/automatisierter-portfolio-tracker-datenfluss.png" alt="Infografik zum automatisierten Datenfluss des Portfolio-Trackers von Unternehmens-E-Mails über Gmail, Airtable und GitHub bis zur eigenen Webdarstellung" title="Der automatisierte Portfolio-Tracker: Datenfluss ohne RSS">
+            <figcaption>Der automatisierte Datenfluss führt von Unternehmens-E-Mails über Gmail, Airtable und GitHub bis zur eigenen Darstellung im Portfolio-Tracker.</figcaption>
+          </figure>
+
+          <div class="article-content">
+            <p>Journalisten kennen die Situation zur Genüge: Im Tagesgeschäft will man nichts verpassen, alle Quellen im Blick behalten und immer auf dem neuesten Stand sein. Ganz ähnlich ergeht es Investoren an der Börse. Statt eines Themengebiets sind es aber hier die Unternehmen, bei denen man auf dem Laufenden bleiben möchte. Sei es, um schnell reagieren zu können oder einfach, um Entwicklungen nicht zu verpassen. Dabei haben beide Gruppen das gleiche Problem. Manche Teilbereiche der Quellen sind einfach zugänglich, Informationen werden täglich oder sogar stündlich über die Ticker der Medien geschickt. Andere Unternehmen bekommen kaum mediale Aufmerksamkeit.</p>
+
+            <p>So ergeht es mir bei meinem kleinen Aktienportfolio: Während ich bei Amazon, Nike oder BASF mit Informationen überschüttet werde, höre ich in Deutschland von Nibe Industrier aus Schweden oder UGI aus den USA herzlich wenig. Portfolios kann man sich kostenlos bei Medien wie dem Handelsblatt oder Onvista anlegen und dort gibt es in der Regel zu allen Positionen einen News-Bereich. Dort zeigt sich aber wieder die bekannte Schwäche. Die Informationsfülle ist abhängig vom medialen Spotlight. Meine erste Lösung: Ein selbst entwickelter Portfolio-Tracker, der spezialisiert auf meine Positionen und auf deren Unternehmensmeldungen Informationen automatisch sammelt. Medienangebote habe ich in den ersten Inkrementen bewusst herausgelassen, um die Umsetzung schlank zu halten. Ich konzentriere mich also auf die Unternehmensinformationen.</p>
+
+            <h2>RSS, Scraping, Seiten-Tracker - Keep it simple</h2>
+            <p>Als Erstes dachte ich mir, dass ein RSS-Feed meine Bedürfnisse gut abdeckt. Aber kaum mehr ein Unternehmen bietet den Klassiker im Netz an. Browser-Erweiterungen oder das aktive Scraping aller Seiten kam für mich allein wegen des Aufwands und der Abhängigkeit von Drittanbietern nicht in Frage. Was ist also der direkteste Weg vom Unternehmen auf meine Seite? Die Antwort ist einfacher als gedacht. E-Mails. Denn quasi alle Unternehmensmeldungen werden per Mail verschickt oder zumindest angekündigt.</p>
+
+            <p>Der Rest schien mir simpel zu sein, Make sollte die Mails bei meinem E-Mail-Anbieter abgreifen, sie in eine Airtable-Tabelle schreiben und diese zeige ich per iFrame auf meiner Seite. Das Problem waren die Namen. Denn welche Mail ist von wem? Während die Extraktion der Inhalte, die Übergabe von Zeit und die Darstellung einfach zu lösen war, war die robuste Zuordnung der Namen das langwierigste Problem. Ein Beispiel: Die “Bank of Nova Scotia” nennt sich selbst auch einfach “Scotiabank”, Mails werden aber auch als Scotia Investors News gekennzeichnet. Dazu kommen besonders kurze Namen wie “UGI” oder Handelsnamen, die sich von Unternehmensnamen unterscheiden. Nachdem die Zuordnung solide aufgestellt war, fehlt die andere Seite, also das Eintragen der Namen in die Tabelle. Dafür musste ich die Namen mit einer Referenznamenstabelle abgleichen, damit nicht ständig neue Unternehmens-Namen-Variationen in meine Tabelle eingetragen werden.</p>
+
+            <figure class="article-hero">
+              <img src="assets/img/portfolio-tracker-make-datenlauf.png" alt="Screenshot des Make-Szenarios vom Gmail-Eingang über die Zuordnung und Sortierung in Airtable bis zur Aktualisierung der JSON-Datei auf GitHub" title="Make-Datenlauf des Portfolio-Trackers">
+              <figcaption>Das Make-Szenario verarbeitet eingehende Unternehmensmeldungen, gleicht Firmennamen ab, sortiert die News in Airtable und aktualisiert anschließend die JSON-Datei auf GitHub.</figcaption>
+            </figure>
+
+            <h2>Abhängigkeiten abbauen: Wenn der Datenlauf zusammenbricht</h2>
+            <p>Der Import, die Verarbeitung und nicht zuletzt die Sortierung der Tabellen kosten wie immer Tokens, Daten-Übertragungsmengen und API-Aufrufe. Da ich mittlerweile sowieso einige Automatisierungen über Make gebaut habe, lag es nahe, mir hier einen Core-Account für 10 Euro im Monat zuzulegen. Hier laufe ich also in keine Limitationen mehr hinein. Airtable jedoch bietet mir zu wenig, dass ich hier einen kostenpflichtigen Account anlegen möchte. Das hat jedoch dazu geführt, dass die iFrame-Einbindung nach dem Testzeitraum nicht mehr funktionierte. Der Datenfluss funktioniert also noch, aber ich kann die Tabelle nicht mehr darstellen. Die Daten werden jedoch weiter in Airtable abgelegt. Es bildet also weiterhin die Referenzdatenbank.</p>
+
+            <p>Für die Version 0.2 habe ich also mit Codex eine eigene Darstellung auf meiner Webseite erstellt. Make lädt die aufbereiteten Tabellenzeilen, wandelt sie in JSON um und aktualisiert über die GitHub-API eine Datei im Repository meiner Webseite. Das hat auch den Vorteil, dass ich mein eigenes Design bestimmen und beispielsweise Markierungen für die Aktualität setzen kann. Dazu habe ich die Darstellung so gewählt, dass immer nur drei Meldungen pro Unternehmen dargestellt werden. Neue Meldungen schieben somit immer von links nach rechts ältere Meldungen weiter, bis die ältesten herausfallen. Diese Lösung läuft nun schon seit mehr als einem Monat robust und ohne Probleme. Man sieht also: Weniger Abhängigkeiten von Drittanbietern machen ein System nicht nur robuster, sondern bieten häufig mehr Spielraum bei der Umsetzung.</p>
+
+            <p><a class="button button--secondary" href="experimente.html#portfolio-tracker" title="Portfolio-Tracker in den Experimenten öffnen">Zum Portfolio-Tracker</a></p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer"><div class="wrap site-footer__inner"><p>&copy; <span data-current-year></span> Michael Büttner</p><div class="site-footer__links"><a href="kontakt.html" title="Kontakt zu Michael Büttner aufnehmen">Kontakt</a><a href="impressum.html" title="Impressum der Website ansehen">Impressum</a><a href="datenschutz.html" title="Datenschutzhinweise der Website ansehen">Datenschutz</a></div></div></footer>
+  </body>
+</html>
