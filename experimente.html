@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Experimente &amp; Showcases | Michael Büttner</title>
     <meta name="description" content="Experimente, Prototypen und digitale Showcases von Michael Büttner.">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260730-1">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260902-1">
     <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
     <script src="assets/js/main.js?v=20260702" defer></script>
     <script src="assets/js/portfolio-news.js?v=20260721-2" defer></script>
@@ -46,35 +46,6 @@
             </div>
           </article>
 
-          <article class="showcase-card">
-            <div class="showcase-card__header">
-              <div>
-                <p class="showcase-card__label">Datenexperiment · Zweite Iteration</p>
-                <h2>Persönliche Vogelkarte - Vers. 0.2</h2>
-                <p>Eine wachsende Übersicht meiner mit Merlin und eBird erfassten Vogelarten. Neue Daten werden halbautomatisch verarbeitet und nach Städten zusammengeführt. Aus Datenschutzgründen zeigt die Karte nur Städte. Der aktuelle Datenlauf: Merlin --&gt; eBird Life List --&gt; Browser-Plugin --&gt; Make --&gt; OpenStreetMap-Geocoding --&gt; JSON --&gt; GitHub --&gt; Website.</p>
-                <details class="showcase-history">
-                  <summary>Bisherige Versionen anzeigen</summary>
-                  <div class="showcase-history__entry">
-                    <h3>Vers. 0.1 – Manueller CSV-Import</h3>
-                    <p>Erste funktionsfähige Version der Vogelkarte. Die eBird-Life-List wurde manuell heruntergeladen und lokal in eine datenschutzbereinigte JSON-Datei umgewandelt. Datenlauf: Merlin --&gt; eBird Life List --&gt; CSV-Export --&gt; lokale Aufbereitung --&gt; JSON --&gt; Website.</p>
-                  </div>
-                </details>
-              </div>
-            </div>
-            <div class="bird-map-showcase">
-              <div class="bird-map-summary" data-bird-map-summary aria-label="Zusammenfassung"></div>
-              <div
-                class="bird-map"
-                data-bird-map
-                data-source="data/vogelbeobachtungen.json"
-                role="region"
-                aria-label="Karte der erfassten Vogelarten">
-              </div>
-              <p class="bird-map-status" data-bird-map-status aria-live="polite">Vogeldaten werden geladen …</p>
-              <div class="bird-city-list" data-bird-city-list aria-label="Vogelarten nach Stadt"></div>
-            </div>
-          </article>
-
           <article id="portfolio-tracker" class="showcase-card portfolio-news-card">
             <div class="showcase-card__header">
               <div>
@@ -89,6 +60,7 @@
                   </div>
                 </details>
               </div>
+              <a class="button button--secondary" href="blog-portfolio-tracker-unternehmensmeldungen-ohne-rss-scraping.html" title="Artikel zum Portfolio-Tracker lesen">Zum Artikel</a>
             </div>
             <div class="portfolio-news" data-portfolio-news data-source="data/unternehmensnews.json">
               <form class="portfolio-news__controls" data-news-controls role="search">
@@ -129,6 +101,38 @@
                 <div class="portfolio-news__rows" data-news-rows></div>
               </div>
               <p class="portfolio-news__empty" data-news-empty hidden>Keine passenden Unternehmen oder Meldungen gefunden.</p>
+            </div>
+          </article>
+
+          <article class="showcase-card">
+            <div class="showcase-card__header">
+              <div>
+                <p class="showcase-card__label">Datenexperiment · Zweite Iteration</p>
+                <h2>Persönliche Vogelkarte - Vers. 0.2</h2>
+                <p>Eine wachsende Übersicht meiner mit Merlin und eBird erfassten Vogelarten. Neue Daten werden halbautomatisch verarbeitet und nach Städten zusammengeführt. Aus Datenschutzgründen zeigt die Karte nur Städte. Der aktuelle Datenlauf: Merlin --&gt; eBird Life List --&gt; Browser-Plugin --&gt; Make --&gt; OpenStreetMap-Geocoding --&gt; JSON --&gt; GitHub --&gt; Website.</p>
+                <details class="showcase-history">
+                  <summary>Bisherige Versionen anzeigen</summary>
+                  <div class="showcase-history__entry">
+                    <h3>Vers. 0.1 – Manueller CSV-Import</h3>
+                    <p>Erste funktionsfähige Version der Vogelkarte. Die eBird-Life-List wurde manuell heruntergeladen und lokal in eine datenschutzbereinigte JSON-Datei umgewandelt. Datenlauf: Merlin --&gt; eBird Life List --&gt; CSV-Export --&gt; lokale Aufbereitung --&gt; JSON --&gt; Website.</p>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <div class="bird-map-showcase">
+              <div class="bird-map-summary" data-bird-map-summary aria-label="Zusammenfassung"></div>
+              <div
+                class="bird-map"
+                data-bird-map
+                data-source="data/vogelbeobachtungen.json"
+                role="region"
+                aria-label="Karte der erfassten Vogelarten">
+              </div>
+              <p class="bird-map-status" data-bird-map-status aria-live="polite">Vogeldaten werden geladen …</p>
+              <details class="showcase-history bird-city-list-disclosure">
+                <summary>Vogelarten nach Stadt anzeigen</summary>
+                <div class="bird-city-list" data-bird-city-list aria-label="Vogelarten nach Stadt"></div>
+              </details>
             </div>
           </article>
 
