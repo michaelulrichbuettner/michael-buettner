@@ -11,6 +11,14 @@
       "description": "Mobile Geräte, neue Formfaktoren und visuelle Technologien",
       "articles": [
         {
+          "title": "Cooler als Ray-Ban: Google zeigt clevere Brille für den Alltag",
+          "summary": "Eine redaktionelle Einordnung zu Smart Glasses, Android XR und KI-gestützten Funktionen im Alltag.",
+          "url": "https://www.inside-digital.de/news/cooler-als-ray-ban-google-zeigt-clevere-brille-fuer-den-alltag",
+          "topic": "smartphones-imaging",
+          "eventBased": false,
+          "year": 2025
+        },
+        {
           "title": "Wechselobjektive für Smartphones: realme und Xiaomi gehen neue Wege",
           "summary": "Eine redaktionelle Einordnung zu Smartphones, Kameratechnik und den dahinterliegenden Markt- oder Techniktrends.",
           "url": "https://www.inside-digital.de/news/wechselobjektive-fuer-smartphones-realme-und-xiaomi-gehen-neue-wege",
@@ -212,6 +220,14 @@
       "shortName": "E-Bikes & Fahrradtechnik",
       "description": "Antriebe, Komponenten, Sicherheit und Mobilität auf zwei Rädern",
       "articles": [
+        {
+          "title": "Bosch mit E-Bike-Neuigkeiten: Neuer Motor, neues Display, verbessertes ABS und Automatik",
+          "summary": "Ein kompakter Überblick über neue Bosch-Antriebe, Displays, ABS-Funktionen und automatische Schaltungen für E-Bikes.",
+          "url": "https://www.inside-digital.de/news/bosch-mit-e-bike-neuigkeiten-neuer-motor-neues-display-verbessertes-abs-und-automatik",
+          "topic": "ebikes",
+          "eventBased": false,
+          "year": 2025
+        },
         {
           "title": "Keine Chance für Diebe: E-Bikes werden viel sicherer",
           "summary": "Eine redaktionelle Einordnung zu E-Bikes, Diebstahlschutz und den dahinterliegenden Markt- oder Techniktrends.",
@@ -488,6 +504,14 @@
       "description": "Elektromobilität, Fahrberichte und neue Verkehrskonzepte",
       "articles": [
         {
+          "title": "Robolöwe zum Reiten? So irre könnte die Zukunft des Bikens sein",
+          "summary": "Eine redaktionelle Einordnung zu Kawasakis Roboter-Fahrzeug, Wasserstoffantrieb und möglichen Mobilitätskonzepten der Zukunft.",
+          "url": "https://www.inside-digital.de/news/reiten-statt-fahren-so-irre-koennte-die-zukunft-des-bikens-sein",
+          "topic": "mobility",
+          "eventBased": false,
+          "year": 2025
+        },
+        {
           "title": "Yamaha präsentiert: Alien-Bikes und irre Autos",
           "summary": "Eine redaktionelle Einordnung zu Mobilität, Konzeptfahrzeuge und den dahinterliegenden Markt- oder Techniktrends.",
           "url": "https://www.inside-digital.de/news/yamaha-alien-bike-und-verrueckte-autos",
@@ -711,6 +735,14 @@
       "shortName": "Daten & Orientierung",
       "description": "Werkzeuge, die komplexe Daten verständlich und nutzbar machen",
       "articles": [
+        {
+          "title": "Bundestagswahl 2025: 7 Alternativen zum Wahl-O-Mat",
+          "summary": "Ein vergleichender Überblick über digitale Wahlhilfen – vom KI-Chat bis zum spielerischen Matching-Tool.",
+          "url": "https://www.inside-digital.de/news/bundestagswahl-2025-7-alternativen-wahl-o-mat",
+          "topic": "data-orientation",
+          "eventBased": false,
+          "year": 2025
+        },
         {
           "title": "Wie weit kommst du mit der Bahn in welcher Zeit? Diese Karte zeigt es dir",
           "summary": "Ein kompakter Ratgeber zu Bahn, Datenvisualisierung mit konkreter Orientierung für Leserinnen und Leser.",
