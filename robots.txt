@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://michaelulrichbuettner.github.io/michael-buettner/sitemap.xml
+Sitemap: https://michael-buettner.eu/sitemap.xml
