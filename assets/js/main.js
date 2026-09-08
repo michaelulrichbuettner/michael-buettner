@@ -13,12 +13,12 @@
     }).format(new Date(value));
   }
 
-  function postCard(post) {
+  function postCard(post, index, featured) {
     const tags = post.tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
     const linkTitle = `${post.title} lesen`;
     const imageAlt = post.imageAlt || `Vorschaubild zum Beitrag ${post.title}`;
     const image = post.image
-      ? `<a class="post-card__image" href="${post.url}" title="${linkTitle}" aria-hidden="true" tabindex="-1"><img src="${post.image}" alt="${imageAlt}" title="${imageAlt}"></a>`
+      ? `<a class="post-card__image" href="${post.url}" title="${linkTitle}" aria-hidden="true" tabindex="-1"><img src="${post.image}"${post.imageSrcset ? ` srcset="${post.imageSrcset}" sizes="${featured ? "(max-width: 920px) calc(100vw - 2rem), (max-width: 1152px) calc((100vw - 4rem) / 3), 363px" : "(max-width: 1152px) calc(100vw - 2rem), 1120px"}"` : ""}${post.imageWidth && post.imageHeight ? ` width="${post.imageWidth}" height="${post.imageHeight}"` : ""} loading="${index === 0 ? "eager" : "lazy"}" decoding="async" alt="${imageAlt}" title="${imageAlt}"></a>`
       : "";
     return `
       <article class="post-card">
@@ -32,7 +32,7 @@
 
   function renderPosts(target, items) {
     target.innerHTML = items.length
-      ? items.map(postCard).join("")
+      ? items.map((post, index) => postCard(post, index, target.classList.contains("post-list--featured"))).join("")
       : '<p class="empty-state">Noch keine Beiträge in dieser Auswahl.</p>';
   }
 

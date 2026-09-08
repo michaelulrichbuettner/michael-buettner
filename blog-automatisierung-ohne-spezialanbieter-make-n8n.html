@@ -6,8 +6,8 @@
     <title>Automatisierung ohne Spezialanbieter wie Make oder n8n | Michael Büttner</title>
     <meta name="description" content="Schlanke Automatisierung mit Browser-Plugin und Apps Script.">
     <link rel="canonical" href="https://michael-buettner.eu/blog-automatisierung-ohne-spezialanbieter-make-n8n.html">
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260706">
-    <script src="assets/js/main.js?v=20260702" defer></script>
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260908-images">
+    <script src="assets/js/main.js?v=20260908-images" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -20,7 +20,7 @@
         "inLanguage": "de",
         "datePublished": "2026-07-22",
         "image": [
-          "https://michael-buettner.eu/assets/img/ki-automatisierung-effiziente-workflows.png"
+          "https://michael-buettner.eu/assets/img/optimized/ki-automatisierung-effiziente-workflows.webp"
         ],
         "author": {
           "@type": "Person",
@@ -57,7 +57,7 @@
           <h1>Automatisierung ohne Spezialanbieter wie Make oder n8n</h1>
           <p class="article-meta">22. Juli 2026</p>
           <figure class="article-hero">
-            <img src="assets/img/ki-automatisierung-effiziente-workflows.png" alt="Infografik zu einem schlanken Automatisierungsworkflow mit Browser-Plugin, KI-Analyse, Google-Sheets-Transfer und schneller Amortisierung" title="Schlanke Automatisierung: Der KI-Workflow ohne Umwege">
+            <img src="assets/img/optimized/ki-automatisierung-effiziente-workflows.webp" alt="Infografik zu einem schlanken Automatisierungsworkflow mit Browser-Plugin, KI-Analyse, Google-Sheets-Transfer und schneller Amortisierung" title="Schlanke Automatisierung: Der KI-Workflow ohne Umwege" width="2752" height="1536" decoding="async" srcset="assets/img/optimized/ki-automatisierung-effiziente-workflows-640.webp 640w, assets/img/optimized/ki-automatisierung-effiziente-workflows-1280.webp 1280w, assets/img/optimized/ki-automatisierung-effiziente-workflows.webp 2752w" sizes="(max-width: 912px) calc(100vw - 2rem), 880px">
             <figcaption>Schlanke KI-Automatisierung: vom Browser-Plugin über ChatGPT bis zum Transfer in Google Sheets.</figcaption>
           </figure>
 
@@ -77,7 +77,7 @@
 
             <p>“Eine Chrome-Erweiterung nach Manifest V3 erfasst die URL und einen aus mehreren Ansichten zusammengesetzten Ganzseiten-Screenshot einer Stellenanzeige. Anschließend öffnet sie einen neuen Chat in einem definierten ChatGPT-Projekt und befüllt den Prompt, ohne ihn automatisch abzusenden. Ein dort hinterlegter Skill analysiert Anzeige und Bewerberprofil und liefert neben dem Bericht einen validen JSON-Datenblock. Ein Content-Script liest diesen Block aus der ChatGPT-Seite, validiert und normalisiert die Felder und übergibt sie Base64-kodiert an eine als Web-App bereitgestellte Google-Apps-Script-Anwendung. Nach einer Kontrollansicht fügt das Script eine neue, formatierte Zeile an der passenden Position einer Google-Sheets-Tabelle ein. Bestehende Datensätze werden nicht überschrieben.”</p>
             <figure class="article-hero">
-              <img src="assets/img/chrome-erweiterung-stellen-check.png" alt="Screenshot der Chrome-Erweiterungsverwaltung mit der lokal geladenen Erweiterung Stellen-Check Übergabe" title="Chrome-Erweiterung Stellen-Check Übergabe">
+              <img src="assets/img/chrome-erweiterung-stellen-check.png" alt="Screenshot der Chrome-Erweiterungsverwaltung mit der lokal geladenen Erweiterung Stellen-Check Übergabe" title="Chrome-Erweiterung Stellen-Check Übergabe" width="802" height="426" decoding="async" loading="lazy">
               <figcaption>Die lokal entwickelte Chrome-Erweiterung übernimmt die Übergabe der Stellenanzeige in das ChatGPT-Projekt.</figcaption>
             </figure>
 
@@ -86,7 +86,7 @@
             <h2>Fehler, Feinschliff und Erkenntnisse</h2>
             <p>Die Fehlersuche und der Feinschliff haben rund 30 Minuten gekostet. Nun läuft die Automatisierung rund, stabil und robust für geschätzt rund 90 Prozent der Stellenanzeigen. Grenzbereiche wie unlesbare Screenshots, weil die Stellenanzeige auf mehreren Seiten verteilt oder ungünstig von Werbung oder Pop-Ups verdeckt wird, können so nicht abgedeckt werden. Genauso funktioniert das System praktisch nur lokal und besitzt noch keine Einbindung von Jobbenachrichtigungen per Mail. Als dritte Schwäche zeigt sich die Eintragung des Arbeitsortes in die Stellentabelle. Dort können keine neuen Namen in die Spaltenauswahl eingerichtet werden. Somit sind Stellen, die in Städten verfügbar sind, die bisher noch nicht per Hand in das Dropdown eingetragen wurden, zwar eingetragen, zeigen jedoch einen Fehler in der Tabelle. Die Schwächen sind jedoch zu verdauen, da die Automatisierung sich bei der Zeitersparnis wohl nach rund zehn Tagen bezahlt gemacht hat.</p>
             <figure class="article-hero">
-              <img src="assets/img/stellen-tabelle-stellen-check.png" alt="Screenshot einer Google-Sheets-Tabelle mit Stellen, Passungsbewertung, strategischem Wert, Institution, Ort, Gehalt, Frist und Bewerbungsstatus" title="Stellen und Bewerbungen in Google Sheets">
+              <img src="assets/img/stellen-tabelle-stellen-check.png" alt="Screenshot einer Google-Sheets-Tabelle mit Stellen, Passungsbewertung, strategischem Wert, Institution, Ort, Gehalt, Frist und Bewerbungsstatus" title="Stellen und Bewerbungen in Google Sheets" width="1872" height="332" decoding="async" loading="lazy">
               <figcaption>Die automatisiert befüllte Google-Sheets-Tabelle sammelt und priorisiert die Stelleninformationen für den Bewerbungsablauf.</figcaption>
             </figure>
 

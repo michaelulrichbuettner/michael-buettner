@@ -6,7 +6,10 @@ window.sitePosts = [
     tags: ["Medien", "Praxis", "Workflow", "KI"],
     excerpt: "Wie ein automatisierter Datenfluss Unternehmensmeldungen per E-Mail bündelt und im eigenen Webdesign darstellt.",
     url: "blog-portfolio-tracker-unternehmensmeldungen-ohne-rss-scraping.html",
-    image: "assets/img/automatisierter-portfolio-tracker-datenfluss.png",
+    image: "assets/img/optimized/automatisierter-portfolio-tracker-datenfluss.webp",
+    imageSrcset: "assets/img/optimized/automatisierter-portfolio-tracker-datenfluss-640.webp 640w, assets/img/optimized/automatisierter-portfolio-tracker-datenfluss-1280.webp 1280w, assets/img/optimized/automatisierter-portfolio-tracker-datenfluss.webp 2752w",
+    imageWidth: 2752,
+    imageHeight: 1536,
     imageAlt: "Infografik zum automatisierten Datenfluss des Portfolio-Trackers von Unternehmens-E-Mails über Gmail, Airtable und GitHub bis zur eigenen Webdarstellung"
   },
   {
@@ -16,7 +19,10 @@ window.sitePosts = [
     tags: ["Praxis", "Workflow", "KI", "Automatisierung"],
     excerpt: "Schlanke Automatisierung mit Browser-Plugin und Apps Script.",
     url: "blog-automatisierung-ohne-spezialanbieter-make-n8n.html",
-    image: "assets/img/ki-automatisierung-effiziente-workflows.png",
+    image: "assets/img/optimized/ki-automatisierung-effiziente-workflows.webp",
+    imageSrcset: "assets/img/optimized/ki-automatisierung-effiziente-workflows-640.webp 640w, assets/img/optimized/ki-automatisierung-effiziente-workflows-1280.webp 1280w, assets/img/optimized/ki-automatisierung-effiziente-workflows.webp 2752w",
+    imageWidth: 2752,
+    imageHeight: 1536,
     imageAlt: "Infografik zu einem schlanken Automatisierungsworkflow mit Browser-Plugin, KI-Analyse, Google-Sheets-Transfer und schneller Amortisierung",
     workSample: true
   },
@@ -27,7 +33,10 @@ window.sitePosts = [
     tags: ["Medien", "Praxis", "Workflow", "KI", "Agile Methoden"],
     excerpt: "Webseiten-Entwicklung mit Codex - So entstand das MVP.",
     url: "blog-codex-projekt-webseite-ohne-coding-erfahrung.html",
-    image: "assets/img/low-code-ki-entwicklungspfad.jpg",
+    image: "assets/img/optimized/low-code-ki-entwicklungspfad.webp",
+    imageSrcset: "assets/img/optimized/low-code-ki-entwicklungspfad-640.webp 640w, assets/img/optimized/low-code-ki-entwicklungspfad-1280.webp 1280w, assets/img/optimized/low-code-ki-entwicklungspfad.webp 2752w",
+    imageWidth: 2752,
+    imageHeight: 1536,
     imageAlt: "Infografik zum Low-Code- und KI-gestützten Entwicklungspfad eines Personal-Branding-MVPs mit Codex, Management-Expertise und agilem Workflow",
     workSample: true
   },
@@ -38,7 +47,10 @@ window.sitePosts = [
     tags: ["Medien", "Praxis", "Führung", "Struktur", "Workflow"],
     excerpt: "Warum Transparenz, Spezialisierung und Leitplanken kreative Power und Leistungsfähigkeit freisetzen.",
     url: "blog-skalierung-struktur-workflow-transparenz.html",
-    image: "assets/img/weg-zu-207-millionen-visits.jpg",
+    image: "assets/img/optimized/weg-zu-207-millionen-visits.webp",
+    imageSrcset: "assets/img/optimized/weg-zu-207-millionen-visits-640.webp 640w, assets/img/optimized/weg-zu-207-millionen-visits-1280.webp 1280w, assets/img/optimized/weg-zu-207-millionen-visits.webp 2752w",
+    imageWidth: 2752,
+    imageHeight: 1536,
     imageAlt: "Infografik zur strategischen Skalierung einer Redaktion von 38 auf 207 Millionen Visits durch Themenworkflow, CvD-Rolle und digitalen Redaktionsplan",
     workSample: true
   },
@@ -49,7 +61,10 @@ window.sitePosts = [
     tags: ["KI", "Netzpolitik", "Medien", "Gesellschaft"],
     excerpt: "Warum KI im Journalismus nicht nur Produktionsprozesse verändert, sondern vor allem die Distributionshoheit der Medien angreift.",
     url: "blog-ki-zerstoert-unsere-jobs.html",
-    image: "assets/img/kampf-um-die-distributionshoheit-medien.png",
+    image: "assets/img/optimized/kampf-um-die-distributionshoheit-medien.webp",
+    imageSrcset: "assets/img/optimized/kampf-um-die-distributionshoheit-medien-640.webp 640w, assets/img/optimized/kampf-um-die-distributionshoheit-medien-1280.webp 1280w, assets/img/optimized/kampf-um-die-distributionshoheit-medien.webp 2752w",
+    imageWidth: 2752,
+    imageHeight: 1536,
     imageAlt: "Infografik zum Kampf um die Distributionshoheit von Medien im KI-Wandel",
     workSample: true
   }

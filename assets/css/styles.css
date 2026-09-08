@@ -1426,6 +1426,7 @@ h2 {
 .post-card__image img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
@@ -1754,6 +1755,7 @@ h2 {
 .visual-card img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: contain;
   background: var(--color-white);
