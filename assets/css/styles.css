@@ -92,12 +92,12 @@ a {
 }
 
 .brand__mark {
-  display: grid;
-  place-items: center;
+  display: block;
+  flex-shrink: 0;
   width: 42px;
   height: 42px;
+  object-fit: cover;
   border: 1px solid var(--color-ink);
-  background: linear-gradient(135deg, var(--color-yellow), var(--color-yellow-soft));
 }
 
 .nav {

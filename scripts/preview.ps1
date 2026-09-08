@@ -15,6 +15,7 @@ $mimeTypes = @{
   ".js"   = "text/javascript; charset=utf-8"
   ".json" = "application/json; charset=utf-8"
   ".png"  = "image/png"
+  ".ico"  = "image/x-icon"
   ".webp" = "image/webp"
   ".jpg"  = "image/jpeg"
   ".jpeg" = "image/jpeg"
