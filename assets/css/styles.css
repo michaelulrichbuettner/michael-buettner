@@ -108,8 +108,7 @@ a {
   overflow-x: auto;
 }
 
-.nav a,
-.language-link {
+.nav a {
   display: inline-flex;
   align-items: center;
   min-height: 42px;
@@ -121,13 +120,8 @@ a {
 }
 
 .nav a:hover,
-.nav a[aria-current="page"],
-.language-link:hover {
+.nav a[aria-current="page"] {
   color: var(--color-ink);
-}
-
-.language-link {
-  border-left: 1px solid var(--color-line);
 }
 
 .section {
@@ -2175,10 +2169,6 @@ h2 {
     order: 3;
     width: 100%;
     margin-left: 0;
-  }
-
-  .language-link {
-    margin-left: auto;
   }
 
   .intro-grid,
