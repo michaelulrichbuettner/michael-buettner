@@ -117,7 +117,7 @@
       const recipient = "michael.ulrich.buettner@gmail.com";
       const email = form.elements.email.value.trim();
       const message = form.elements.message.value.trim();
-      const subject = "Kontakt über michael-buettner.de";
+      const subject = "Kontakt über michael-buettner.eu";
       const body = [
         "Absender:",
         email,
