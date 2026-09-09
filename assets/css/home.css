@@ -20,13 +20,8 @@
   font-weight: 600;
 }
 
-.bilingual-grid h1,
-.hero__name {
-  margin: 0;
-  font-family: var(--font-heading);
-  font-size: clamp(1.96rem, 3.5vw, 3rem);
-  font-weight: 700;
-  line-height: 1.08;
+.hero__title {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 .bilingual-grid h2 {
