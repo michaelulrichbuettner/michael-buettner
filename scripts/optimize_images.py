@@ -23,12 +23,20 @@ def main():
             print(f'{filename}: {source.stat().st_size:,} -> {target.stat().st_size:,} bytes', flush=True)
             if filename == SOURCES[-1]:
                 continue
-            for width in (640, 1280):
+            for width in (640, 960, 1280):
                 if width >= image.width:
                     continue
                 height = round(image.height * width / image.width)
                 thumbnail = image.resize((width, height), Image.Resampling.LANCZOS)
                 thumbnail.save(output / f'{source.stem}-{width}.webp', 'WEBP', quality=90, method=6)
 
+def optimize_portrait():
+    source = ROOT / 'assets/img/michael-buettner-portrait.webp'
+    with Image.open(source) as image:
+        for width in (48, 96):
+            thumbnail = image.resize((width, width), Image.Resampling.LANCZOS)
+            thumbnail.save(source.with_name(f'{source.stem}-{width}.webp'), 'WEBP', quality=90, method=6)
+
 if __name__ == '__main__':
     main()
+    optimize_portrait()
