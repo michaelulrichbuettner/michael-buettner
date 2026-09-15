@@ -51,7 +51,10 @@
       "articles": [
         { "event": "Snapdragon Summit 2025", "date": "2025-09-25", "title": "Achtung Samsung: Hier kommt die Liste der neuen Smartphone-Konkurrenten 2026", "url": "https://www.inside-digital.de/news/achtung-samsung-hier-kommt-die-liste-der-neuen-konkurrenten-2026" },
         { "event": "Snapdragon Summit 2025", "date": "2025-09-25", "title": "Smartphones 2026: Das sind die neuen Funktionen", "url": "https://www.inside-digital.de/news/smartphones-2026-die-neuen-funktionen" },
-        { "event": "Snapdragon Summit 2021", "date": "2021-12-02", "title": "Smartphone-Funktionen im PC: Das soll die nächste Generation können", "url": "https://www.inside-digital.de/news/smartphone-funktionen-im-pc-das-soll-die-naechste-generation-koennen" }
+        { "event": "Snapdragon Summit 2019", "date": "2019-12-13", "title": "5G per Software-Update: So wird es möglich", "url": "https://web.archive.org/web/20200922193615/https://www.inside-digital.de/news/5g-per-software-update-so-wird-es-moeglich" },
+        { "event": "Snapdragon Summit 2019", "date": "2019-12-05", "title": "Qualcomm Snapdragon XR2: Das werden zukünftige VR-Headsets können", "url": "https://web.archive.org/web/20201025084829/https://www.inside-digital.de/news/qualcomm-snapdragon-xr2-das-werden-zukuenftige-vr-headsets-koennen" },
+        { "event": "Snapdragon Summit 2019", "date": "2019-12-04", "title": "Snapdragon 865: Das kann der neue Top-Prozessor von Qualcomm", "url": "https://web.archive.org/web/20201001183039/https://www.inside-digital.de/news/snapdragon-865-das-kann-der-neue-top-prozessor-von-qualcomm" },
+        { "event": "Snapdragon Summit 2019", "date": "2019-12-04", "title": "Snapdragon 765 vorgestellt: Das sind die neuen 5G-Mittelklasse-Prozessoren", "url": "https://web.archive.org/web/20201001181923/https://www.inside-digital.de/news/snapdragon-765-vorgestellt-das-sind-die-neuen-5g-mittelklasse-prozessoren" }
       ]
     },
     {

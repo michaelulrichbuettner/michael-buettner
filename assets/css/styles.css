@@ -995,6 +995,14 @@ h2 {
   font-weight: 700;
 }
 
+.event-popup__archive-label {
+  color: var(--color-yellow-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .event-popup__article a {
   font-family: var(--font-heading);
   font-size: 0.96rem;

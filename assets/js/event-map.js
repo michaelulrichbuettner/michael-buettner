@@ -23,10 +23,15 @@
   }
 
   function articleMarkup(article) {
+    const isArchive = article.url.startsWith("https://web.archive.org/");
+    const linkTitle = isArchive
+      ? `${article.title} als Archivfassung öffnen`
+      : `${article.title} bei inside digital öffnen`;
     return `
       <li class="event-popup__article">
         <time datetime="${escapeHtml(article.date)}">${formatDate(article.date)}</time>
-        <a href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(article.title)} bei inside digital öffnen">
+        ${isArchive ? '<span class="event-popup__archive-label">Archivfassung</span>' : ""}
+        <a href="${escapeHtml(article.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(linkTitle)}">
           ${escapeHtml(article.title)}
         </a>
       </li>
