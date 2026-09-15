@@ -103,6 +103,16 @@
         { "event": "IAA 2023", "date": "2023-09-12", "title": "VW ID. Buzz: Wie viel Bulli steckt im Elektro-Bus?", "url": "https://www.inside-digital.de/tests/vw-id-buzz-wie-viel-bulli-steckt-im-elektro-bus" },
         { "event": "IAA 2023", "date": "2023-09-07", "title": "Porsche Taycan 4S Testdrive: So normal kann sich ein Porsche fahren", "url": "https://www.inside-digital.de/tests/porsche-taycan-4s-testdrive-so-normal-kann-sich-ein-porsche-fahren" }
       ]
+    },
+    {
+      "id": "oneplus-new-york",
+      "name": "OnePlus-Event",
+      "location": "New York, USA",
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "articles": [
+        { "event": "OnePlus-Event 2018", "date": "2018-10-29", "title": "OnePlus 6T vorgestellt: Revolution in der Evolution", "url": "https://www.inside-digital.de/news/oneplus-6t-vorgestellt-revolution-in-der-evolution" }
+      ]
     }
   ]
 }

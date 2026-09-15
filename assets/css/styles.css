@@ -1054,10 +1054,6 @@ h2 {
   cursor: pointer;
 }
 
-.event-location-list button:last-child {
-  grid-column: span 2;
-}
-
 .event-location-list button:hover,
 .event-location-list button:focus-visible,
 .event-location-list button.is-active {
@@ -2917,10 +2913,6 @@ button.ki-filter, button.ki-related { cursor: pointer; }
 
   .event-location-list button {
     min-height: 58px;
-  }
-
-  .event-location-list button:last-child {
-    grid-column: auto;
   }
 
   .event-map-popup .leaflet-popup-content {
