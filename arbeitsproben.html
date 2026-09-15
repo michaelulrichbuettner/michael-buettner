@@ -8,12 +8,14 @@
     <link rel="canonical" href="https://michael-buettner.eu/arbeitsproben.html">
     <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
     <link rel="stylesheet" href="assets/css/styles.css?v=20260911-local-fonts">
+    <link rel="stylesheet" href="assets/css/arbeitsproben.css?v=20260915-podcasts">
     <script src="assets/js/posts.js?v=20260908-images" defer></script>
     <script src="assets/js/main.js?v=20260908-images" defer></script>
     <script src="assets/vendor/leaflet/leaflet.js?v=1.9.4" defer></script>
     <script src="assets/vendor/topojson/topojson-client.min.js?v=3.1.0" defer></script>
     <script src="assets/js/event-map.js?v=20260802-2" defer></script>
     <script src="assets/js/topic-landscape.js?v=20260802-3" defer></script>
+    <script src="assets/js/podcasts.js?v=20260915-podcasts" defer></script>
     <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
     <link rel="icon" type="image/png" href="favicon-96.png" sizes="96x96">
     <link rel="preload" href="assets/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -38,7 +40,7 @@
         <div class="wrap section-heading">
           <p class="eyebrow">Arbeitsproben</p>
           <h1>Messen- und Event-Portfolio</h1>
-          <p class="lead">Ausgewählte Artikel von Events und Messen aus den vergangenen drei Jahren von Michael Büttner</p>
+          <p class="lead">Ausgewählte Artikel von Events und Messen aus den vergangenen Jahren von Michael Büttner. Vor-Ort-Reportagen und Eindrücke.</p>
         </div>
         <div class="wrap event-portfolio__visual">
           <div
@@ -52,6 +54,18 @@
           <p class="event-map-status" data-event-map-status aria-live="polite">Event-Karte wird geladen …</p>
           <div class="event-location-list" data-event-location-list aria-label="Event-Orte"></div>
           <p class="event-map-source">Kartendaten: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a></p>
+        </div>
+      </section>
+      <section class="section podcast-portfolio" aria-labelledby="podcasts-title">
+        <div class="wrap section-heading">
+          <p class="eyebrow">Am Mikrofon</p>
+          <h2 id="podcasts-title">Podcasts &amp; Gespräche</h2>
+          <p class="lead">Michael Büttner zu Gast bei Casa Casi und überMORGEN.</p>
+        </div>
+        <div class="wrap">
+          <div class="post-list post-list--featured podcast-grid" data-podcasts></div>
+          <noscript><p>Die Folgen findest du bei <a href="https://www.casacasi.de/episodes" target="_blank" rel="noopener noreferrer">Casa Casi</a> und im <a href="https://morgen.podigee.io/5-5-ces-2024-das-messe-special-ubermorgen" target="_blank" rel="noopener noreferrer">CES-Special von überMORGEN</a>.</p></noscript>
+          <p class="podcast-privacy">Audio wird erst nach deinem Klick vom jeweiligen Anbieter geladen. Dabei werden Verbindungsdaten wie deine IP-Adresse übermittelt. <a href="datenschutz.html#podcasts-title">Datenschutzhinweise</a></p>
         </div>
       </section>
       <section class="section topic-portfolio">
@@ -83,11 +97,12 @@
       </section>
       <section class="section">
         <div class="wrap section-heading">
-          <p class="eyebrow">Weitere Arbeitsproben</p>
-          <h2>Eigene Texte und ausgewählte Veröffentlichungen.</h2>
+          <p class="eyebrow">Aktuell / <span lang="en">Latest</span></p>
+          <h2>Neueste Einblicke / <span lang="en">Recent insights</span></h2>
         </div>
         <div class="wrap">
-          <div class="post-list" data-work-samples></div>
+          <div class="post-list post-list--featured" data-latest-posts="3"></div>
+          <p class="insights-more"><a class="button button--secondary" href="blog.html">Alle Einblicke ansehen</a></p>
         </div>
       </section>
     </main>

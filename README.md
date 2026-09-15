@@ -7,13 +7,15 @@ Eine einfache statische Website für GitHub Pages.
 - `index.html`: Startseite mit Kurzprofil und den drei neuesten Einblicken
 - `erfahrung.html`: Lebenslauf und berufliche Stationen
 - `masterarbeit.html`: Masterarbeit zu Synthetic Video Journalism
-- `arbeitsproben.html`: Texte, die als Arbeitsproben markiert sind
+- `arbeitsproben.html`: Event-Weltkarte, Podcast-Auftritte, Themen und Schwerpunkte sowie die drei neuesten Einblicke
 - `blog.html`: Einblicke-Seite mit Tag-Filter
 - `kontakt.html`: Kontaktformular, aktuell als Mailto-Fallback vorbereitet
 - `experimente.html`: Experimente, darunter die interaktive Vogelkarte
 - `impressum.html`: Anbieterkennzeichnung, nur im Footer verlinkt
 - `datenschutz.html`: Datenschutzhinweise, im Footer und beim Kontaktformular verlinkt
-- `assets/js/posts.js`: Einblicke-Daten und Markierung für Arbeitsproben
+- `assets/js/posts.js`: Einblicke-Daten für Startseite, Arbeitsproben und Einblicke-Seite
+- `assets/js/podcasts.js`: Auswahl und Darstellung der Podcastfolgen
+- `assets/css/arbeitsproben.css`: Seitenspezifische Überschriften- und Podcast-Gestaltung
 - `assets/css/styles.css`: Gestaltung der Website
 
 ## Neue Einblicke eintragen
@@ -32,7 +34,22 @@ Neue Beiträge werden in `assets/js/posts.js` ergänzt. Ein Eintrag hat diese Fe
 }
 ```
 
-`workSample: true` bedeutet, dass der Beitrag auch auf der Seite `arbeitsproben.html` erscheint.
+Startseite und Arbeitsprobenseite zeigen automatisch die drei neuesten Beiträge nach Datum. Die vollständige Liste steht auf `blog.html`. Die bisherige Eigenschaft `workSample` wird für diese Übersichten nicht mehr benötigt.
+
+## Podcastfolgen pflegen
+
+Die ausgewählten Folgen stehen im Array `episodes` am Anfang von `assets/js/podcasts.js`. Die Reihenfolge dort ist die Anzeigereihenfolge; Folgen eines Podcasts sollten zusammenbleiben.
+
+Pro Folge werden eine eindeutige `id`, `podcast`, `provider`, `episode` (Folgennummer), `title`, `date` im Format `YYYY-MM-DD`, `topic`, `url` (Originalseite) und `audioUrl` (öffentliche Audiodatei aus dem offiziellen RSS-Feed) gepflegt. Die Rolle ist für alle Folgen „Gast“. Es gibt keine zusätzlichen Beschreibungstexte.
+
+Quellen zur Prüfung neuer oder geänderter Audioadressen:
+
+- Casa Casi: <https://feeds.transistor.fm/casa-casi-tech-fur-feinschmecker>
+- überMORGEN: <https://morgen.podigee.io/feed/mp3>
+
+Die Wiedergabe erfolgt mit dem nativen Browser-Player. Erst ein Klick auf „Folge anhören“ setzt die Audioquelle und lädt die Datei vom Anbieter. Ein zweiter gestarteter Player pausiert die vorherige Folge; der Link zur Originalseite bleibt immer verfügbar. Es werden keine Audiodateien ins Projekt kopiert. Änderungen an den Anbietern müssen auch in den Datenschutzhinweisen berücksichtigt werden.
+
+Das Raster zeigt auf großen Bildschirmen drei, auf Tablets zwei und auf kleinen Bildschirmen eine Kachel pro Zeile. Breite und Bildflächenformat entsprechen den Einblicke-Kacheln der Startseite.
 
 ## Vogelkarte aktualisieren
 
