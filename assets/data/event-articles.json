@@ -9,6 +9,7 @@
       "articles": [
         { "event": "CES 2025", "date": "2025-03-06", "title": "SunLED: Eine kleine Sonne für deinen Bildschirm", "url": "https://www.inside-digital.de/news/sunled-eine-kleine-sonne-fuer-deinen-bildschirm" },
         { "event": "CES 2025", "date": "2025-01-11", "title": "Keine Chance für Diebe: E-Bikes werden viel sicherer", "url": "https://www.inside-digital.de/news/keine-chance-fuer-diebe-e-bikes-werden-viel-sicherer" },
+        { "event": "CES 2025", "date": "2025-01-10", "title": "Ultrahuman Rare: So viel Luxus bieten die neuen smarten Ringe", "url": "https://www.inside-digital.de/news/ultrahuman-rare-so-viel-luxus-bieten-die-neuen-smarten-ringe" },
         { "event": "CES 2025", "date": "2025-01-08", "title": "Persil, Perwoll und Co. bekommen KI-Upgrade: Deutscher Hersteller will das Waschen revolutionieren", "url": "https://www.inside-digital.de/news/persil-perwoll-und-co-bekommen-ki-upgrade-deutscher-hersteller-will-das-waschen-revolutionieren" },
         { "event": "CES 2024", "date": "2024-01-22", "title": "Samsung Galaxy S24 Ultra im ersten Test: Lohnt der Stift?", "url": "https://www.inside-digital.de/tests/samsung-galaxy-s24-ultra-im-ersten-test-lohnt-der-stift" },
         { "event": "CES 2024", "date": "2024-01-21", "title": "Bluetooth: Geniales Feature ist noch vollkommen unbekannt", "url": "https://www.inside-digital.de/ratgeber/bluetooth-auracast-geniales-feature-ist-noch-vollkommen-unbekannt" },
@@ -37,7 +38,8 @@
         { "event": "MWC 2024", "date": "2024-02-28", "title": "Oppo ist zurück: Doch dieses Highlight gibts für Deutsche nicht", "url": "https://www.inside-digital.de/news/oppo-ist-zurueck-doch-dieses-highlight-gibts-fuer-deutsche-nicht" },
         { "event": "MWC 2024", "date": "2024-02-28", "title": "Angriff aus China: Müssen sich Samsung und Motorola jetzt Sorgen machen?", "url": "https://www.inside-digital.de/news/angriff-aus-china-muessen-sich-samsung-und-motorola-jetzt-sorgen-machen" },
         { "event": "MWC 2023", "date": "2023-02-28", "title": "Telekom verbindet Fahrrad mit Auto: Das kommt dabei heraus", "url": "https://www.inside-digital.de/news/telekom-verbindet-fahrrad-mit-auto-das-kommt-dabei-heraus" },
-        { "event": "MWC 2023", "date": "2023-02-27", "title": "Mit Motor: Lenovo erfindet den Laptop neu", "url": "https://www.inside-digital.de/news/mit-motor-lenovo-erfindet-den-laptop-neu" }
+        { "event": "MWC 2023", "date": "2023-02-27", "title": "Mit Motor: Lenovo erfindet den Laptop neu", "url": "https://www.inside-digital.de/news/mit-motor-lenovo-erfindet-den-laptop-neu" },
+        { "event": "MWC 2022", "date": "2022-02-28", "title": "WLAN 7 und Bluetooth 5.3: Qualcomm zeigt neue Funkstandards", "url": "https://www.inside-digital.de/news/wlan-7-und-bluetooth-5-3-qualcomm-zeigt-neue-funkstandards" }
       ]
     },
     {
@@ -48,7 +50,8 @@
       "longitude": -156.3319,
       "articles": [
         { "event": "Snapdragon Summit 2025", "date": "2025-09-25", "title": "Achtung Samsung: Hier kommt die Liste der neuen Smartphone-Konkurrenten 2026", "url": "https://www.inside-digital.de/news/achtung-samsung-hier-kommt-die-liste-der-neuen-konkurrenten-2026" },
-        { "event": "Snapdragon Summit 2025", "date": "2025-09-25", "title": "Smartphones 2026: Das sind die neuen Funktionen", "url": "https://www.inside-digital.de/news/smartphones-2026-die-neuen-funktionen" }
+        { "event": "Snapdragon Summit 2025", "date": "2025-09-25", "title": "Smartphones 2026: Das sind die neuen Funktionen", "url": "https://www.inside-digital.de/news/smartphones-2026-die-neuen-funktionen" },
+        { "event": "Snapdragon Summit 2021", "date": "2021-12-02", "title": "Smartphone-Funktionen im PC: Das soll die nächste Generation können", "url": "https://www.inside-digital.de/news/smartphone-funktionen-im-pc-das-soll-die-naechste-generation-koennen" }
       ]
     },
     {
