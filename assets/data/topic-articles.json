@@ -749,6 +749,22 @@
           "url": "https://www.inside-digital.de/ratgeber/karte-zeigt-wie-weit-man-in-wenigen-stunden-mit-der-bahn-kommt",
           "topic": "data-orientation",
           "eventBased": false
+        },
+        {
+          "title": "Nachtzüge in Europa: Diese interaktive Karte zeigt alle Verbindungen",
+          "summary": "Ein Überblick über eine interaktive Nachtzugkarte, die europäische Verbindungen, Fahrtage und Buchungsmöglichkeiten zugänglich macht.",
+          "url": "https://www.inside-digital.de/news/nachtzuege-in-europa-diese-interaktive-karte-zeigt-alle-verbindungen",
+          "topic": "data-orientation",
+          "eventBased": false,
+          "year": 2023
+        },
+        {
+          "title": "Weltweite Hilfe: Diese Karte sollte jeder Deutsche kennen",
+          "summary": "Eine Vorstellung des Konsulatfinders, mit dem Reisende deutsche Auslandsvertretungen und Anlaufstellen auf einer Weltkarte finden.",
+          "url": "https://www.inside-digital.de/news/weltweite-hilfe-diese-karte-sollte-jeder-deutsche-kennen",
+          "topic": "data-orientation",
+          "eventBased": false,
+          "year": 2023
         }
       ]
     }

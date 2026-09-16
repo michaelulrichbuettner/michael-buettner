@@ -21,7 +21,10 @@
         { "event": "CES 2024", "date": "2024-01-10", "title": "Ein Monat autark: Neue Powerstation machts möglich", "url": "https://www.inside-digital.de/news/ein-monat-autark-neue-powerstation-machts-moeglich" },
         { "event": "CES 2024", "date": "2024-01-08", "title": "3D mit echtem Comeback: Diese Monitore begeistern auf der CES 2024", "url": "https://www.inside-digital.de/news/3d-mit-echtem-comeback-diese-monitore-und-laptops-begeistern-auf-der-ces-2024" },
         { "event": "CES 2024", "date": "2024-01-08", "title": "Fieberthermometer auf Steroiden: Withings zeigt BeamO", "url": "https://www.inside-digital.de/news/fieberthermometer-auf-steroiden-withings-zeigt-beamo" },
-        { "event": "CES 2023", "date": "2022-12-15", "title": "Endlich einfach: Diesen Laptop kann jedes Kind reparieren", "url": "https://www.inside-digital.de/news/endlich-einfach-diesen-laptop-kann-jedes-kind-reparieren" }
+        { "event": "CES 2023", "date": "2023-01-08", "title": "Neue Laptops von LG: schlanker, leichter, robuster", "url": "https://www.inside-digital.de/news/neue-laptops-von-lg-schlanker-leichter-robuster" },
+        { "event": "CES 2023", "date": "2023-01-05", "title": "High-End-Smartphones 2023: Das ist der erste Herausforderer des Jahres", "url": "https://www.inside-digital.de/news/high-end-smartphones-2023-das-ist-der-erste-herausforderer-des-jahres" },
+        { "event": "CES 2023", "date": "2022-12-15", "title": "Endlich einfach: Diesen Laptop kann jedes Kind reparieren", "url": "https://www.inside-digital.de/news/endlich-einfach-diesen-laptop-kann-jedes-kind-reparieren" },
+        { "event": "CES 2019", "date": "2019-01-11", "title": "Philips Hue auf der CES 2019: Neue Leuchten und Google-Einbindungen", "url": "https://www.inside-digital.de/news/philips-hue-auf-der-ces-2019-neue-leuchten-und-google-einbindungen" }
       ]
     },
     {
@@ -37,9 +40,13 @@
         { "event": "MWC 2024", "date": "2024-03-01", "title": "Telekom kündigt revolutionären Dienst an: Milliarden Kundendaten stehen bereit", "url": "https://www.inside-digital.de/news/telekom-kuendigt-revolutionaeren-dienst-an-milliarden-kundendaten-stehen-bereit" },
         { "event": "MWC 2024", "date": "2024-02-28", "title": "Oppo ist zurück: Doch dieses Highlight gibts für Deutsche nicht", "url": "https://www.inside-digital.de/news/oppo-ist-zurueck-doch-dieses-highlight-gibts-fuer-deutsche-nicht" },
         { "event": "MWC 2024", "date": "2024-02-28", "title": "Angriff aus China: Müssen sich Samsung und Motorola jetzt Sorgen machen?", "url": "https://www.inside-digital.de/news/angriff-aus-china-muessen-sich-samsung-und-motorola-jetzt-sorgen-machen" },
+        { "event": "MWC 2024", "date": "2024-02-23", "title": "Das Kultspiel einer ganzen Generation: Jetzt auf einem Rasenmäher zocken", "url": "https://www.inside-digital.de/news/das-kultspiel-einer-ganzen-generation-jetzt-auf-einem-rasenmaeher-zocken" },
         { "event": "MWC 2023", "date": "2023-02-28", "title": "Telekom verbindet Fahrrad mit Auto: Das kommt dabei heraus", "url": "https://www.inside-digital.de/news/telekom-verbindet-fahrrad-mit-auto-das-kommt-dabei-heraus" },
         { "event": "MWC 2023", "date": "2023-02-27", "title": "Mit Motor: Lenovo erfindet den Laptop neu", "url": "https://www.inside-digital.de/news/mit-motor-lenovo-erfindet-den-laptop-neu" },
-        { "event": "MWC 2022", "date": "2022-02-28", "title": "WLAN 7 und Bluetooth 5.3: Qualcomm zeigt neue Funkstandards", "url": "https://www.inside-digital.de/news/wlan-7-und-bluetooth-5-3-qualcomm-zeigt-neue-funkstandards" }
+        { "event": "MWC 2023", "date": "2023-02-27", "title": "Dutzende neue Laptops: Das sind die kommenden Lenovo-Computer von 350 bis 2.000 Euro", "url": "https://www.inside-digital.de/news/dutzende-neue-laptops-lenovo-computer-von-350-bis-2-000-euro" },
+        { "event": "MWC 2022", "date": "2022-02-28", "title": "WLAN 7 und Bluetooth 5.3: Qualcomm zeigt neue Funkstandards", "url": "https://www.inside-digital.de/news/wlan-7-und-bluetooth-5-3-qualcomm-zeigt-neue-funkstandards" },
+        { "event": "MWC 2019", "date": "2019-03-01", "title": "WhatsApp für die Silver Surfer: Klappsmartphone mit speziellem Button", "url": "https://www.inside-digital.de/news/whatsapp-fuer-die-silver-surfer-klappsmartphone-mit-speziellem-button" },
+        { "event": "MWC 2019", "date": "2019-02-24", "title": "Falthandy für alle: TCL probt den Display-Aufstand gegen Samsung und LG", "url": "https://www.inside-digital.de/news/falthandy-fuer-alle-tcl-probt-den-display-aufstand-gegen-samsung-und-lg" }
       ]
     },
     {
@@ -80,7 +87,12 @@
         { "event": "Eurobike 2024", "date": "2024-07-04", "title": "Low-Tech-Bike: Mit diesem Trick wird das Buffalo Utility S2 zur Bergziege", "url": "https://www.inside-digital.de/news/low-tech-bike-mit-diesem-trick-wird-das-buffalo-utility-s2-zur-bergziege" },
         { "event": "Eurobike 2023", "date": "2023-06-23", "title": "Neues SUV-E-Bike ausprobiert: Damit habe ich nicht gerechnet", "url": "https://www.inside-digital.de/news/neues-suv-e-bike-ausprobiert-damit-habe-ich-nicht-gerechnet" },
         { "event": "Eurobike 2023", "date": "2023-06-23", "title": "Automatik fürs E-Bike vorgestellt: Nie wieder im falschen Gang", "url": "https://www.inside-digital.de/news/automatik-fuers-e-bike-vorgestellt-nie-wieder-im-falschen-gang" },
-        { "event": "Eurobike 2023", "date": "2023-06-22", "title": "Bosch bringt Mega-Reichweite, E-Schaltung und Diebstahlschutz im Abo", "url": "https://www.inside-digital.de/news/bosch-bringt-mega-reichweite-e-schaltung-und-diebstahlschutz-im-abo" }
+        { "event": "Eurobike 2023", "date": "2023-06-22", "title": "Bosch bringt Mega-Reichweite, E-Schaltung und Diebstahlschutz im Abo", "url": "https://www.inside-digital.de/news/bosch-bringt-mega-reichweite-e-schaltung-und-diebstahlschutz-im-abo" },
+        { "event": "Eurobike 2022", "date": "2022-07-23", "title": "Testfahrt mit superkompaktem E-Bike: Keiner klappt kleiner", "url": "https://www.inside-digital.de/news/testfahrt-mit-superkompaktem-e-bike-keiner-klappt-kleiner" },
+        { "event": "Eurobike 2022", "date": "2022-07-21", "title": "E-Bike: Reifendruckkontrolle per Bluetooth aufs Handy oder die Smartwatch", "url": "https://www.inside-digital.de/news/e-bike-reifendruckkontrolle-per-bluetooth-aufs-handy-oder-die-smartwatch" },
+        { "event": "Eurobike 2022", "date": "2022-07-20", "title": "Porsche-E-Bike: So fährt sich das Edel-Rad mit Rückfahrkamera", "url": "https://www.inside-digital.de/news/porsche-e-bike-so-faehrt-sich-das-edel-rad-mit-rueckfahrkamera" },
+        { "event": "Eurobike 2022", "date": "2022-07-17", "title": "Automatik fürs E-Bike: Radeln ohne Schalten ausprobiert", "url": "https://www.inside-digital.de/news/automatik-fuers-e-bike-radeln-ohne-schalten-ausprobiert" },
+        { "event": "Eurobike 2022", "date": "2022-07-16", "title": "E-Bikes mit ABS von Bosch und Shimano: So fährt sich die Technik", "url": "https://www.inside-digital.de/news/e-bikes-mit-abs-von-bosch-und-shimano-so-faehrt-sich-die-technik" }
       ]
     },
     {
@@ -112,6 +124,50 @@
       "longitude": -74.006,
       "articles": [
         { "event": "OnePlus-Event 2018", "date": "2018-10-29", "title": "OnePlus 6T vorgestellt: Revolution in der Evolution", "url": "https://www.inside-digital.de/news/oneplus-6t-vorgestellt-revolution-in-der-evolution" }
+      ]
+    },
+    {
+      "id": "ifa",
+      "name": "IFA",
+      "location": "Berlin, Deutschland",
+      "latitude": 52.52,
+      "longitude": 13.405,
+      "articles": [
+        { "event": "IFA 2019", "date": "2019-09-06", "title": "LG G8X ThinQ: Dual-Screen-Smartphone zum Anstecken", "url": "https://www.inside-digital.de/news/lg-g8x-thinq-dual-screen-smartphone-zum-anstecken" },
+        { "event": "IFA 2019", "date": "2019-09-05", "title": "Nokia 7.2 vorgestellt: Dicker Kerl mit Zeiss-Augen", "url": "https://www.inside-digital.de/news/nokia-7-2-vorgestellt-dicker-kerl-mit-zeiss-augen" }
+      ]
+    },
+    {
+      "id": "fibo",
+      "name": "FIBO",
+      "location": "Köln, Deutschland",
+      "latitude": 50.9375,
+      "longitude": 6.9603,
+      "articles": [
+        { "event": "FIBO 2024", "date": "2024-04-15", "title": "Schluss mit hässlichen Gewichten: Dieses Fitnessstudio passt hinter deine Tür", "url": "https://www.inside-digital.de/news/schluss-mit-haesslichen-gewichten-dieses-fitnessstudio-passt-hinter-deine-tuer" },
+        { "event": "FIBO 2024", "date": "2024-04-14", "title": "Fitnessstudio für die Jackentasche: Das kann das Unitree Pump", "url": "https://www.inside-digital.de/news/fitnessstudio-fuer-die-jackentasche-das-kann-das-unitree-pump" },
+        { "event": "FIBO 2023", "date": "2023-04-16", "title": "Endlich digital: Diese Matte will dein Yogameister werden", "url": "https://www.inside-digital.de/news/endlich-digital-diese-yogamatte-will-dein-trainer-sein" },
+        { "event": "FIBO 2023", "date": "2023-04-16", "title": "Smartphone wird zum Trainer: Diese App passt jetzt auf, dass du richtig trainierst", "url": "https://www.inside-digital.de/news/smartphone-wird-zum-trainer-jrny-app-passt-jetzt-auf-dass-du-richtig-trainierst" }
+      ]
+    },
+    {
+      "id": "crosscall-paris",
+      "name": "Crosscall",
+      "location": "Paris, Frankreich",
+      "latitude": 48.8566,
+      "longitude": 2.3522,
+      "articles": [
+        { "event": "Crosscall 2018", "date": "2018-10-03", "title": "Crosscall Trekker-X4 im Hands-On: Mehr als robust", "url": "https://www.inside-digital.de/news/crosscall-trekker-x4-im-hands-on" }
+      ]
+    },
+    {
+      "id": "bq-muenchen",
+      "name": "BQ Produktvorstellung",
+      "location": "München, Deutschland",
+      "latitude": 48.1351,
+      "longitude": 11.582,
+      "articles": [
+        { "event": "BQ Produktvorstellung 2017", "date": "2017-05-18", "title": "BQ Aquaris X und Aquaris X Pro im Hands-On-Video", "url": "https://www.inside-digital.de/news/43873-bq-aquaris-x-pro-hands-on" }
       ]
     }
   ]

@@ -38,16 +38,19 @@
     `;
   }
 
-  function popupMarkup(event) {
-    const count = event.articles.length;
+  function popupMarkup(events) {
     return `
       <section class="event-popup">
+        ${events.map((event) => `
+        <section class="event-popup__group" aria-label="${escapeHtml(event.name)}">
         <header class="event-popup__header">
           <p>${escapeHtml(event.location)}</p>
           <h2>${escapeHtml(event.name)}</h2>
-          <span>${count} ${count === 1 ? "Artikel" : "Artikel"}</span>
+          <span>${event.articles.length} Artikel</span>
         </header>
         <ol class="event-popup__articles">${event.articles.map(articleMarkup).join("")}</ol>
+        </section>
+        `).join("")}
       </section>
     `;
   }
@@ -150,24 +153,33 @@
 
     const markers = new Map();
 
-    function selectEvent(event, shouldZoom) {
+    function selectEvents(selectedEvents, shouldZoom) {
+      const event = selectedEvents[0];
       const marker = markers.get(event.id);
       if (!marker) return;
-
-      locationListElement.querySelectorAll("button").forEach((button) => {
-        const isSelected = button.dataset.eventId === event.id;
-        button.classList.toggle("is-active", isSelected);
-        button.setAttribute("aria-pressed", String(isSelected));
-      });
 
       if (shouldZoom && map.getZoom() < 4) {
         map.flyTo([event.latitude, event.longitude], 4, { duration: 0.55 });
       }
-      marker.openPopup();
+      marker.setPopupContent(popupMarkup(selectedEvents)).openPopup();
+      locationListElement.querySelectorAll("button").forEach((button) => {
+        const isSelected = selectedEvents.some((item) => item.id === button.dataset.eventId);
+        button.classList.toggle("is-active", isSelected);
+        button.setAttribute("aria-pressed", String(isSelected));
+      });
     }
 
+    // Events in the same city share a marker but remain separately selectable below.
+    const locations = new Map();
     events.forEach((event) => {
-      const count = event.articles.length;
+      const key = `${event.latitude},${event.longitude}`;
+      if (!locations.has(key)) locations.set(key, []);
+      locations.get(key).push(event);
+    });
+
+    locations.forEach((locationEvents) => {
+      const event = locationEvents[0];
+      const count = locationEvents.reduce((sum, item) => sum + item.articles.length, 0);
       const icon = window.L.divIcon({
         className: "event-map-marker",
         html: `<span class="event-map-marker__pin"><span>${count}</span></span>`,
@@ -179,23 +191,26 @@
         icon,
         keyboard: true,
         riseOnHover: true,
-        title: `${event.name}, ${event.location}: ${count} Artikel`
+        title: `${locationEvents.map((item) => item.name).join(" · ")}, ${event.location}: ${count} Artikel`
       })
         .addTo(map)
-        .bindPopup(popupMarkup(event), {
+        .bindPopup(popupMarkup(locationEvents), {
           className: "event-map-popup",
           maxWidth: 440,
           minWidth: 280
         });
 
-      marker.on("click", () => selectEvent(event, true));
+      marker.on("click", () => selectEvents(locationEvents, true));
+      marker.on("keypress", (keyEvent) => {
+        if (keyEvent.originalEvent.key === "Enter") selectEvents(locationEvents, true);
+      });
       marker.on("popupclose", () => {
         locationListElement.querySelectorAll("button").forEach((button) => {
           button.classList.remove("is-active");
           button.setAttribute("aria-pressed", "false");
         });
       });
-      markers.set(event.id, marker);
+      locationEvents.forEach((item) => markers.set(item.id, marker));
     });
 
     locationListElement.innerHTML = events
@@ -211,7 +226,7 @@
       const button = clickEvent.target.closest("button[data-event-id]");
       if (!button) return;
       const event = events.find((item) => item.id === button.dataset.eventId);
-      if (event) selectEvent(event, true);
+      if (event) selectEvents([event], true);
     });
 
     statusElement.textContent = "Punkt oder Event auswählen, um die zugehörigen Artikel zu öffnen.";
