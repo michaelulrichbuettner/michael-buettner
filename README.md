@@ -66,6 +66,15 @@ Stadtmittelpunkt in `data/vogelorte.json` ergänzt werden. Das Importskript
 bricht andernfalls ab, damit keine unbekannten oder exakten Orte versehentlich
 veröffentlicht werden.
 
+## Reihenfolge der Experimente
+
+Die Experiment-Karten in `experimente.html` haben ein `data-updated`-Datum im
+Format `YYYY-MM-DD`. Bei einer inhaltlichen Überarbeitung oder neuen Iteration
+das Datum der betroffenen Karte aktualisieren. `assets/js/experiments.js` ordnet
+die Karten beim Laden automatisch absteigend nach diesem Datum; bei gleichem
+Datum bleibt die Reihenfolge im HTML erhalten. Automatisch eingelesene News
+ändern das Bearbeitungsdatum eines Experiments nicht.
+
 ## Mehrsprachigkeit
 
 Die erste Version ist deutsch. Für Englisch kann später eine parallele Struktur ergänzt werden, zum Beispiel:

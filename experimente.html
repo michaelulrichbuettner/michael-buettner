@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/styles.css?v=20260911-local-fonts">
     <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
     <script src="assets/js/main.js?v=20260908-images" defer></script>
+    <script src="assets/js/experiments.js?v=20260916" defer></script>
     <script src="assets/js/portfolio-news.js?v=20260721-2" defer></script>
     <script src="assets/vendor/leaflet/leaflet.js?v=1.9.4" defer></script>
     <script src="assets/js/vogelkarte.js?v=20260729" defer></script>
@@ -38,8 +39,8 @@
           <h1>Daten, Automation, KI: Beispiele und Anwendungen</h1>
           <p class="lead">Hier zeige ich Prototypen, Datenexperimente und digitale Anwendungen – als Momentaufnahme auf dem Weg von der Idee zum Produkt.</p>
         </div>
-        <div class="wrap showcase-list">
-          <article class="showcase-card">
+        <div class="wrap showcase-list" data-sort-experiments>
+          <article class="showcase-card" data-updated="2026-08-03">
             <div class="showcase-card__header">
               <div>
                 <p class="showcase-card__label">KI-Orientierung · Erste Iteration</p>
@@ -50,21 +51,27 @@
             </div>
           </article>
 
-          <article id="portfolio-tracker" class="showcase-card portfolio-news-card">
+          <article id="portfolio-tracker" class="showcase-card portfolio-news-card" data-updated="2026-09-16">
             <div class="showcase-card__header">
               <div>
-                <p class="showcase-card__label">Portfolio-Tracker &middot; Zweite Iteration</p>
-                <h2>Portfolio-Tracker mit Make und Airtable - Vers. 0.2</h2>
-                <p>Zweiter Prototyp, der Unternehmensmeldungen strukturiert und als interaktive Übersicht zugänglich macht. Die Daten sind sortier- und durchsuchbar. Der Datenlauf in der aktuellen Version: Newsletter --&gt; GMail --&gt; Make --&gt; Airtable --&gt; Make --&gt; JSON --&gt; GitHub Pages --&gt; Webseite</p>
+                <p class="showcase-card__label">Portfolio-Tracker &middot; Dritte Iteration</p>
+                <h2>Portfolio-Tracker mit Make und Google Tabellen – Vers. 0.3</h2>
+                <p>Der Portfolio-Tracker bündelt Unternehmensmeldungen aus abonnierten Investor-Relations-Newslettern und zeigt die drei neusten Meldungen je Unternehmen. Die Übersicht lässt sich durchsuchen und nach Aktualität oder Unternehmensnamen sortieren. Eine KI fasst die E-Mails zusammen und extrahiert weiterführende Links.</p>
+                <p>In der dritten Iteration ersetzt Google Tabellen die bisherige Airtable-Datenbank, deren monatliches API-Limit den Betrieb eingeschränkt hatte. Zwei Make-Abläufe übernehmen das Sammeln und Veröffentlichen: Neue E-Mails werden alle vier Stunden verarbeitet, die Website-Daten stündlich aktualisiert. Bereits archivierte E-Mails und Meldungen mit „Stock Quote“ im Betreff werden beim Sammeln übersprungen.</p>
+                <p>Der aktuelle Datenlauf: Newsletter &rarr; Gmail &rarr; Make &rarr; Google Tabellen &rarr; Make &rarr; JSON &rarr; GitHub Pages &rarr; Webseite.</p>
                 <details class="showcase-history">
-                  <summary>Bisherige Version anzeigen</summary>
+                  <summary>Bisherige Versionen anzeigen</summary>
+                  <div class="showcase-history__entry">
+                    <h3>Vers. 0.2 – Eigene Webansicht mit Airtable</h3>
+                    <p>In der zweiten Iteration erhielt der Tracker eine eigene sortier- und durchsuchbare Webansicht mit bis zu drei Meldungen je Unternehmen. Airtable blieb die Referenzdatenbank. Make bereitete die dort gespeicherten News als JSON auf und aktualisierte eine Datei auf GitHub, die von der Website geladen wurde. Datenlauf: Newsletter &rarr; Gmail &rarr; Make &rarr; Airtable &rarr; Make &rarr; JSON &rarr; GitHub Pages &rarr; Webseite.</p>
+                    <a class="button button--secondary" href="blog-portfolio-tracker-unternehmensmeldungen-ohne-rss-scraping.html" title="Artikel zur zweiten Version des Portfolio-Trackers lesen">Zum Artikel</a>
+                  </div>
                   <div class="showcase-history__entry">
                     <h3>Vers. 0.1 – Airtable-Prototyp</h3>
-                    <p>Erste funktionsfähige Version des Portfolio-Trackers. Unternehmensmeldungen wurden über Make in Airtable gesammelt und dort als interaktive Übersicht dargestellt. Datenlauf: Newsletter --&gt; Gmail --&gt; Make --&gt; Airtable --&gt; Webseite. <a href="https://airtable.com/apphsKFnLJHY0gIh5/shrM9DejUwtlSMOpJ" target="_blank" rel="noopener noreferrer" title="Version 0.1 des Portfolio-Trackers in Airtable in einem neuen Tab öffnen">Version 0.1 in Airtable öffnen</a></p>
+                    <p>Erste funktionsfähige Version des Portfolio-Trackers. Unternehmensmeldungen wurden über Make in Airtable gesammelt und dort als interaktive Übersicht dargestellt. Datenlauf: Newsletter --&gt; Gmail --&gt; Make --&gt; Airtable --&gt; Webseite.</p>
                   </div>
                 </details>
               </div>
-              <a class="button button--secondary" href="blog-portfolio-tracker-unternehmensmeldungen-ohne-rss-scraping.html" title="Artikel zum Portfolio-Tracker lesen">Zum Artikel</a>
             </div>
             <div class="portfolio-news" data-portfolio-news data-source="data/unternehmensnews.json">
               <form class="portfolio-news__controls" data-news-controls role="search">
@@ -108,7 +115,7 @@
             </div>
           </article>
 
-          <article class="showcase-card">
+          <article class="showcase-card" data-updated="2026-07-30">
             <div class="showcase-card__header">
               <div>
                 <p class="showcase-card__label">Datenexperiment · Zweite Iteration</p>
@@ -140,7 +147,7 @@
             </div>
           </article>
 
-          <article class="showcase-card">
+          <article class="showcase-card" data-updated="2026-07-22">
             <div class="showcase-card__header">
               <div>
                 <p class="showcase-card__label">Stellen-Check-Automatisierung - erste Iteration</p>
