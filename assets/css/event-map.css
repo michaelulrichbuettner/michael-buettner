@@ -1,0 +1,63 @@
+/* North-polar equal-area map; the article panel never leaves this container. */
+.event-map.polar-map {
+  position: relative;
+  height: 650px;
+  min-height: 0;
+  isolation: isolate;
+  scroll-margin-top: 150px;
+  background: var(--color-white);
+}
+.polar-map__svg { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+.polar-map__svg:active { cursor: grabbing; }
+.polar-map__geography path { vector-effect: non-scaling-stroke; }
+.polar-map__ocean { fill: #fcfbf8; stroke: var(--color-line); stroke-width: 1; }
+.polar-map__land { fill: var(--color-soft); stroke: #c5c6c2; stroke-width: .75; }
+.polar-map__grid { fill: none; stroke: #b8b6af; stroke-width: .65; opacity: .35; }
+.polar-map__pole { font: 600 10px var(--font-body); letter-spacing: .12em; fill: var(--color-muted); pointer-events: none; }
+.polar-map__marker { cursor: pointer; outline: none; }
+.polar-map__marker circle { fill: var(--color-yellow); stroke: var(--color-ink); stroke-width: 1.8; }
+.polar-map__marker text { fill: var(--color-ink); font: 700 12px var(--font-body); pointer-events: none; }
+.polar-map__marker.is-cluster circle { stroke-width: 2.5; }
+.polar-map__marker:hover circle, .polar-map__marker:focus circle { fill: var(--color-yellow-soft); stroke-width: 3; }
+.polar-map__marker.is-active circle { fill: var(--color-ink); stroke: var(--color-yellow); stroke-width: 3; }
+.polar-map__marker.is-active text { fill: var(--color-white); }
+.polar-map__controls { position: absolute; top: 16px; left: 16px; z-index: 3; display: flex; gap: 5px; }
+.polar-map__controls button, .polar-map__panel-header button {
+  display: grid; place-items: center; min-width: 36px; min-height: 36px;
+  border: 1px solid var(--color-line); border-radius: 0;
+  background: var(--color-white); color: var(--color-ink); font: 600 1rem var(--font-body); cursor: pointer;
+}
+.polar-map__controls [data-map-home] { padding: 0 .75rem; font-size: .8rem; }
+.polar-map__controls button:disabled { opacity: .45; cursor: default; }
+.polar-map__controls button:not(:disabled):hover, .polar-map__panel-header button:hover { background: var(--color-yellow-soft); }
+.polar-map__controls button:focus-visible, .polar-map__panel button:focus-visible, .polar-map__articles:focus-visible {
+  outline: 2px solid var(--color-ink); outline-offset: 2px;
+}
+.polar-map__caption { position: absolute; right: 18px; top: 22px; margin: 0; color: var(--color-muted); font-size: .75rem; pointer-events: none; }
+.polar-map__panel {
+  position: absolute; z-index: 2; top: 72px; right: 16px; bottom: 16px;
+  width: min(370px, 42%); display: flex; flex-direction: column;
+  border: 1px solid var(--color-line); border-top: 3px solid var(--color-yellow);
+  background: var(--color-white); box-shadow: 0 5px 20px rgb(23 23 23 / 6%);
+  overflow: hidden;
+}
+.polar-map__panel[hidden] { display: none; }
+.polar-map__panel-header { flex: 0 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: .5rem; padding: 1rem; border-bottom: 1px solid var(--color-line); }
+.polar-map__panel-header p { color: var(--color-yellow-dark); font-size: .72rem; font-weight: 800; text-transform: uppercase; margin: 0; }
+.polar-map__panel-header h2 { font-size: 1.35rem; line-height: 1.2; margin: .25rem 0; overflow-wrap: anywhere; }
+.polar-map__panel-header span { font-size: .78rem; color: var(--color-muted); }
+.polar-map__panel-header button { flex: 0 0 36px; font-size: 1.4rem; }
+.polar-map__articles { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0 1rem; scrollbar-gutter: stable; }
+.polar-map__articles ol { padding: 0; margin: 0; list-style: none; }
+.polar-map__articles h3 { margin: 1rem 0 0; font-size: 1rem; }
+.polar-map__articles a { overflow-wrap: anywhere; }
+@media (max-width: 699px) {
+  .event-map.polar-map { height: 650px; }
+  .polar-map__controls { top: 12px; left: 12px; }
+  .polar-map__caption { top: auto; bottom: 14px; right: 14px; font-size: .7rem; }
+  .polar-map.has-selection .polar-map__caption { display: none; }
+  .polar-map__panel { top: auto; left: 12px; right: 12px; bottom: 12px; width: auto; height: 48%; }
+  .polar-map__panel-header { padding: .65rem .8rem; }
+  .polar-map__panel-header h2 { font-size: 1.15rem; }
+  .polar-map__articles { padding: 0 .8rem; }
+}

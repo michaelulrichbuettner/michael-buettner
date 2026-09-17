@@ -6,14 +6,15 @@
     <title>Arbeitsproben | Michael Büttner</title>
     <meta name="description" content="Texte, Arbeitsproben und Veröffentlichungen von Michael Büttner.">
     <link rel="canonical" href="https://michael-buettner.eu/arbeitsproben.html">
-    <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css?v=1.9.4">
     <link rel="stylesheet" href="assets/css/styles.css?v=20260915-archives">
     <link rel="stylesheet" href="assets/css/arbeitsproben.css?v=20260915-podcasts">
+    <link rel="stylesheet" href="assets/css/event-map.css?v=20260916-polar">
     <script src="assets/js/posts.js?v=20260908-images" defer></script>
     <script src="assets/js/main.js?v=20260908-images" defer></script>
-    <script src="assets/vendor/leaflet/leaflet.js?v=1.9.4" defer></script>
+    <script src="assets/vendor/d3-array/d3-array.min.js?v=3.2.4" defer></script>
+    <script src="assets/vendor/d3-geo/d3-geo.min.js?v=3.1.1" defer></script>
     <script src="assets/vendor/topojson/topojson-client.min.js?v=3.1.0" defer></script>
-    <script src="assets/js/event-map.js?v=20260916-events" defer></script>
+    <script src="assets/js/event-map.js?v=20260916-polar" defer></script>
     <script src="assets/js/topic-landscape.js?v=20260802-3" defer></script>
     <script src="assets/js/podcasts.js?v=20260915-podcasts" defer></script>
     <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
@@ -49,7 +50,7 @@
             data-source="assets/data/event-articles.json"
             data-world="assets/data/world-countries-110m.json"
             role="region"
-            aria-label="Weltkarte mit Event-Orten und den zugehörigen Artikeln"
+            aria-label="Flächentreue Polaransicht der Nordhalbkugel mit Event-Orten und Artikeln"
           ></div>
           <p class="event-map-status" data-event-map-status aria-live="polite">Event-Karte wird geladen …</p>
           <div class="event-location-list" data-event-location-list aria-label="Event-Orte"></div>
