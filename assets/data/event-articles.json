@@ -7,7 +7,6 @@
       "latitude": 36.1699,
       "longitude": -115.1398,
       "articles": [
-        { "event": "CES 2025", "date": "2025-03-06", "title": "SunLED: Eine kleine Sonne für deinen Bildschirm", "url": "https://www.inside-digital.de/news/sunled-eine-kleine-sonne-fuer-deinen-bildschirm" },
         { "event": "CES 2025", "date": "2025-01-11", "title": "Keine Chance für Diebe: E-Bikes werden viel sicherer", "url": "https://www.inside-digital.de/news/keine-chance-fuer-diebe-e-bikes-werden-viel-sicherer" },
         { "event": "CES 2025", "date": "2025-01-10", "title": "Ultrahuman Rare: So viel Luxus bieten die neuen smarten Ringe", "url": "https://www.inside-digital.de/news/ultrahuman-rare-so-viel-luxus-bieten-die-neuen-smarten-ringe" },
         { "event": "CES 2025", "date": "2025-01-08", "title": "Persil, Perwoll und Co. bekommen KI-Upgrade: Deutscher Hersteller will das Waschen revolutionieren", "url": "https://www.inside-digital.de/news/persil-perwoll-und-co-bekommen-ki-upgrade-deutscher-hersteller-will-das-waschen-revolutionieren" },
@@ -34,6 +33,7 @@
       "latitude": 41.3874,
       "longitude": 2.1686,
       "articles": [
+        { "event": "MWC 2025", "date": "2025-03-06", "title": "SunLED: Eine kleine Sonne für deinen Bildschirm", "url": "https://www.inside-digital.de/news/sunled-eine-kleine-sonne-fuer-deinen-bildschirm" },
         { "event": "MWC 2025", "date": "2025-03-05", "title": "MWC 2025: Diese Highlights der Messe sind ausgezeichnet!", "url": "https://www.inside-digital.de/news/mwc-2025-das-sind-die-highlights-der-messe" },
         { "event": "MWC 2025", "date": "2025-03-03", "title": "Wechselobjektive für Smartphones: realme und Xiaomi gehen neue Wege", "url": "https://www.inside-digital.de/news/wechselobjektive-fuer-smartphones-realme-und-xiaomi-gehen-neue-wege" },
         { "event": "MWC 2025", "date": "2025-03-02", "title": "Smartphone oder Kamera? Xiaomi bringt 15 Ultra nach Deutschland", "url": "https://www.inside-digital.de/news/smartphone-oder-kamera-xiaomi-bringt-15-ultra-nach-deutschland" },
