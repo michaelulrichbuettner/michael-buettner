@@ -371,9 +371,9 @@
       // gentle, deterministic vertical fan so that identical dates remain
       // discoverable without breaking the calm character of the timeline.
       const progress = run.length > 1 ? localIndex / (run.length - 1) - 0.5 : 0;
-      const stackOffset = progress * Math.min(24, item.rowHeight * 0.34);
-      const jitter = (hashUnit(item.article.id) - 0.5) * Math.min(5, item.rowHeight * 0.07);
-      const y = item.y + stackOffset + jitter;
+      const stackOffset = progress * Math.min(12, item.rowHeight * 0.16);
+      const jitter = (hashUnit(`${item.article.id}-fan`) - 0.5) * Math.min(3, item.rowHeight * 0.05);
+      const y = clamp(item.y + stackOffset + jitter, item.rowTop + 7, item.rowBottom - 7);
       const selected = selectedId === item.article.id;
       drawMark(item.x, y, format, 1, selected);
       hitTargets.push({ kind: "article", article: item.article, topic, x: item.x, y, radius: layout.coarse ? 22 : 15 });
@@ -387,8 +387,12 @@
       if (!grouped.has(key)) grouped.set(key, []);
       const x = xForTime(article.time);
       const row = rowForTopic(article.topic, x);
-      const y = row.center + (formatMeta[article.format]?.lane || 0) * row.height;
-      grouped.get(key).push({ article, x, y, rowHeight: row.height });
+      const inset = Math.min(14, Math.max(7, row.height * 0.12));
+      const availableHeight = Math.max(0, row.height - inset * 2);
+      // Vertical placement has no extra semantic meaning. It simply uses the
+      // local band room so individual marks stay legible in dense phases.
+      const y = row.top + inset + hashUnit(article.id) * availableHeight;
+      grouped.get(key).push({ article, x, y, rowHeight: row.height, rowTop: row.top, rowBottom: row.top + row.height });
     });
 
     grouped.forEach((items, key) => {
@@ -422,13 +426,20 @@
     const sampleCount = Math.max(42, Math.ceil(layout.plotWidth / sampleStep) + 1);
     const kernelPixels = clamp(layout.compact ? 44 : 58, 34, layout.plotWidth * 0.11);
     const kernelDuration = (viewEnd - viewStart) * (kernelPixels / layout.plotWidth);
-    const contextDuration = kernelDuration * 3;
-    const shapeArticles = articles.filter((article) => {
+    const continuityDuration = kernelDuration * 8;
+    const contextDuration = continuityDuration * 3;
+    const matchingArticles = articles.filter((article) => {
       const matchesFormat = activeFormat === "all" || article.format === activeFormat;
-      return matchesFormat && article.time >= viewStart - contextDuration && article.time <= viewEnd + contextDuration;
+      return matchesFormat;
     });
     const byTopic = new Map(topics.map((topic) => [topic.id, []]));
-    shapeArticles.forEach((article) => byTopic.get(article.topic)?.push(article));
+    const topicTotals = new Map(topics.map((topic) => [topic.id, 0]));
+    matchingArticles.forEach((article) => {
+      topicTotals.set(article.topic, topicTotals.get(article.topic) + 1);
+      if (article.time >= viewStart - contextDuration && article.time <= viewEnd + contextDuration) {
+        byTopic.get(article.topic)?.push(article);
+      }
+    });
 
     const samples = [];
     for (let index = 0; index < sampleCount; index += 1) {
@@ -436,11 +447,16 @@
       const x = layout.left + ratio * layout.plotWidth;
       const time = viewStart + ratio * (viewEnd - viewStart);
       const rawWeights = topics.map((topic) => {
-        const density = byTopic.get(topic.id).reduce((sum, article) => {
-          const distance = (article.time - time) / kernelDuration;
-          return Math.abs(distance) > 3 ? sum : sum + Math.exp(-0.5 * distance * distance);
-        }, 0);
-        return Math.log1p(density);
+        const densities = byTopic.get(topic.id).reduce((sum, article) => {
+          const localDistance = (article.time - time) / kernelDuration;
+          const trendDistance = (article.time - time) / continuityDuration;
+          if (Math.abs(trendDistance) > 3) return sum;
+          sum.local += Math.abs(localDistance) > 3 ? 0 : Math.exp(-0.5 * localDistance * localDistance);
+          sum.trend += Math.exp(-0.5 * trendDistance * trendDistance);
+          return sum;
+        }, { local: 0, trend: 0 });
+        const globalPrior = Math.log1p(topicTotals.get(topic.id) || 0) * 0.025;
+        return Math.log1p(densities.local) + Math.log1p(densities.trend) * 0.18 + globalPrior;
       });
       const totalWeight = rawWeights.reduce((sum, weight) => sum + weight, 0);
       const fallbackWeight = totalWeight ? 0 : 1 / topics.length;
