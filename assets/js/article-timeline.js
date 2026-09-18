@@ -38,6 +38,8 @@
   let detailPinned = false;
   let hoveredTarget = null;
   let pointerState = null;
+  const touchPoints = new Map();
+  let pinchState = null;
   let renderFrame = 0;
 
   const formatMeta = {
@@ -565,6 +567,42 @@
     return { x: event.clientX - rectangle.left, y: event.clientY - rectangle.top };
   }
 
+  function touchPair() {
+    return [...touchPoints.values()].slice(0, 2);
+  }
+
+  function distanceBetween(first, second) {
+    return Math.hypot(second.x - first.x, second.y - first.y);
+  }
+
+  function midpointBetween(first, second) {
+    return { x: (first.x + second.x) / 2, y: (first.y + second.y) / 2 };
+  }
+
+  function beginPinch() {
+    const [first, second] = touchPair();
+    if (!first || !second) return;
+    pinchState = {
+      distance: Math.max(1, distanceBetween(first, second)),
+      center: midpointBetween(first, second),
+      start: viewStart,
+      span: viewEnd - viewStart
+    };
+    pointerState = null;
+  }
+
+  function updatePinch() {
+    if (!pinchState || touchPoints.size < 2 || !layout) return;
+    const [first, second] = touchPair();
+    const distance = Math.max(1, distanceBetween(first, second));
+    const center = midpointBetween(first, second);
+    const span = clamp(pinchState.span * (pinchState.distance / distance), MIN_SPAN, fullEnd - fullStart);
+    const startFraction = clamp((pinchState.center.x - layout.left) / layout.plotWidth, 0, 1);
+    const currentFraction = clamp((center.x - layout.left) / layout.plotWidth, 0, 1);
+    const anchorTime = pinchState.start + startFraction * pinchState.span;
+    setDomain(anchorTime - currentFraction * span, anchorTime + (1 - currentFraction) * span);
+  }
+
   function hitTest(point) {
     if (
       point.x < layout.left || point.x > layout.left + layout.plotWidth ||
@@ -716,8 +754,16 @@
   }, { passive: false });
 
   stage.addEventListener("pointerdown", (event) => {
-    if (event.button !== 0 || event.target.closest("[data-timeline-detail]")) return;
+    if ((event.pointerType === "mouse" && event.button !== 0) || event.target.closest("[data-timeline-detail]")) return;
     const point = pointFromEvent(event);
+    if (event.pointerType === "touch") {
+      touchPoints.set(event.pointerId, { ...point, id: event.pointerId });
+      stage.setPointerCapture(event.pointerId);
+      if (touchPoints.size === 2) beginPinch();
+      else if (touchPoints.size === 1) pointerState = { id: event.pointerId, startX: point.x, startY: point.y, lastX: point.x, moved: false };
+      stage.classList.add("is-dragging");
+      return;
+    }
     pointerState = { id: event.pointerId, startX: point.x, startY: point.y, lastX: point.x, moved: false };
     stage.setPointerCapture(event.pointerId);
     stage.classList.add("is-dragging");
@@ -725,6 +771,13 @@
 
   stage.addEventListener("pointermove", (event) => {
     if (event.target.closest("[data-timeline-detail]")) return;
+    if (event.pointerType === "touch" && touchPoints.has(event.pointerId)) {
+      touchPoints.set(event.pointerId, { ...pointFromEvent(event), id: event.pointerId });
+      if (touchPoints.size >= 2) {
+        updatePinch();
+        return;
+      }
+    }
     if (pointerState && pointerState.id === event.pointerId) {
       const point = pointFromEvent(event);
       const deltaX = pointerState.lastX - point.x;
@@ -743,6 +796,19 @@
   });
 
   stage.addEventListener("pointerup", (event) => {
+    if (event.pointerType === "touch" && touchPoints.has(event.pointerId)) {
+      touchPoints.delete(event.pointerId);
+      if (stage.hasPointerCapture(event.pointerId)) stage.releasePointerCapture(event.pointerId);
+      if (pinchState) {
+        pinchState = null;
+        const [remaining] = touchPair();
+        pointerState = remaining
+          ? { id: remaining.id, startX: remaining.x, startY: remaining.y, lastX: remaining.x, moved: true }
+          : null;
+        if (!remaining) stage.classList.remove("is-dragging");
+        return;
+      }
+    }
     if (!pointerState || pointerState.id !== event.pointerId) return;
     const moved = pointerState.moved;
     pointerState = null;
@@ -770,6 +836,8 @@
 
   stage.addEventListener("pointercancel", () => {
     pointerState = null;
+    touchPoints.clear();
+    pinchState = null;
     stage.classList.remove("is-dragging");
   });
 

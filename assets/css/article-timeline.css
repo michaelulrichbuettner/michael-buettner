@@ -121,7 +121,9 @@
   background: var(--color-white);
   box-shadow: var(--shadow);
   cursor: grab;
-  touch-action: pan-y;
+  /* The canvas owns one- and two-finger gestures; page scrolling remains
+     available when a gesture starts outside the visualization. */
+  touch-action: none;
   user-select: none;
 }
 
