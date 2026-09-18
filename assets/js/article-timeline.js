@@ -111,13 +111,24 @@
   }
 
   function rowCenter(topicId) {
-    const index = topics.findIndex((topic) => topic.id === topicId);
-    return layout.rows[index]?.center ?? layout.top;
+    return rowForTopic(topicId, layout.left + layout.plotWidth / 2).center;
   }
 
-  function rowForTopic(topicId) {
-    const index = topics.findIndex((topic) => topic.id === topicId);
-    return layout.rows[index] || { top: layout.top, height: layout.minimumRowHeight, center: layout.top };
+  function rowForTopic(topicId, x) {
+    const samples = layout.bandSamples || [];
+    if (!samples.length) {
+      return { top: layout.top, height: layout.minimumRowHeight, center: layout.top };
+    }
+    const samplePosition = clamp((x - layout.left) / layout.plotWidth, 0, 1) * (samples.length - 1);
+    const before = samples[Math.floor(samplePosition)];
+    const after = samples[Math.min(samples.length - 1, Math.ceil(samplePosition))];
+    const progress = samplePosition - Math.floor(samplePosition);
+    const first = before.rows.get(topicId);
+    const second = after.rows.get(topicId);
+    if (!first || !second) return { top: layout.top, height: layout.minimumRowHeight, center: layout.top };
+    const top = first.top + (second.top - first.top) * progress;
+    const heightForRow = first.height + (second.height - first.height) * progress;
+    return { top, height: heightForRow, center: top + heightForRow / 2 };
   }
 
   function formatDateRange(start, end) {
@@ -251,17 +262,30 @@
     context.fillRect(0, 0, width, height);
 
     topics.forEach((topic, index) => {
-      const row = layout.rows[index];
-      const y = row.top;
+      const firstRow = layout.bandSamples[0].rows.get(topic.id);
       if (index % 2 === 1) {
         context.fillStyle = rgba(palette.soft, 0.56);
-        context.fillRect(layout.left, y, layout.plotWidth, row.height);
+        context.beginPath();
+        layout.bandSamples.forEach((sample, sampleIndex) => {
+          const row = sample.rows.get(topic.id);
+          if (sampleIndex === 0) context.moveTo(sample.x, row.top);
+          else context.lineTo(sample.x, row.top);
+        });
+        [...layout.bandSamples].reverse().forEach((sample) => {
+          const row = sample.rows.get(topic.id);
+          context.lineTo(sample.x, row.top + row.height);
+        });
+        context.closePath();
+        context.fill();
       }
       context.strokeStyle = palette.lineSoft;
       context.lineWidth = 1;
       context.beginPath();
-      context.moveTo(layout.left, y + row.height);
-      context.lineTo(width - layout.right, y + row.height);
+      layout.bandSamples.forEach((sample, sampleIndex) => {
+        const row = sample.rows.get(topic.id);
+        if (sampleIndex === 0) context.moveTo(sample.x, row.top + row.height);
+        else context.lineTo(sample.x, row.top + row.height);
+      });
       context.stroke();
 
       context.save();
@@ -272,7 +296,7 @@
       const labelWidth = layout.left - (layout.compact ? 20 : 32);
       const lines = wrapText(topic.name, labelWidth);
       const lineHeight = layout.compact ? 14 : 17;
-      const startY = row.center - ((lines.length - 1) * lineHeight) / 2;
+      const startY = firstRow.center - ((lines.length - 1) * lineHeight) / 2;
       lines.forEach((line, lineIndex) => {
         context.fillText(line, layout.compact ? 10 : 16, startY + lineIndex * lineHeight);
       });
@@ -340,21 +364,22 @@
     context.restore();
   }
 
-  function drawDensity(run, topic, format, y, averageGap) {
+  function drawDensity(run, topic, format, averageGap) {
     const meta = formatMeta[format] || formatMeta.news;
     const firstX = run[0].x;
     const lastX = run[run.length - 1].x;
     const centerX = (firstX + lastX) / 2;
     const radiusX = Math.max(13, (lastX - firstX) / 2 + 10);
-    const row = rowForTopic(topic.id);
-    const radiusY = Math.max(7, Math.min(13, row.height * 0.17));
+    const centerY = run.reduce((sum, item) => sum + item.y, 0) / run.length;
+    const averageRowHeight = run.reduce((sum, item) => sum + item.rowHeight, 0) / run.length;
+    const radiusY = Math.max(7, Math.min(18, averageRowHeight * 0.18));
     const densityStrength = clamp(1 - averageGap / layout.clusterDistance, 0.35, 1);
     const countStrength = clamp(Math.log2(run.length) / 5, 0.35, 1);
     const alpha = 0.17 + 0.25 * densityStrength * countStrength;
 
     context.save();
     context.filter = "blur(4px)";
-    context.translate(centerX, y);
+    context.translate(centerX, centerY);
     context.scale(radiusX, radiusY);
     const gradient = context.createRadialGradient(0, 0, 0.08, 0, 0, 1);
     gradient.addColorStop(0, rgba(meta.color, Math.min(0.72, alpha + 0.2)));
@@ -372,7 +397,7 @@
       format,
       articles: run.map((item) => item.article),
       x: centerX,
-      y,
+      y: centerY,
       radiusX: radiusX + 7,
       radiusY: radiusY + 9
     });
@@ -380,7 +405,7 @@
     return densityStrength;
   }
 
-  function drawArticleRun(run, topic, format, laneY, rowHeight) {
+  function drawArticleRun(run, topic, format) {
     if (!run.length) return;
     const gaps = [];
     for (let index = 1; index < run.length; index += 1) gaps.push(run[index].x - run[index - 1].x);
@@ -388,15 +413,15 @@
     const shouldAggregate = run.length >= 4 && averageGap <= layout.clusterDistance;
     let densityStrength = 0;
 
-    if (shouldAggregate) densityStrength = drawDensity(run, topic, format, laneY, averageGap);
+    if (shouldAggregate) densityStrength = drawDensity(run, topic, format, averageGap);
     const pointAlpha = shouldAggregate ? clamp(0.75 - densityStrength, 0, 0.5) : 1;
     if (shouldAggregate && pointAlpha < 0.2) return;
 
     run.forEach((item, localIndex) => {
       const centeredIndex = localIndex - (run.length - 1) / 2;
-      const stackOffset = run.length <= 3 ? centeredIndex * Math.min(7, rowHeight * 0.1) : 0;
-      const jitter = (hashUnit(item.article.id) - 0.5) * Math.min(7, rowHeight * 0.1);
-      const y = laneY + stackOffset + jitter;
+      const stackOffset = run.length <= 3 ? centeredIndex * Math.min(7, item.rowHeight * 0.1) : 0;
+      const jitter = (hashUnit(item.article.id) - 0.5) * Math.min(7, item.rowHeight * 0.1);
+      const y = item.y + stackOffset + jitter;
       const selected = selectedId === item.article.id;
       drawMark(item.x, y, format, pointAlpha, selected);
       if (pointAlpha >= 0.38) {
@@ -410,27 +435,28 @@
     visibleArticles.forEach((article) => {
       const key = `${article.topic}|${article.format}`;
       if (!grouped.has(key)) grouped.set(key, []);
-      grouped.get(key).push({ article, x: xForTime(article.time) });
+      const x = xForTime(article.time);
+      const row = rowForTopic(article.topic, x);
+      const y = row.center + (formatMeta[article.format]?.lane || 0) * row.height;
+      grouped.get(key).push({ article, x, y, rowHeight: row.height });
     });
 
     grouped.forEach((items, key) => {
       const [topicId, format] = key.split("|");
       const topic = topicById.get(topicId);
       if (!topic) return;
-      const row = rowForTopic(topicId);
       items.sort((left, right) => left.x - right.x);
-      const laneY = row.center + (formatMeta[format]?.lane || 0) * row.height;
       let run = [items[0]];
 
       for (let index = 1; index < items.length; index += 1) {
         if (items[index].x - items[index - 1].x <= layout.clusterDistance) {
           run.push(items[index]);
         } else {
-          drawArticleRun(run, topic, format, laneY, row.height);
+          drawArticleRun(run, topic, format);
           run = [items[index]];
         }
       }
-      drawArticleRun(run, topic, format, laneY, row.height);
+      drawArticleRun(run, topic, format);
     });
   }
 
@@ -439,6 +465,46 @@
       const matchesFormat = activeFormat === "all" || article.format === activeFormat;
       return matchesFormat && article.time >= viewStart && article.time <= viewEnd;
     });
+  }
+
+  function buildBandGeometry() {
+    const sampleStep = layout.compact ? 6 : 8;
+    const sampleCount = Math.max(42, Math.ceil(layout.plotWidth / sampleStep) + 1);
+    const kernelPixels = clamp(layout.compact ? 44 : 58, 34, layout.plotWidth * 0.11);
+    const kernelDuration = (viewEnd - viewStart) * (kernelPixels / layout.plotWidth);
+    const contextDuration = kernelDuration * 3;
+    const shapeArticles = articles.filter((article) => {
+      const matchesFormat = activeFormat === "all" || article.format === activeFormat;
+      return matchesFormat && article.time >= viewStart - contextDuration && article.time <= viewEnd + contextDuration;
+    });
+    const byTopic = new Map(topics.map((topic) => [topic.id, []]));
+    shapeArticles.forEach((article) => byTopic.get(article.topic)?.push(article));
+
+    const samples = [];
+    for (let index = 0; index < sampleCount; index += 1) {
+      const ratio = index / (sampleCount - 1);
+      const x = layout.left + ratio * layout.plotWidth;
+      const time = viewStart + ratio * (viewEnd - viewStart);
+      const rawWeights = topics.map((topic) => {
+        const density = byTopic.get(topic.id).reduce((sum, article) => {
+          const distance = (article.time - time) / kernelDuration;
+          return Math.abs(distance) > 3 ? sum : sum + Math.exp(-0.5 * distance * distance);
+        }, 0);
+        return Math.log1p(density);
+      });
+      const totalWeight = rawWeights.reduce((sum, weight) => sum + weight, 0);
+      const fallbackWeight = totalWeight ? 0 : 1 / topics.length;
+      let currentTop = layout.top;
+      const rows = new Map();
+      topics.forEach((topic, topicIndex) => {
+        const share = totalWeight ? rawWeights[topicIndex] / totalWeight : fallbackWeight;
+        const heightForRow = layout.minimumRowHeight + layout.flexibleHeight * share;
+        rows.set(topic.id, { top: currentTop, height: heightForRow, center: currentTop + heightForRow / 2 });
+        currentTop += heightForRow;
+      });
+      samples.push({ x, rows });
+    }
+    layout.bandSamples = samples;
   }
 
   function updateStatus(currentArticles) {
@@ -451,6 +517,7 @@
     renderFrame = 0;
     if (!data || !layout) return;
     hitTargets = [];
+    buildBandGeometry();
     drawStructure();
     const currentArticles = visibleArticles();
     context.save();
@@ -492,24 +559,7 @@
     const coarse = matchMedia("(pointer: coarse)").matches;
     const plotHeight = height - top - bottom;
     const minimumRowHeight = Math.min(compact ? 30 : 36, plotHeight / topics.length);
-    const remainingHeight = Math.max(0, plotHeight - minimumRowHeight * topics.length);
-    const rawWeights = topics.map((topic) => Math.log1p(Math.max(0, topic.count || 0)));
-    const smallestWeight = Math.min(...rawWeights);
-    // The scale starts above the mandatory minimum rather than sharing a large
-    // common base first. This makes the log-scale visibly useful while a small
-    // floor still preserves breathing room for every topic.
-    const weights = rawWeights.map((weight) => Math.max(0.4, weight - smallestWeight + 0.4));
-    const totalWeight = weights.reduce((sum, weight) => sum + weight, 0) || topics.length;
-    // Every band stays legible. Only the space above the minimum is allocated
-    // by log-scaled article volume, so large beats visibly breathe without
-    // turning the display into a linear count chart.
-    let currentTop = top;
-    const rows = topics.map((topic, index) => {
-      const heightForRow = minimumRowHeight + remainingHeight * (weights[index] / totalWeight);
-      const row = { top: currentTop, height: heightForRow, center: currentTop + heightForRow / 2 };
-      currentTop += heightForRow;
-      return row;
-    });
+    const flexibleHeight = Math.max(0, plotHeight - minimumRowHeight * topics.length);
 
     layout = {
       compact,
@@ -521,7 +571,8 @@
       plotWidth: Math.max(100, width - left - right),
       plotHeight,
       minimumRowHeight,
-      rows,
+      flexibleHeight,
+      bandSamples: [],
       clusterDistance: coarse ? 20 : compact ? 17 : 14
     };
     scheduleRender();
