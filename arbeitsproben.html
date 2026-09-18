@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="assets/css/styles.css?v=20260915-archives">
     <link rel="stylesheet" href="assets/css/arbeitsproben.css?v=20260915-podcasts">
     <link rel="stylesheet" href="assets/css/event-map.css?v=20260916-polar">
+    <link rel="stylesheet" href="assets/css/article-timeline.css?v=20260918-archive">
     <script src="assets/js/posts.js?v=20260908-images" defer></script>
     <script src="assets/js/main.js?v=20260908-images" defer></script>
     <script src="assets/vendor/d3-array/d3-array.min.js?v=3.2.4" defer></script>
     <script src="assets/vendor/d3-geo/d3-geo.min.js?v=3.1.1" defer></script>
     <script src="assets/vendor/topojson/topojson-client.min.js?v=3.1.0" defer></script>
     <script src="assets/js/event-map.js?v=20260916-polar" defer></script>
-    <script src="assets/js/topic-landscape.js?v=20260802-3" defer></script>
+    <script src="assets/data/article-archive-data.js?v=20260918-archive" defer></script>
+    <script src="assets/js/article-timeline.js?v=20260918-archive-2" defer></script>
     <script src="assets/js/podcasts.js?v=20260915-podcasts" defer></script>
     <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
     <link rel="icon" type="image/png" href="favicon-96.png" sizes="96x96">
@@ -69,31 +71,50 @@
           <p class="podcast-privacy">Audio wird erst nach deinem Klick vom jeweiligen Anbieter geladen. Dabei werden Verbindungsdaten wie deine IP-Adresse übermittelt. <a href="datenschutz.html#podcasts-title">Datenschutzhinweise</a></p>
         </div>
       </section>
-      <section class="section topic-portfolio">
+      <section class="section article-archive-section" aria-labelledby="article-archive-title">
         <div class="wrap section-heading">
-          <p class="eyebrow">Thematische Bandbreite</p>
-          <h2>Themen und Schwerpunkte</h2>
-          <p class="lead">Ausgewählte Artikel nach Themen und Schwerpunkten - von Michael Büttner</p>
+          <p class="eyebrow">Journalistische Entwicklung</p>
+          <h2 id="article-archive-title">Artikelarchiv - Themen und Formate im Laufe der Zeit</h2>
+          <p class="lead">Das verlinkte Artikelarchiv nach Themenfeld, Format und Veröffentlichungszeit. Beim Zoomen werden aus dichten Themenphasen einzelne Beiträge.</p>
         </div>
         <div
-          class="wrap topic-landscape"
-          data-topic-landscape
-          data-source="assets/data/topic-articles.json"
+          class="wrap article-timeline"
+          data-article-timeline
+          data-source="assets/data/article-archive.json"
         >
-          <div class="topic-landscape__toolbar">
-            <p data-topic-status aria-live="polite">Themenfelder werden geladen …</p>
-            <button class="button button--secondary topic-landscape__back" type="button" data-topic-back hidden>Zur Übersicht</button>
+          <div class="article-timeline__toolbar">
+            <div class="article-timeline__filters" role="group" aria-label="Artikel nach Format filtern">
+              <button type="button" data-format-filter="all" aria-pressed="true">Alle</button>
+              <button type="button" data-format-filter="news" aria-pressed="false">News</button>
+              <button type="button" data-format-filter="test" aria-pressed="false">Tests</button>
+              <button type="button" data-format-filter="guide" aria-pressed="false">Ratgeber</button>
+            </div>
+            <div class="article-timeline__navigation" aria-label="Zeitraum steuern">
+              <button class="button button--secondary" type="button" data-timeline-zoom-out aria-label="Herauszoomen">−</button>
+              <button class="button button--secondary" type="button" data-timeline-zoom-in aria-label="Hineinzoomen">+</button>
+              <button class="button button--secondary article-timeline__reset" type="button" data-timeline-reset>Gesamtansicht</button>
+            </div>
           </div>
-          <div class="topic-landscape__stage">
-            <svg
-              data-topic-svg
-              role="group"
-              aria-label="Interaktive Themenlandschaft mit acht Themenfeldern"
-              preserveAspectRatio="xMidYMid meet"
-            ></svg>
-            <article class="topic-detail" data-topic-detail aria-live="polite" hidden></article>
+          <div class="article-timeline__meta">
+            <div class="article-timeline__legend" aria-label="Legende der journalistischen Formate">
+              <span><i class="article-timeline__mark article-timeline__mark--news" aria-hidden="true"></i>News</span>
+              <span><i class="article-timeline__mark article-timeline__mark--test" aria-hidden="true"></i>Test</span>
+              <span><i class="article-timeline__mark article-timeline__mark--guide" aria-hidden="true"></i>Ratgeber</span>
+            </div>
+            <p data-timeline-status aria-live="polite">Artikelarchiv wird geladen …</p>
           </div>
-          <p class="topic-landscape__fallback" data-topic-fallback hidden>Die Themenlandschaft konnte nicht geladen werden.</p>
+          <div class="article-timeline__stage" data-timeline-stage>
+            <canvas
+              data-timeline-canvas
+              tabindex="0"
+              role="img"
+              aria-label="Interaktive Zeitlandschaft mit Themenbändern, Artikeldichte und einzelnen Artikeln"
+              aria-describedby="article-timeline-instructions"
+            ></canvas>
+            <article class="article-timeline__detail" data-timeline-detail aria-live="polite" hidden></article>
+          </div>
+          <p class="article-timeline__instructions" id="article-timeline-instructions">Zoomen mit Mausrad, Trackpad oder den Schaltflächen. Zum Verschieben die Grafik ziehen. Ein Artikelpunkt öffnet die Vorschau.</p>
+          <p class="article-timeline__fallback" data-timeline-fallback hidden>Das Artikelarchiv konnte nicht geladen werden.</p>
         </div>
       </section>
       <section class="section">

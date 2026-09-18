@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "source": "michael_buettner_artikelarchiv_mit_links.xlsx",
+    "reason": "Kein verwertbares Veröffentlichungsdatum; nicht Teil der Zeitvisualisierung.",
+    "count": 1
+  },
+  "articles": [
+    {
+      "sourceRow": 623,
+      "title": "WhatsApp-Update: So bekommst du die neueste Version früher",
+      "url": "https://www.inside-digital.de/ratgeber/whatsapp-update-per-beta",
+      "format": "guide",
+      "formatLabel": "Ratgeber",
+      "topic": "ai-software",
+      "rawDate": null
+    }
+  ]
+}
