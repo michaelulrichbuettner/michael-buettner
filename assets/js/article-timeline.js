@@ -364,69 +364,19 @@
     context.restore();
   }
 
-  function drawDensity(run, topic, format, averageGap) {
-    const meta = formatMeta[format] || formatMeta.news;
-    const firstX = run[0].x;
-    const lastX = run[run.length - 1].x;
-    const centerX = (firstX + lastX) / 2;
-    const radiusX = Math.max(13, (lastX - firstX) / 2 + 10);
-    const centerY = run.reduce((sum, item) => sum + item.y, 0) / run.length;
-    const averageRowHeight = run.reduce((sum, item) => sum + item.rowHeight, 0) / run.length;
-    const radiusY = Math.max(7, Math.min(18, averageRowHeight * 0.18));
-    const densityStrength = clamp(1 - averageGap / layout.clusterDistance, 0.35, 1);
-    const countStrength = clamp(Math.log2(run.length) / 5, 0.35, 1);
-    const alpha = 0.17 + 0.25 * densityStrength * countStrength;
-
-    context.save();
-    context.filter = "blur(4px)";
-    context.translate(centerX, centerY);
-    context.scale(radiusX, radiusY);
-    const gradient = context.createRadialGradient(0, 0, 0.08, 0, 0, 1);
-    gradient.addColorStop(0, rgba(meta.color, Math.min(0.72, alpha + 0.2)));
-    gradient.addColorStop(0.55, rgba(meta.color, alpha));
-    gradient.addColorStop(1, rgba(meta.color, 0));
-    context.fillStyle = gradient;
-    context.beginPath();
-    context.arc(0, 0, 1, 0, Math.PI * 2);
-    context.fill();
-    context.restore();
-
-    hitTargets.push({
-      kind: "density",
-      topic,
-      format,
-      articles: run.map((item) => item.article),
-      x: centerX,
-      y: centerY,
-      radiusX: radiusX + 7,
-      radiusY: radiusY + 9
-    });
-
-    return densityStrength;
-  }
-
   function drawArticleRun(run, topic, format) {
     if (!run.length) return;
-    const gaps = [];
-    for (let index = 1; index < run.length; index += 1) gaps.push(run[index].x - run[index - 1].x);
-    const averageGap = gaps.length ? gaps.reduce((sum, gap) => sum + gap, 0) / gaps.length : Infinity;
-    const shouldAggregate = run.length >= 4 && averageGap <= layout.clusterDistance;
-    let densityStrength = 0;
-
-    if (shouldAggregate) densityStrength = drawDensity(run, topic, format, averageGap);
-    const pointAlpha = shouldAggregate ? clamp(0.75 - densityStrength, 0, 0.5) : 1;
-    if (shouldAggregate && pointAlpha < 0.2) return;
-
     run.forEach((item, localIndex) => {
-      const centeredIndex = localIndex - (run.length - 1) / 2;
-      const stackOffset = run.length <= 3 ? centeredIndex * Math.min(7, item.rowHeight * 0.1) : 0;
-      const jitter = (hashUnit(item.article.id) - 0.5) * Math.min(7, item.rowHeight * 0.1);
+      // Preserve every article as an individual mark. Nearby releases use a
+      // gentle, deterministic vertical fan so that identical dates remain
+      // discoverable without breaking the calm character of the timeline.
+      const progress = run.length > 1 ? localIndex / (run.length - 1) - 0.5 : 0;
+      const stackOffset = progress * Math.min(24, item.rowHeight * 0.34);
+      const jitter = (hashUnit(item.article.id) - 0.5) * Math.min(5, item.rowHeight * 0.07);
       const y = item.y + stackOffset + jitter;
       const selected = selectedId === item.article.id;
-      drawMark(item.x, y, format, pointAlpha, selected);
-      if (pointAlpha >= 0.38) {
-        hitTargets.push({ kind: "article", article: item.article, topic, x: item.x, y, radius: layout.coarse ? 22 : 15 });
-      }
+      drawMark(item.x, y, format, 1, selected);
+      hitTargets.push({ kind: "article", article: item.article, topic, x: item.x, y, radius: layout.coarse ? 22 : 15 });
     });
   }
 
@@ -599,13 +549,7 @@
       }
     }
     if (closestArticle) return closestArticle;
-
-    return hitTargets.find((target) => {
-      if (target.kind !== "density") return false;
-      const normalizedX = (point.x - target.x) / target.radiusX;
-      const normalizedY = (point.y - target.y) / target.radiusY;
-      return normalizedX * normalizedX + normalizedY * normalizedY <= 1;
-    }) || null;
+    return null;
   }
 
   function appendTextElement(tagName, className, text) {
