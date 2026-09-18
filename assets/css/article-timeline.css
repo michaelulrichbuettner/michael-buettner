@@ -1,5 +1,7 @@
 .article-timeline {
-  --timeline-news: var(--color-yellow-dark);
+  /* A clearer gold for article news: related to the site yellow, but still
+     dark enough to remain legible on the open timeline surface. */
+  --timeline-news: #c89c12;
   --timeline-test: var(--color-swot-blue);
   --timeline-guide: var(--color-swot-green);
   display: grid;

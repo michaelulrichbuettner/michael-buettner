@@ -70,7 +70,7 @@
     palette.white = cssValue("--color-white", palette.white);
     palette.yellowSoft = cssValue("--color-yellow-soft", palette.yellowSoft);
     palette.yellow = cssValue("--color-yellow", palette.yellow);
-    formatMeta.news.color = cssValue("--color-yellow-dark", formatMeta.news.color);
+    formatMeta.news.color = cssValue("--timeline-news", formatMeta.news.color);
     formatMeta.test.color = cssValue("--color-swot-blue", formatMeta.test.color);
     formatMeta.guide.color = cssValue("--color-swot-green", formatMeta.guide.color);
   }
@@ -338,7 +338,7 @@
 
   function drawMark(x, y, format, alpha = 1, selected = false) {
     const meta = formatMeta[format] || formatMeta.news;
-    const radius = selected ? 7.5 : 5.5;
+    const radius = selected ? 7.25 : 4.8;
     context.save();
     context.globalAlpha = alpha;
     context.fillStyle = meta.color;
@@ -364,26 +364,54 @@
     context.restore();
   }
 
-  function drawArticleRun(run, topic, format) {
-    if (!run.length) return;
-    run.forEach((item, localIndex) => {
-      // Preserve every article as an individual mark. Nearby releases use a
-      // gentle, deterministic vertical fan so that identical dates remain
-      // discoverable without breaking the calm character of the timeline.
-      const progress = run.length > 1 ? localIndex / (run.length - 1) - 0.5 : 0;
-      const stackOffset = progress * Math.min(12, item.rowHeight * 0.16);
-      const jitter = (hashUnit(`${item.article.id}-fan`) - 0.5) * Math.min(3, item.rowHeight * 0.05);
-      const y = clamp(item.y + stackOffset + jitter, item.rowTop + 7, item.rowBottom - 7);
+  function drawTopicArticles(items, topic) {
+    if (!items.length) return;
+    const placed = [];
+    const markerGap = layout.coarse ? 12 : 10;
+
+    items.sort((left, right) => left.x - right.x || left.order - right.order);
+    items.forEach((item) => {
+      const minimum = item.rowTop + 6;
+      const maximum = item.rowBottom - 6;
+      const preferred = clamp(item.y, minimum, maximum);
+      const candidates = [preferred];
+      // Try a few quiet vertical positions around the natural position before
+      // accepting a slight overlap. This resolves collisions across formats,
+      // too, rather than only within one colour group.
+      for (let step = 1; step <= 8; step += 1) {
+        const offset = step * markerGap;
+        candidates.push(clamp(preferred - offset, minimum, maximum));
+        candidates.push(clamp(preferred + offset, minimum, maximum));
+      }
+
+      let best = candidates[0];
+      let bestScore = Number.POSITIVE_INFINITY;
+      candidates.forEach((candidate) => {
+        const collisionScore = placed.reduce((score, other) => {
+          const dx = Math.abs(other.x - item.x);
+          const dy = Math.abs(other.y - candidate);
+          if (dx >= markerGap || dy >= markerGap) return score;
+          return score + (markerGap - dx) * (markerGap - dy) * 30;
+        }, 0);
+        const movementScore = Math.abs(candidate - preferred) * 0.7;
+        const score = collisionScore + movementScore;
+        if (score < bestScore) {
+          bestScore = score;
+          best = candidate;
+        }
+      });
+
       const selected = selectedId === item.article.id;
-      drawMark(item.x, y, format, 1, selected);
-      hitTargets.push({ kind: "article", article: item.article, topic, x: item.x, y, radius: layout.coarse ? 22 : 15 });
+      drawMark(item.x, best, item.article.format, 1, selected);
+      placed.push({ x: item.x, y: best });
+      hitTargets.push({ kind: "article", article: item.article, topic, x: item.x, y: best, radius: layout.coarse ? 22 : 15 });
     });
   }
 
   function drawData(visibleArticles) {
     const grouped = new Map();
     visibleArticles.forEach((article) => {
-      const key = `${article.topic}|${article.format}`;
+      const key = article.topic;
       if (!grouped.has(key)) grouped.set(key, []);
       const x = xForTime(article.time);
       const row = rowForTopic(article.topic, x);
@@ -392,25 +420,13 @@
       // Vertical placement has no extra semantic meaning. It simply uses the
       // local band room so individual marks stay legible in dense phases.
       const y = row.top + inset + hashUnit(article.id) * availableHeight;
-      grouped.get(key).push({ article, x, y, rowHeight: row.height, rowTop: row.top, rowBottom: row.top + row.height });
+      grouped.get(key).push({ article, x, y, rowHeight: row.height, rowTop: row.top, rowBottom: row.top + row.height, order: hashUnit(article.id) });
     });
 
-    grouped.forEach((items, key) => {
-      const [topicId, format] = key.split("|");
+    grouped.forEach((items, topicId) => {
       const topic = topicById.get(topicId);
       if (!topic) return;
-      items.sort((left, right) => left.x - right.x);
-      let run = [items[0]];
-
-      for (let index = 1; index < items.length; index += 1) {
-        if (items[index].x - items[index - 1].x <= layout.clusterDistance) {
-          run.push(items[index]);
-        } else {
-          drawArticleRun(run, topic, format);
-          run = [items[index]];
-        }
-      }
-      drawArticleRun(run, topic, format);
+      drawTopicArticles(items, topic);
     });
   }
 
