@@ -491,18 +491,21 @@
     const bottom = 18;
     const coarse = matchMedia("(pointer: coarse)").matches;
     const plotHeight = height - top - bottom;
-    const minimumRowHeight = Math.min(compact ? 36 : 42, plotHeight / topics.length);
+    const minimumRowHeight = Math.min(compact ? 30 : 36, plotHeight / topics.length);
     const remainingHeight = Math.max(0, plotHeight - minimumRowHeight * topics.length);
-    const weights = topics.map((topic) => Math.log1p(Math.max(0, topic.count || 0)));
+    const rawWeights = topics.map((topic) => Math.log1p(Math.max(0, topic.count || 0)));
+    const smallestWeight = Math.min(...rawWeights);
+    // The scale starts above the mandatory minimum rather than sharing a large
+    // common base first. This makes the log-scale visibly useful while a small
+    // floor still preserves breathing room for every topic.
+    const weights = rawWeights.map((weight) => Math.max(0.4, weight - smallestWeight + 0.4));
     const totalWeight = weights.reduce((sum, weight) => sum + weight, 0) || topics.length;
-    // Every band stays legible. The remaining room is split partly evenly and
-    // partly by log-scaled article volume, so large beats breathe without
-    // dominating the entire visual.
-    const equalShare = remainingHeight * 0.42 / topics.length;
-    const weightedSpace = remainingHeight * 0.58;
+    // Every band stays legible. Only the space above the minimum is allocated
+    // by log-scaled article volume, so large beats visibly breathe without
+    // turning the display into a linear count chart.
     let currentTop = top;
     const rows = topics.map((topic, index) => {
-      const heightForRow = minimumRowHeight + equalShare + weightedSpace * (weights[index] / totalWeight);
+      const heightForRow = minimumRowHeight + remainingHeight * (weights[index] / totalWeight);
       const row = { top: currentTop, height: heightForRow, center: currentTop + heightForRow / 2 };
       currentTop += heightForRow;
       return row;
