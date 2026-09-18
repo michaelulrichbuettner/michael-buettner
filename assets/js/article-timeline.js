@@ -292,15 +292,15 @@
 
       context.save();
       context.fillStyle = palette.ink;
-      context.font = font(layout.compact ? 11 : 13, 600);
+      context.font = font(layout.mobile ? 10 : layout.compact ? 11 : 13, 600);
       context.textAlign = "left";
       context.textBaseline = "middle";
-      const labelWidth = layout.left - (layout.compact ? 20 : 32);
+      const labelWidth = layout.left - (layout.mobile ? 16 : layout.compact ? 20 : 32);
       const lines = wrapText(topic.name, labelWidth);
-      const lineHeight = layout.compact ? 14 : 17;
+      const lineHeight = layout.mobile ? 13 : layout.compact ? 14 : 17;
       const startY = firstRow.center - ((lines.length - 1) * lineHeight) / 2;
       lines.forEach((line, lineIndex) => {
-        context.fillText(line, layout.compact ? 10 : 16, startY + lineIndex * lineHeight);
+        context.fillText(line, layout.mobile ? 8 : layout.compact ? 10 : 16, startY + lineIndex * lineHeight);
       });
       context.restore();
     });
@@ -536,17 +536,19 @@
     context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
 
     const compact = width < 620;
-    const left = compact ? 124 : 214;
+    const coarse = matchMedia("(pointer: coarse)").matches;
+    const mobile = compact && (coarse || width < 480);
+    const left = compact ? (mobile ? 102 : 118) : 214;
     const right = compact ? 10 : 18;
     const top = compact ? 48 : 54;
     const bottom = 18;
-    const coarse = matchMedia("(pointer: coarse)").matches;
     const plotHeight = height - top - bottom;
     const minimumRowHeight = Math.min(compact ? 30 : 36, plotHeight / topics.length);
     const flexibleHeight = Math.max(0, plotHeight - minimumRowHeight * topics.length);
 
     layout = {
       compact,
+      mobile,
       coarse,
       left,
       right,

@@ -1,7 +1,6 @@
 .article-timeline {
-  /* A clearer gold for article news: related to the site yellow, but still
-     dark enough to remain legible on the open timeline surface. */
-  --timeline-news: #c89c12;
+  /* Match the visual language of the event-map markers. */
+  --timeline-news: var(--color-yellow);
   --timeline-test: var(--color-swot-blue);
   --timeline-guide: var(--color-swot-green);
   display: grid;
