@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "source": "eBird CSV imports via Make",
-  "generatedAt": "2026-09-09T06:44:27.624Z",
+  "generatedAt": "2026-09-25T06:20:53.118Z",
   "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
   "observations": [
     {
@@ -194,22 +194,22 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-09-05",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Stockente",
       "observerId": "Michael",
-      "scientificName": "Anas platyrhynchos"
+      "commonName": "Stockente",
+      "scientificName": "Anas platyrhynchos",
+      "date": "2026-09-05",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-09-05",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Tannenmeise",
       "observerId": "Michael",
-      "scientificName": "Periparus ater"
+      "commonName": "Tannenmeise",
+      "scientificName": "Periparus ater",
+      "date": "2026-09-05",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
