@@ -1,5 +1,19 @@
 window.sitePosts = [
   {
+    title: "Darstellung des Artikelportfolios - Viele Dimensionen, viele Darstellungen",
+    date: "2026-10-07",
+    lang: "de",
+    tags: ["Praxis", "Datenvisualisierung", "Arbeitsproben", "Workflow"],
+    excerpt: "Wie aus über 600 Artikeln ein zoombares Archiv nach Zeit, Thema und Format entsteht.",
+    url: "blog-darstellung-artikelportfolio-viele-dimensionen.html",
+    image: "assets/img/optimized/visualisierung-des-artikelportfolios.webp",
+    imageSrcset: "assets/img/optimized/visualisierung-des-artikelportfolios-640.webp 640w, assets/img/optimized/visualisierung-des-artikelportfolios-960.webp 960w, assets/img/optimized/visualisierung-des-artikelportfolios-1280.webp 1280w, assets/img/optimized/visualisierung-des-artikelportfolios.webp 2752w",
+    imageWidth: 2752,
+    imageHeight: 1536,
+    imageAlt: "Infografik zur Visualisierung des Artikelportfolios mit Herausforderungen digitaler Archive, KI-gestützter Strukturierung und dynamischem Matrix-Konzept",
+    workSample: true
+  },
+  {
     title: "KI-Verbrauch im Blick: Nicht nur das Modell ist entscheidend",
     date: "2026-10-07",
     lang: "de",

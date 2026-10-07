@@ -11,6 +11,7 @@ SOURCES = [
     'kampf-um-die-distributionshoheit-medien.png',
     'workflow-automatisierter-stellen-check.png',
     'ki-effizienz-was-wirklich-zaehlt.png',
+    'visualisierung-des-artikelportfolios.png',
 ]
 
 def main():
