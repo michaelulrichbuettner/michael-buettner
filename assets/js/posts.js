@@ -1,5 +1,18 @@
 window.sitePosts = [
   {
+    title: "KI-Verbrauch im Blick: Nicht nur das Modell ist entscheidend",
+    date: "2026-10-07",
+    lang: "de",
+    tags: ["Praxis", "Workflow", "KI", "Automatisierung", "CMS", "Projektarbeit"],
+    excerpt: "Warum KI-Verbrauch nicht nur vom Modell abhängt, sondern stark von Kontextgröße, Aufgabenverteilung und UI-Arbeit geprägt wird.",
+    url: "blog-ki-verbrauch-nicht-nur-modell-entscheidend.html",
+    image: "assets/img/optimized/ki-effizienz-was-wirklich-zaehlt.webp",
+    imageSrcset: "assets/img/optimized/ki-effizienz-was-wirklich-zaehlt-640.webp 640w, assets/img/optimized/ki-effizienz-was-wirklich-zaehlt-960.webp 960w, assets/img/optimized/ki-effizienz-was-wirklich-zaehlt-1280.webp 1280w, assets/img/optimized/ki-effizienz-was-wirklich-zaehlt.webp 2752w",
+    imageWidth: 2752,
+    imageHeight: 1536,
+    imageAlt: "Infografik zu KI-Effizienz durch Kontextdisziplin, passendes Werkzeug und menschliche Steuerung"
+  },
+  {
     title: "Portfolio Tracker: Unternehmensmeldungen ohne RSS oder Scraping bündeln",
     date: "2026-08-27",
     lang: "de",

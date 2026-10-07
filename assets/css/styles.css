@@ -2449,11 +2449,55 @@ h2 {
   text-underline-offset: 0.22em;
 }
 
+.article-content blockquote {
+  margin: 2rem 0;
+  padding: 1.2rem 1.4rem;
+  border-left: 4px solid var(--color-yellow-dark);
+  background: var(--color-soft);
+}
+
+.article-content blockquote p {
+  margin: 0;
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
 .article-content ul,
 .article-content ol {
   display: grid;
   gap: 0.55rem;
   padding-left: 1.3rem;
+}
+
+.article-table-wrap {
+  width: 100%;
+  margin: 1.6rem 0 2rem;
+  overflow-x: auto;
+}
+
+.article-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  color: var(--color-muted);
+  font-size: 0.96rem;
+}
+
+.article-table th,
+.article-table td {
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--color-line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.article-table th {
+  color: var(--color-ink);
+  background: var(--color-soft);
+}
+
+.article-table code {
+  color: var(--color-ink);
 }
 
 .article-content li::marker {

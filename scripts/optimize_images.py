@@ -10,6 +10,7 @@ SOURCES = [
     'weg-zu-207-millionen-visits.jpg',
     'kampf-um-die-distributionshoheit-medien.png',
     'workflow-automatisierter-stellen-check.png',
+    'ki-effizienz-was-wirklich-zaehlt.png',
 ]
 
 def main():
@@ -21,7 +22,7 @@ def main():
             target = output / (source.stem + '.webp')
             image.save(target, 'WEBP', quality=92, method=6)
             print(f'{filename}: {source.stat().st_size:,} -> {target.stat().st_size:,} bytes', flush=True)
-            if filename == SOURCES[-1]:
+            if filename == 'workflow-automatisierter-stellen-check.png':
                 continue
             for width in (640, 960, 1280):
                 if width >= image.width:
