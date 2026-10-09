@@ -1,0 +1,34 @@
+.article-archive-embed {
+  background: transparent;
+}
+
+.article-archive-embed .section {
+  padding: 24px 0;
+}
+
+.article-archive-embed .section-heading h1 {
+  max-width: none;
+  font-size: 32px;
+  line-height: 1.2;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.article-archive-embed .lead {
+  max-width: none;
+  font-size: 18px;
+}
+
+@media (max-width: 760px) {
+  .article-archive-embed .section {
+    padding: 16px 0;
+  }
+
+  .article-archive-embed .section-heading h1 {
+    font-size: 24px;
+  }
+
+  .article-archive-embed .lead {
+    font-size: 16px;
+  }
+}
