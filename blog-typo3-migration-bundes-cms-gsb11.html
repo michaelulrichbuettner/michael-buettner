@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TYPO3-Migration - Wie und warum ich das Bundes-CMS GSB11 aufgesetzt habe | Michael Büttner</title>
+    <meta name="description" content="Ein Erfahrungsbericht zur Migration auf GSB11, dem TYPO3-basierten Bundes-CMS: Hosting, Testumgebung, Anpassungen und Vergleich mit GitHub Pages.">
+    <link rel="canonical" href="https://michael-buettner.eu/blog-typo3-migration-bundes-cms-gsb11.html">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260911-local-fonts">
+    <script src="assets/js/main.js?v=20260908-images" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://michael-buettner.eu/blog-typo3-migration-bundes-cms-gsb11.html#article",
+        "url": "https://michael-buettner.eu/blog-typo3-migration-bundes-cms-gsb11.html",
+        "mainEntityOfPage": "https://michael-buettner.eu/blog-typo3-migration-bundes-cms-gsb11.html",
+        "headline": "TYPO3-Migration - Wie und warum ich das Bundes-CMS GSB11 aufgesetzt habe",
+        "description": "Ein Erfahrungsbericht zur Migration auf GSB11, dem TYPO3-basierten Bundes-CMS: Hosting, Testumgebung, Anpassungen und Vergleich mit GitHub Pages.",
+        "inLanguage": "de",
+        "datePublished": "2026-10-14",
+        "image": [
+          "https://michael-buettner.eu/assets/img/optimized/cms-migration-bundes-cms-gsb11.webp"
+        ],
+        "author": {
+          "@type": "Person",
+          "@id": "https://michael-buettner.eu/#person",
+          "name": "Michael Büttner",
+          "url": "https://michael-buettner.eu/",
+          "sameAs": [
+            "https://www.wikidata.org/wiki/Q134509438"
+          ]
+        }
+      }
+    </script>
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" type="image/png" href="favicon-96.png" sizes="96x96">
+    <link rel="preload" href="assets/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/literata-latin.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+  <body>
+    <a class="skip-link" href="#main" title="Zum Hauptinhalt springen">Zum Inhalt springen</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="brand" href="./" title="Zur Startseite von Michael Büttner"><img class="brand__mark" src="assets/img/michael-buettner-portrait-48.webp" srcset="assets/img/michael-buettner-portrait-48.webp 48w, assets/img/michael-buettner-portrait-96.webp 96w, assets/img/michael-buettner-portrait.webp 168w" sizes="42px" width="42" height="42" alt="Porträt von Michael Büttner" title="Michael Büttner"><span class="brand__text">Michael Büttner</span></a>
+        <nav class="nav" aria-label="Hauptnavigation">
+          <a href="experimente.html" title="Experimente und Showcases von Michael Büttner ansehen">Experimente</a>
+          <a href="erfahrung.html" title="Erfahrung von Michael Büttner ansehen">Erfahrung</a>
+          <a href="masterarbeit.html" title="Masterarbeit von Michael Büttner ansehen">Masterarbeit</a>
+          <a href="arbeitsproben.html" title="Arbeitsproben von Michael Büttner ansehen">Arbeitsproben</a>
+          <a href="blog.html" title="Einblicke von Michael Büttner lesen">Einblicke</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="page">
+      <article class="section article-page">
+        <div class="wrap article-wrap">
+          <a class="back-link" href="blog.html" title="Zur Einblicke-Übersicht zurückkehren">Zurück zu den Einblicken</a>
+          <p class="eyebrow">Praxis · CMS · Workflow · Projektarbeit · KI · Software</p>
+          <h1>TYPO3-Migration - Wie und warum ich das Bundes-CMS GSB11 aufgesetzt habe</h1>
+          <p class="article-meta">14. Oktober 2026</p>
+          <figure class="article-hero">
+            <img src="assets/img/optimized/cms-migration-bundes-cms-gsb11.webp" alt="Infografik zur TYPO3-Migration auf das Bundes-CMS GSB11 mit Server-Setup, Testumgebung, Core-freier Anpassung und Vergleich zu GitHub Pages" title="TYPO3-Migration: Der Weg zum Bundes-CMS GSB11" width="2752" height="1536" decoding="async" srcset="assets/img/optimized/cms-migration-bundes-cms-gsb11-640.webp 640w, assets/img/optimized/cms-migration-bundes-cms-gsb11-1280.webp 1280w, assets/img/optimized/cms-migration-bundes-cms-gsb11.webp 2752w" sizes="(max-width: 912px) calc(100vw - 2rem), 880px">
+            <figcaption>GSB11 als Lernfeld für TYPO3, Verwaltungs-CMS und den Vergleich mit einer per GitHub Pages gepflegten Website.</figcaption>
+          </figure>
+
+          <div class="article-content">
+            <p>Ich habe in den vergangenen Jahren viel mit selbstgebauten CMS gearbeitet, habe unterschiedliche Migrationen und Weiterentwicklungen auf und innerhalb von WordPress redaktionell verantwortet und eng mit den Entwicklern bei Nutzerführung, Website-Struktur und Datenbanken zusammengearbeitet. Dazu habe ich mit meinem GitHub-Pages-Projekt eine Website komplett ohne CMS aufgebaut. Was mir aber fehlte, ist ein tieferer Einblick in andere CMS.</p>
+
+            <h2>Warum GSB?</h2>
+            <p>Ganz konkret fehlten mir Erfahrungen in TYPO3- und Headless-CMS-Technologien. Doch das bin ich jetzt angegangen. Und da ich mich schon länger für die öffentliche Verwaltung interessiere, habe ich mir beim ITZBund die Möglichkeiten von <a href="https://produkt.gsb.bund.de/gsb11" target="_blank" rel="noopener noreferrer" title="Informationen zum Government Site Builder GSB11 öffnen">GSB11</a> angeschaut. Der Government Site Builder (GSB 11) ist das Content-Management-System des Bundes. Es wurde eigentlich entwickelt, “um moderne, barrierefreie und zukunftssichere Internetauftritte für Behörden zu ermöglichen.” Da es aber auf TYPO3 basiert, vollständig auf Open-Source-Technologien setzt und als Open Code auch bereitgestellt wird, schlage ich damit zwei Fliegen mit einer Klappe: TYPO3 und das neue Verwaltungs-CMS auf einmal zu lernen.</p>
+
+            <p>Dafür habe ich einige neue Dinge lernen müssen, bevor ich mit dem CMS starten konnte. Ich habe zum ersten Mal einen eigenen Server bei einem Hoster gemietet und ein CMS installiert. Beim Einrichten und beim Styling der Seite hat mir die KI in Form von Codex sehr geholfen und assistiert. Um die grundsätzliche Machbarkeit zu prüfen, habe ich mit der KI vorab eine lokale Testumgebung aufgesetzt, die auch nach der Serverinstallation für Test vor groberen Eingriffen ins Live-System herhalten muss. Die Testumgebung läuft auf einer externen SSD. Eine virtuelle Maschine, Ubuntu, eine Docker-Integration und darin das GSB11 sind dabei die Grundlagen.</p>
+
+            <p><a class="button button--secondary" href="https://hosting250462.af960.netcup.net/" target="_blank" rel="noopener noreferrer" title="GSB11-Version der Website öffnen">GSB11-Seite ansehen</a></p>
+
+            <h2>Individuell und dennoch nah am Original</h2>
+            <p>Ziel des Ganzen ist, möglichst nah an meinem Grunddesign meiner GitHub-Page zu bleiben und dennoch mit den GSB11-Grundelementen auszukommen, soweit es geht. Das ist schon bei recht einfachen Blöcken zum Teil nicht trivial. Dennoch läuft das GSB11-Projekt bisher ohne tiefgreifende Anpassungen stabil und mit einem annehmbaren optischen Ergebnis. Am GSB11-Core selbst wurde kein Quellcode verändert. Die Anpassungen liegen in der Konfiguration, im Sitepackage und zusätzlichen Extensions. Was ich anpassen musste (von Codex zusammengestellte Liste):</p>
+
+            <ul>
+              <li>Design: eigene CSS-Regeln, Schriften, Farben, Rasterhintergrund und auswählbare Containerfarben</li>
+              <li>Markenauftritt: eigenes Logo/Porträt, Favicon und angepasster Backend-Anmeldebereich.</li>
+              <li>Seitengerüst: eigene Vorlagen für Header, Footer und Navigation sowie Korrekturen der Menü-Darstellung</li>
+              <li>Unterseiten-Teaser: zusätzliche Optionen für Anzahl und Sortierung nach Datum; eigenes Teaser-Datum in den Seiteneigenschaften. Dafür wurden die bestehenden Datenbanktabellen um Felder ergänzt</li>
+              <li>Suche: TYPO3 Indexed Search installiert und konfiguriert</li>
+              <li>Externe Einbettungen: offizielle Extension gsb_consent installiert und aktiviert</li>
+            </ul>
+
+            <p>Noch in Bearbeitung aktuell:</p>
+
+            <ul>
+              <li>Artikelarchiv: eigene Extension mit Artikeldatensätzen, Auswahlbegriffen und Backend-Formularen; 626 Artikel importiert.</li>
+              <li>RAG-Suche für Masterarbeit mit Anbindung an OpenAI-API vorbereitet</li>
+            </ul>
+
+            <p>Mit den Anpassungen kann ich also gefühlt 90 Prozent meiner bestehenden GitHub-Seite nachbauen. Automatisierungen sind noch nicht angebunden und einige Darstellungen nicht übernommen, weil ich meinem Grundprinzip von möglichst wenig Anpassungen im CMS treu bleiben möchte.</p>
+
+            <h2>Ich bin schneller als die KI</h2>
+            <p>Was mir bei der Bedienung von TYPO3, beziehungsweise dem GSB11 auffällt: Schon nach wenigen Tagen mit dem CMS bin ich beim Einbau von Content schneller als Codex beim Einbauen des gleichen Contents in meine per Codex gepflegte GitHub-Pages-Seite. Dazu sind Änderungen und Anpassungen an der Seite in der Regel einfacher und ebenfalls schneller möglich. Verlinkungen, ein zusätzliches Bild oder ein Button: TYPO3 ist selbstverständlich einfacher zu bedienen, als eine hardcoded Seite immer wieder per Codex zu aktualisieren. Dafür gibt man jedoch Flexibilität bei der Gestaltung und Darstellung auf und muss mit laufenden Kosten für das Hosting rechnen.</p>
+
+            <p>Mir gefallen beide Ansätze und damit werde ich beide Seiten parallel laufen lassen, um</p>
+
+            <ol>
+              <li>weiter Erfahrung zu sammeln</li>
+              <li>Unterschiede deutlich machen zu können</li>
+              <li>mich selbst zu beobachten, wo ich in Zukunft intuitiv eher hin tendiere</li>
+              <li>Möglichkeiten auszunutzen, die nur in einer Variante realisierbar sind</li>
+            </ol>
+
+            <p>Mit GSB11 soll das Projekt aber nicht zu Ende sein. Ich plane die Seite noch in einer Headless-Version und einer WordPress-Variante aufzusetzen. Am Ende sollen alle Versionen als Auswahl für den Nutzer zur Verfügung stehen.</p>
+
+            <p><a class="button button--secondary" href="https://hosting250462.af960.netcup.net/" target="_blank" rel="noopener noreferrer" title="GSB11-Version der Website öffnen">GSB11-Seite ansehen</a></p>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer"><div class="wrap site-footer__inner"><p>&copy; <span data-current-year></span> Michael Büttner</p><div class="site-footer__links"><a href="kontakt.html" title="Kontakt zu Michael Büttner aufnehmen">Kontakt</a><a href="impressum.html" title="Impressum der Website ansehen">Impressum</a><a href="datenschutz.html" title="Datenschutzhinweise der Website ansehen">Datenschutz</a></div></div></footer>
+  </body>
+</html>

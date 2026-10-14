@@ -12,6 +12,7 @@ SOURCES = [
     'workflow-automatisierter-stellen-check.png',
     'ki-effizienz-was-wirklich-zaehlt.png',
     'visualisierung-des-artikelportfolios.png',
+    'cms-migration-bundes-cms-gsb11.png',
 ]
 
 def main():

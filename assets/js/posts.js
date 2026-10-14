@@ -1,5 +1,18 @@
 window.sitePosts = [
   {
+    title: "TYPO3-Migration - Wie und warum ich das Bundes-CMS GSB11 aufgesetzt habe",
+    date: "2026-10-14",
+    lang: "de",
+    tags: ["Praxis", "CMS", "Workflow", "Projektarbeit", "KI", "Software"],
+    excerpt: "Warum ich GSB11 als TYPO3-basiertes Bundes-CMS aufgesetzt habe und was der Vergleich mit GitHub Pages zeigt.",
+    url: "blog-typo3-migration-bundes-cms-gsb11.html",
+    image: "assets/img/optimized/cms-migration-bundes-cms-gsb11.webp",
+    imageSrcset: "assets/img/optimized/cms-migration-bundes-cms-gsb11-640.webp 640w, assets/img/optimized/cms-migration-bundes-cms-gsb11-960.webp 960w, assets/img/optimized/cms-migration-bundes-cms-gsb11-1280.webp 1280w, assets/img/optimized/cms-migration-bundes-cms-gsb11.webp 2752w",
+    imageWidth: 2752,
+    imageHeight: 1536,
+    imageAlt: "Infografik zur TYPO3-Migration auf das Bundes-CMS GSB11 mit Server-Setup, Testumgebung, Core-freier Anpassung und Vergleich zu GitHub Pages"
+  },
+  {
     title: "Darstellung des Artikelportfolios - Viele Dimensionen, viele Darstellungen",
     date: "2026-10-07",
     lang: "de",
