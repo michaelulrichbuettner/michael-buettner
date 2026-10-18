@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "source": "eBird CSV imports via Make",
-  "generatedAt": "2026-10-16T08:51:25.699Z",
+  "generatedAt": "2026-10-18T07:17:12.429Z",
   "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
   "observations": [
     {
@@ -32,13 +32,13 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-10-14",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Dohle",
       "observerId": "Michael",
-      "scientificName": "Coloeus monedula"
+      "commonName": "Dohle",
+      "scientificName": "Coloeus monedula",
+      "date": "2026-10-14",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
@@ -59,13 +59,13 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-10-16",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Gebirgsstelze",
       "observerId": "Michael",
-      "scientificName": "Motacilla cinerea"
+      "commonName": "Gebirgsstelze",
+      "scientificName": "Motacilla cinerea",
+      "date": "2026-10-16",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
@@ -113,13 +113,13 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-10-02",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Heckenbraunelle",
       "observerId": "Michael",
-      "scientificName": "Prunella modularis"
+      "commonName": "Heckenbraunelle",
+      "scientificName": "Prunella modularis",
+      "date": "2026-10-02",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
@@ -156,6 +156,15 @@
       "city": "Bonn",
       "latitude": 50.7352621,
       "longitude": 7.1024635
+    },
+    {
+      "city": "Bonn",
+      "date": "2026-10-17",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635,
+      "commonName": "Kranich",
+      "observerId": "Michael",
+      "scientificName": "Grus grus"
     },
     {
       "observerId": "Michael",
