@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "source": "eBird CSV imports via Make",
-  "generatedAt": "2026-10-18T07:17:12.429Z",
+  "generatedAt": "2026-10-21T05:36:05.947Z",
   "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
   "observations": [
     {
@@ -158,13 +158,13 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-10-17",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Kranich",
       "observerId": "Michael",
-      "scientificName": "Grus grus"
+      "commonName": "Kranich",
+      "scientificName": "Grus grus",
+      "date": "2026-10-17",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
