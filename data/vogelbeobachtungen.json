@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "source": "eBird CSV imports via Make",
-  "generatedAt": "2026-10-21T10:28:03.592Z",
+  "generatedAt": "2026-10-22T08:27:16.581Z",
   "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
   "observations": [
     {
@@ -41,13 +41,13 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-10-21",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Eichelhäher",
       "observerId": "Michael",
-      "scientificName": "Garrulus glandarius"
+      "commonName": "Eichelhäher",
+      "scientificName": "Garrulus glandarius",
+      "date": "2026-10-21",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
