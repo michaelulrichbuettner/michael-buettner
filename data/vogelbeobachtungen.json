@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "source": "eBird CSV imports via Make",
-  "generatedAt": "2026-10-24T12:07:46.139Z",
+  "generatedAt": "2026-10-31T09:05:28.511Z",
   "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
   "observations": [
     {
@@ -30,6 +30,15 @@
       "city": "Bonn",
       "latitude": 50.7352621,
       "longitude": 7.1024635
+    },
+    {
+      "city": "Bonn",
+      "date": "2026-10-28",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635,
+      "commonName": "Buchfink",
+      "observerId": "Michael",
+      "scientificName": "Fringilla coelebs"
     },
     {
       "observerId": "Michael",
@@ -194,6 +203,15 @@
       "longitude": 7.1024635
     },
     {
+      "city": "Bonn",
+      "date": "2026-10-29",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635,
+      "commonName": "Nilgans",
+      "observerId": "Michael",
+      "scientificName": "Alopochen aegyptiaca"
+    },
+    {
       "observerId": "Michael",
       "commonName": "Rabenkrähe",
       "scientificName": "Corvus corone",
@@ -266,13 +284,13 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Brühl",
-      "date": "2026-10-24",
-      "latitude": 50.8291313,
-      "longitude": 6.9037057,
-      "commonName": "Kanadagans",
       "observerId": "Michael",
-      "scientificName": "Branta canadensis"
+      "commonName": "Kanadagans",
+      "scientificName": "Branta canadensis",
+      "date": "2026-10-24",
+      "city": "Brühl",
+      "latitude": 50.8291313,
+      "longitude": 6.9037057
     }
   ]
 }
