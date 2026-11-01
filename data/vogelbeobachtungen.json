@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "source": "eBird CSV imports via Make",
-  "generatedAt": "2026-10-31T09:05:28.511Z",
+  "generatedAt": "2026-11-01T10:57:41.692Z",
   "privacy": "Nur Stadtpositionen; keine exakten Beobachtungsorte.",
   "observations": [
     {
@@ -32,13 +32,13 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-10-28",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Buchfink",
       "observerId": "Michael",
-      "scientificName": "Fringilla coelebs"
+      "commonName": "Buchfink",
+      "scientificName": "Fringilla coelebs",
+      "date": "2026-10-28",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
@@ -203,13 +203,13 @@
       "longitude": 7.1024635
     },
     {
-      "city": "Bonn",
-      "date": "2026-10-29",
-      "latitude": 50.7352621,
-      "longitude": 7.1024635,
-      "commonName": "Nilgans",
       "observerId": "Michael",
-      "scientificName": "Alopochen aegyptiaca"
+      "commonName": "Nilgans",
+      "scientificName": "Alopochen aegyptiaca",
+      "date": "2026-10-29",
+      "city": "Bonn",
+      "latitude": 50.7352621,
+      "longitude": 7.1024635
     },
     {
       "observerId": "Michael",
