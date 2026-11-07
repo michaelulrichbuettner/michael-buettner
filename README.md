@@ -86,3 +86,13 @@ Die erste Version ist deutsch. Für Englisch kann später eine parallele Struktu
 ## Veröffentlichung
 
 Die Website kann später über GitHub Pages veröffentlicht werden. Dafür reicht es, die Dateien in ein GitHub-Repository zu laden und GitHub Pages für den Hauptordner zu aktivieren.
+
+## Rollenkarten auf der Startseite
+
+- `assets/js/roles-data.js`: zentrale Inhalte, Reihenfolge und Links. Jeder Eintrag enthält `id`, `url` sowie `de` und `en` mit `title`, `responsibility`, `activities`, `success`, `articleTitle`.
+- Die Array-Reihenfolge bestimmt die Kartenfolge; der erste Eintrag wird beim Laden angezeigt. Neue Rollen als weiteren vollständigen Eintrag in beiden Sprachen ergänzen.
+- Eine leere `url` blendet den Button aus. `articleTitle` bewahrt den vorgesehenen Titel und dient bei ergänzter URL als Buttontext. Interne Links öffnen wie bisher im selben Tab.
+- `assets/js/roles.js`: Darstellung, Pfeile, Tastatur (Links/Rechts, Pos1/Ende), Wischen und Barrierefreiheit. Kein automatischer Wechsel.
+- `assets/css/roles.css`: ausschließlich auf das Karussell begrenzte Gestaltung. Die längste Karte bestimmt die Höhe, damit der folgende Bereich beim Wechsel stehen bleibt. Auf schmalen Bildschirmen stehen Deutsch und Englisch untereinander.
+
+Lokal geprüft am 07.11.2026: alle sieben Tabellenzeilen und Tätigkeiten vollständig übernommen, Linkziele vorhanden, Navigation/Einstieg/Neueste Einblicke unverändert, JavaScript-Syntax gültig. Browserprüfung bei 1280, 375 und 320 Pixeln: Startkarte, Reihenfolge, Pfeile, Umlauf in beide Richtungen, Tastatur, Positionsanzeige, konstante Höhe und kein Textüberlauf. Inaktive Karten sind `inert` und für Screenreader verborgen. Echte Touch-Gesten und Sprachausgabe mit einem Screenreader konnten nicht praktisch geprüft werden. Reduzierte Bewegung ist per CSS berücksichtigt; die Systemeinstellung wurde nicht umgestellt.
