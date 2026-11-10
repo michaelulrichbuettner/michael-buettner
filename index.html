@@ -1,17 +1,19 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" data-site-language="de">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Michael Büttner | Kommunikation, KI und Medienwandel</title>
     <meta name="description" content="Profilseite von Michael Büttner zu Kommunikation, KI, digitalen Produkten, Medienwandel und Marktbeobachtung.">
+    <link rel="stylesheet" href="assets/css/language.css?v=20261110">
+    <script src="assets/js/language.js?v=20261110"></script>
     <link rel="canonical" href="https://michael-buettner.eu/">
     <link rel="stylesheet" href="assets/css/styles.css?v=20260911-local-fonts">
-    <link rel="stylesheet" href="assets/css/home.css?v=20260909-shared-headings">
+    <link rel="stylesheet" href="assets/css/home.css?v=20261110">
     <script src="assets/js/posts.js?v=20261014-gsb11" defer></script>
-    <link rel="stylesheet" href="assets/css/roles.css?v=20261107">
+    <link rel="stylesheet" href="assets/css/roles.css?v=20261110">
     <script src="assets/js/roles-data.js?v=20261107" defer></script>
-    <script src="assets/js/roles.js?v=20261107" defer></script>
+    <script src="assets/js/roles.js?v=20261110" defer></script>
     <script src="assets/js/main.js?v=20260908-images" defer></script>
     <script type="application/ld+json">
       {
@@ -55,6 +57,10 @@
           <a href="arbeitsproben.html" title="Arbeitsproben von Michael Büttner ansehen">Arbeitsproben</a>
           <a href="blog.html" title="Einblicke von Michael Büttner lesen">Einblicke</a>
         </nav>
+        <div class="language-switch" role="group" aria-label="Sprache / Language" hidden>
+          <button type="button" data-set-language="de" lang="de" aria-label="Deutsch" aria-pressed="true">DE</button>
+          <button type="button" data-set-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+        </div>
 
       </div>
     </header>
@@ -64,8 +70,7 @@
         <div class="wrap">
           <h1 class="hero__title">Michael Büttner</h1>
           <div class="bilingual-grid">
-          <div class="language-column" lang="de">
-          <p class="language-label">Deutsch</p>
+          <div class="language-column" lang="de" data-language="de">
           <p class="eyebrow">Kommunikation · KI · digitale Produkte · Medienwandel</p>
           <p class="hero__lead">Ich verbinde kommunikative Klarheit mit Strategie und einem analytischen Blick auf Technologie, Medien und Märkte.</p>
           <div class="hero__actions">
@@ -73,8 +78,7 @@
             <a class="button button--secondary" href="blog.html" title="Einblicke von Michael Büttner lesen">Einblicke ansehen</a>
           </div>
           </div>
-          <div class="language-column" lang="en">
-            <p class="language-label">English</p>
+          <div class="language-column" lang="en" data-language="en">
             <p class="eyebrow">Communication · AI · digital products · media transformation</p>
             <p class="hero__lead">I combine clear communication with strategic thinking and an analytical perspective on technology, media and markets.</p>
             <div class="hero__actions">
@@ -88,7 +92,7 @@
 
       <section class="section section--soft">
         <div class="wrap bilingual-grid">
-          <article class="language-column" lang="de">
+          <article class="language-column" lang="de" data-language="de">
             <p class="eyebrow">Profil</p>
             <h2>An der Schnittstelle von Kommunikation, Organisation, KI und Produkt</h2>
           <div class="text-stack">
@@ -96,7 +100,7 @@
             <p>Expertise im Aufbau leistungsfähiger Redaktionsstrukturen, KI-gestützter Workflows sowie in der Verbindung von Journalismus, Technologie und Produktdenken.</p>
           </div>
           </article>
-          <article class="language-column" lang="en">
+          <article class="language-column" lang="en" data-language="en">
             <p class="eyebrow">Profile</p>
             <h2>At the intersection of communication, organisation, AI and product</h2>
             <div class="text-stack">
@@ -106,10 +110,10 @@
           </article>
         </div>
         <div class="wrap bilingual-grid roles-heading">
-          <div class="language-column" lang="de">
+          <div class="language-column" lang="de" data-language="de">
             <h2 id="roles-heading-de">Diese Rollen habe ich bisher übernommen</h2>
           </div>
-          <div class="language-column" lang="en">
+          <div class="language-column" lang="en" data-language="en">
             <h2 id="roles-heading-en">Roles I’ve held</h2>
           </div>
         </div>
@@ -120,11 +124,11 @@
 
       <section class="section">
         <div class="wrap section-heading">
-          <p class="eyebrow">Aktuell / <span lang="en">Latest</span></p>
-          <h2>Neueste Einblicke / <span lang="en">Recent insights</span></h2>
+          <p class="eyebrow"><span lang="de" data-language="de">Aktuell</span><span lang="en" data-language="en">Latest</span></p>
+          <h2><span lang="de" data-language="de">Neueste Einblicke</span><span lang="en" data-language="en">Recent insights</span></h2>
         </div>
         <div class="wrap">
-          <div class="post-list post-list--featured" data-latest-posts="3"></div>
+          <div class="post-list post-list--featured" data-latest-posts="3" lang="de"></div>
         </div>
       </section>
     </main>

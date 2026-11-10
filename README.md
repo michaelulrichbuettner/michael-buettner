@@ -77,11 +77,9 @@ Datum bleibt die Reihenfolge im HTML erhalten. Automatisch eingelesene News
 
 ## Mehrsprachigkeit
 
-Die erste Version ist deutsch. Für Englisch kann später eine parallele Struktur ergänzt werden, zum Beispiel:
+Startseite und Erfahrungsseite nutzen gemeinsam `assets/js/language.js` und `assets/css/language.css`. Der DE/EN-Schalter sitzt im Header. Deutsch ist der Standard; die Auswahl wird unter `site-language` im localStorage gespeichert und beim Seitenwechsel übernommen. Ohne verfügbaren Speicher funktioniert die Umschaltung weiterhin auf der geöffneten Seite.
 
-- `en/index.html`
-- `en/profile.html`
-- englische Eintraege in `assets/js/posts.js` mit `lang: "en"`
+Für weitere zweisprachige Seiten: beide Dateien einbinden, `data-site-language="de"` am HTML-Element ergänzen, den Header-Schalter übernehmen und Übersetzungsalternativen mit `data-language="de"` beziehungsweise `data-language="en"` sowie passenden `lang`-Attributen kennzeichnen. Inhalte ohne Übersetzung bleiben sichtbar. Dynamische Komponenten können auf `site-language-change` reagieren. Ohne JavaScript bleibt die deutsche Fassung sichtbar.
 
 ## Veröffentlichung
 
@@ -93,6 +91,6 @@ Die Website kann später über GitHub Pages veröffentlicht werden. Dafür reich
 - Die Array-Reihenfolge bestimmt die Kartenfolge; der erste Eintrag wird beim Laden angezeigt. Neue Rollen als weiteren vollständigen Eintrag in beiden Sprachen ergänzen.
 - Eine leere `url` blendet den Button aus. `articleTitle` bewahrt den vorgesehenen Titel und dient bei ergänzter URL als Buttontext. Interne Links öffnen wie bisher im selben Tab.
 - `assets/js/roles.js`: Darstellung, Pfeile, Tastatur (Links/Rechts, Pos1/Ende), Wischen und Barrierefreiheit. Kein automatischer Wechsel.
-- `assets/css/roles.css`: ausschließlich auf das Karussell begrenzte Gestaltung. Die längste Karte bestimmt die Höhe, damit der folgende Bereich beim Wechsel stehen bleibt. Auf schmalen Bildschirmen stehen Deutsch und Englisch untereinander.
+- `assets/css/roles.css`: ausschließlich auf das Karussell begrenzte Gestaltung. Die längste Karte bestimmt die Höhe, damit der folgende Bereich beim Wechsel stehen bleibt. Die Karten zeigen ausschließlich die zentral gewählte Sprache in einer Spalte.
 
 Lokal geprüft am 07.11.2026: alle sieben Tabellenzeilen und Tätigkeiten vollständig übernommen, Linkziele vorhanden, Navigation/Einstieg/Neueste Einblicke unverändert, JavaScript-Syntax gültig. Browserprüfung bei 1280, 375 und 320 Pixeln: Startkarte, Reihenfolge, Pfeile, Umlauf in beide Richtungen, Tastatur, Positionsanzeige, konstante Höhe und kein Textüberlauf. Inaktive Karten sind `inert` und für Screenreader verborgen. Echte Touch-Gesten und Sprachausgabe mit einem Screenreader konnten nicht praktisch geprüft werden. Reduzierte Bewegung ist per CSS berücksichtigt; die Systemeinstellung wurde nicht umgestellt.

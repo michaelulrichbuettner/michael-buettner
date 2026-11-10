@@ -31,7 +31,7 @@
       const content = role[lang];
       const column = element('div', 'role-card__language');
       column.lang = lang;
-      column.append(element('p', 'eyebrow', lang === 'de' ? 'Deutsch' : 'English'));
+      column.dataset.language = lang;
       column.append(element('h3', 'role-card__title', content.title));
       column.append(element('h4', 'role-card__label', lang === 'de' ? 'Verantwortung' : 'Responsibility'));
       column.append(element('p', 'role-card__responsibility', content.responsibility));
@@ -69,7 +69,7 @@
       card.setAttribute('aria-hidden', String(!active));
     });
     position.textContent = `${current + 1} / ${cards.length}`;
-    position.setAttribute('aria-label', `${current + 1} / ${cards.length}: ${roles[current].de.title} / ${roles[current].en.title}`);
+    position.setAttribute('aria-label', `${current + 1} / ${cards.length}: ${roles[current][document.documentElement.dataset.siteLanguage || 'de'].title}`);
   }
   previous.addEventListener('click', () => show(current - 1));
   next.addEventListener('click', () => show(current + 1));
@@ -91,5 +91,15 @@
   });
   viewport.addEventListener('pointercancel', () => { gesture = null; });
   previous.disabled = next.disabled = cards.length < 2;
-  show(0);
+  function updateLanguage() {
+    const lang = document.documentElement.dataset.siteLanguage || 'de';
+    previous.setAttribute('aria-label', lang === 'de' ? 'Vorherige Rolle' : 'Previous role');
+    next.setAttribute('aria-label', lang === 'de' ? 'Nächste Rolle' : 'Next role');
+    root.setAttribute('aria-labelledby', 'roles-heading-' + lang);
+    root.setAttribute('aria-roledescription', lang === 'de' ? 'Karussell' : 'Carousel');
+    cards.forEach(card => card.setAttribute('aria-roledescription', lang === 'de' ? 'Karte' : 'Slide'));
+    show(current);
+  }
+  document.addEventListener('site-language-change', updateLanguage);
+  updateLanguage();
 })();

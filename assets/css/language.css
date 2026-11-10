@@ -1,0 +1,10 @@
+/* Only explicit translation alternatives participate; untranslated content stays visible. */
+html[data-site-language="de"] [data-language="en"],
+html[data-site-language="en"] [data-language="de"] { display: none !important; }
+.language-switch { display: flex; flex-shrink: 0; gap: 2px; padding: 3px; border: 1px solid var(--color-line); border-radius: 999px; background: var(--color-soft); }
+.language-switch[hidden] { display: none; }
+.language-switch button { min-width: 44px; min-height: 44px; padding: .5rem; border: 0; border-radius: 999px; background: transparent; color: var(--color-ink); font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer; }
+.language-switch button[aria-pressed="true"] { background: var(--color-yellow); }
+.language-switch button:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 2px; }
+@media (max-width: 920px) { .language-switch { margin-left: auto; } }
+@media (max-width: 380px) { .site-header__inner { column-gap: .5rem; } .language-switch button { min-width: 36px; } }
