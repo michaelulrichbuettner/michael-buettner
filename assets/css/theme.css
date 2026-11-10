@@ -1,0 +1,68 @@
+html { color-scheme: light; }
+.theme-switch { display: flex; flex-shrink: 0; gap: 2px; padding: 3px; border: 1px solid var(--color-line); border-radius: 999px; background: var(--color-soft); }
+.theme-switch[hidden] { display: none; }
+.theme-switch button { box-sizing: border-box; flex: 0 0 4rem; width: 4rem; min-height: 44px; padding: .5rem .65rem; border: 0; border-radius: 999px; background: transparent; color: var(--color-ink); font: inherit; font-size: .85rem; font-weight: 600; white-space: nowrap; cursor: pointer; }
+.theme-switch button[aria-pressed="true"] { background: var(--color-yellow); color: #171717; }
+.theme-switch button:focus-visible { outline: 2px solid var(--color-ink); outline-offset: 2px; }
+.site-header__inner { column-gap: .8rem; }
+@media (max-width: 1120px) {
+  .site-header__inner { flex-wrap: wrap; align-items: center; padding-block: .8rem; }
+  .site-header__inner .nav { order: 3; width: 100%; margin-left: 0; }
+  .site-header__inner .language-switch { margin-left: auto; }
+  .site-header__inner > .theme-switch { margin-left: auto; }
+  .site-header__inner .language-switch + .theme-switch { margin-left: 0; }
+}
+@media (max-width: 560px) {
+  .site-header__inner:has(.language-switch) .brand { width: 100%; }
+  .site-header__inner:has(.language-switch) .language-switch { margin-left: 0; }
+  .site-header__inner:has(.language-switch) .theme-switch { margin-left: auto; }
+}
+@media (max-width: 380px) {
+  .site-header__inner .brand__text { max-width: 115px; }
+}
+@media screen {
+  html[data-site-theme="dark"] {
+    color-scheme: dark;
+    --color-ink: #eeeDE8;
+    --color-muted: #b4b4ad;
+    --color-line: #4b4d49;
+    --color-line-soft: #343632;
+    --color-paper: #191b19;
+    --color-soft: #252824;
+    --color-white: #20231f;
+    --color-yellow: #f1d46b;
+    --color-yellow-soft: #383321;
+    --color-yellow-dark: #dfc46c;
+    --timeline-news: #f1d46b;
+    --shadow: 0 1px 0 rgb(0 0 0 / 25%);
+  }
+  html[data-site-theme="dark"] body { background: linear-gradient(90deg, rgb(150 155 140 / 5%) 1px, transparent 1px) 0 0 / 88px 88px, linear-gradient(180deg, rgb(150 155 140 / 4%) 1px, transparent 1px) 0 0 / 88px 88px, var(--color-paper); }
+  html[data-site-theme="dark"] .site-header { background: rgb(25 27 25 / 94%); }
+  html[data-site-theme="dark"] .section--soft { background: var(--color-soft); }
+  html[data-site-theme="dark"] .hero { background: linear-gradient(110deg, rgb(241 212 107 / 9%), transparent 48%), linear-gradient(180deg, #20231f, #191b19); }
+  html[data-site-theme="dark"] .site-footer { background: #141613; color: var(--color-ink); }
+  html[data-site-theme="dark"] .site-footer a { color: inherit; }
+  html[data-site-theme="dark"] .language-switch button[aria-pressed="true"] { color: #171717; }
+  html[data-site-theme="dark"] .polar-map__ocean { fill: var(--color-white); }
+  html[data-site-theme="dark"] .polar-map__land { stroke: var(--color-line); }
+  html[data-site-theme="dark"] .polar-map__marker:not(.is-active):not(:hover):not(:focus) text { fill: #171717; }
+  html[data-site-theme="dark"] .event-map-marker { color: #171717; }
+  html[data-site-theme="dark"] .event-map-marker:hover { color: var(--color-ink); }
+  html[data-site-theme="dark"] .topic-landscape,
+  html[data-site-theme="dark"] .ki-space__constellation { background: radial-gradient(circle at center, rgb(241 212 107 / 7%), transparent 40%), var(--color-white); }
+  html[data-site-theme="dark"] .visual-placeholder { background: var(--color-soft); }
+  html[data-site-theme="dark"] .topic-node--selected text,
+  html[data-site-theme="dark"] .topic-node:hover text,
+  html[data-site-theme="dark"] .topic-node:focus text,
+  html[data-site-theme="dark"] .article-node--selected text,
+  html[data-site-theme="dark"] .article-node:hover text,
+  html[data-site-theme="dark"] .article-node:focus text { fill: #171717; }
+  html[data-site-theme="dark"] [class$="--error"] { color: #ffaaaa; }
+  /* Map imagery and external frames retain their original appearance. */
+  html[data-site-theme="dark"] .leaflet-popup-content-wrapper,
+  html[data-site-theme="dark"] .leaflet-popup-tip { background: var(--color-white); color: var(--color-ink); }
+}
+@media print {
+  html { color-scheme: light; }
+  .theme-switch, .language-switch { display: none !important; }
+}

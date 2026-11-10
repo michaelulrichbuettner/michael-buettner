@@ -519,6 +519,13 @@
     }
   }
 
+  document.addEventListener('site-theme-change', () => {
+    readTheme();
+    scheduleRender();
+  });
+  window.addEventListener('beforeprint', () => { readTheme(); render(); });
+  window.addEventListener('afterprint', () => { readTheme(); scheduleRender(); });
+
   function scheduleRender() {
     if (renderFrame) return;
     renderFrame = requestAnimationFrame(render);
