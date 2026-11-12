@@ -8,6 +8,7 @@ window.siteRoles = [
       "responsibility": "Fachliche und disziplinarische Führung sowie personelle und thematische Entwicklung der Redaktion.",
       "activities": [
         "Teams nach Themen und Kompetenzen zusammenstellen",
+        "Entwicklung von Themenclustern",
         "Ressourcen planen",
         "Jahres-, Monats- und Wochenpläne erstellen",
         "Dienstreisen planen und freigeben",
@@ -24,6 +25,7 @@ window.siteRoles = [
       "responsibility": "Professional and line management, staffing and thematic development of the editorial team.",
       "activities": [
         "Build teams around topics and skills",
+        "Develop topic clusters",
         "Plan resources",
         "Create annual, monthly and weekly plans",
         "Plan and approve business travel",
