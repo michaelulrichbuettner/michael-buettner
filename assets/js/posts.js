@@ -1,5 +1,18 @@
 window.sitePosts = [
   {
+    title: "Wie wir bei inside digital neue Themen testeten",
+    date: "2026-11-12",
+    lang: "de",
+    tags: ["Medien","Praxis","Workflow","Agile Methoden"],
+    excerpt: "Wie inside digital neue Themen mit zeitlich begrenzten Specials erprobte und erfolgreiche Ressorts in die reguläre Planung übernahm.",
+    url: "blog-inside-digital-neue-themen-testen.html",
+    image: "assets/img/optimized/themen-testverfahren-neue-ressorts.webp",
+    imageSrcset: "assets/img/optimized/themen-testverfahren-neue-ressorts-640.webp 640w, assets/img/optimized/themen-testverfahren-neue-ressorts-960.webp 960w, assets/img/optimized/themen-testverfahren-neue-ressorts-1280.webp 1280w, assets/img/optimized/themen-testverfahren-neue-ressorts.webp 2752w",
+    imageWidth: 2752,
+    imageHeight: 1536,
+    imageAlt: "Infografik zum Themen-Testverfahren: vom ersten Reichweitensignal über zeitlich begrenzte Themen-Specials bis zur Auswertung und Übernahme neuer Ressorts"
+  },
+  {
     title: "TYPO3-Migration - Wie und warum ich das Bundes-CMS GSB11 aufgesetzt habe",
     date: "2026-10-14",
     lang: "de",

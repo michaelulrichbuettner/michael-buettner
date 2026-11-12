@@ -13,6 +13,7 @@ SOURCES = [
     'ki-effizienz-was-wirklich-zaehlt.png',
     'visualisierung-des-artikelportfolios.png',
     'cms-migration-bundes-cms-gsb11.png',
+    'themen-testverfahren-neue-ressorts.png',
 ]
 
 def main():
