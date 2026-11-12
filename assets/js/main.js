@@ -1,79 +1,37 @@
 (function () {
-  const posts = Array.isArray(window.sitePosts) ? window.sitePosts : [];
+
 
   document.querySelectorAll("[data-current-year]").forEach((node) => {
     node.textContent = new Date().getFullYear();
   });
 
-  function formatDate(value) {
-    return new Intl.DateTimeFormat("de-DE", {
-      day: "2-digit",
-      month: "long",
-      year: "numeric"
-    }).format(new Date(value));
-  }
-
-  function postCard(post, index, featured) {
-    const tags = post.tags.map((tag) => `<span class="tag">${tag}</span>`).join("");
-    const linkTitle = `${post.title} lesen`;
-    const imageAlt = post.imageAlt || `Vorschaubild zum Beitrag ${post.title}`;
-    const image = post.image
-      ? `<a class="post-card__image" href="${post.url}" title="${linkTitle}" aria-hidden="true" tabindex="-1"><img src="${post.image}"${post.imageSrcset ? ` srcset="${post.imageSrcset}" sizes="${featured ? "(max-width: 920px) calc(100vw - 2rem), (max-width: 1152px) calc((100vw - 4rem) / 3), 363px" : "(max-width: 1152px) calc(100vw - 2rem), 1120px"}"` : ""}${post.imageWidth && post.imageHeight ? ` width="${post.imageWidth}" height="${post.imageHeight}"` : ""} loading="${index === 0 ? "eager" : "lazy"}" decoding="async" alt="${imageAlt}" title="${imageAlt}"></a>`
-      : "";
-    return `
-      <article class="post-card">
-        ${image}
-        <div class="post-card__meta">${formatDate(post.date)}${tags ? `<span class="post-card__tags">${tags}</span>` : ""}</div>
-        <h2><a href="${post.url}" title="${linkTitle}">${post.title}</a></h2>
-        <p>${post.excerpt}</p>
-      </article>
-    `;
-  }
-
-  function renderPosts(target, items) {
-    target.innerHTML = items.length
-      ? items.map((post, index) => postCard(post, index, target.classList.contains("post-list--featured"))).join("")
-      : '<p class="empty-state">Noch keine Beiträge in dieser Auswahl.</p>';
-  }
-
-  const sortedPosts = posts
-    .filter((post) => post.lang === "de")
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
-
-  document.querySelectorAll("[data-latest-posts]").forEach((target) => {
-    const limit = Number(target.dataset.latestPosts || 3);
-    renderPosts(target, sortedPosts.slice(0, limit));
-  });
-
-  document.querySelectorAll("[data-work-samples]").forEach((target) => {
-    renderPosts(target, sortedPosts.filter((post) => post.workSample));
-  });
-
-  document.querySelectorAll("[data-all-posts]").forEach((target) => {
-    renderPosts(target, sortedPosts);
-  });
-
-  document.querySelectorAll("[data-tag-filter]").forEach((filter) => {
-    const postTarget = document.querySelector("[data-all-posts]");
-    const tags = ["Alle", ...new Set(sortedPosts.flatMap((post) => post.tags))];
-
-    filter.innerHTML = tags
-      .map((tag, index) => `<button class="tag-button${index === 0 ? " is-active" : ""}" type="button" data-tag="${tag}">${tag}</button>`)
-      .join("");
-
-    filter.addEventListener("click", (event) => {
-      const button = event.target.closest("button[data-tag]");
-      if (!button || !postTarget) return;
-
-      filter.querySelectorAll(".tag-button").forEach((node) => node.classList.remove("is-active"));
-      button.classList.add("is-active");
-
-      const tag = button.dataset.tag;
-      const filteredPosts = tag === "Alle"
-        ? sortedPosts
-        : sortedPosts.filter((post) => post.tags.includes(tag));
-
-      renderPosts(postTarget, filteredPosts);
+  // Cards are present in the delivered HTML; JavaScript only filters them.
+  document.querySelectorAll('[data-tag-filter]').forEach(filter => {
+    const postTarget = document.querySelector('[data-all-posts]');
+    if (!postTarget) return;
+    const cards = [...postTarget.querySelectorAll('.post-card')];
+    const tagsByCard = cards.map(card => JSON.parse(card.dataset.postTags || '[]'));
+    const tags = ['Alle', ...new Set(tagsByCard.flat())];
+    filter.replaceChildren(...tags.map((tag, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'tag-button' + (index === 0 ? ' is-active' : '');
+      button.dataset.tag = tag;
+      button.textContent = tag;
+      button.setAttribute('aria-pressed', String(index === 0));
+      return button;
+    }));
+    filter.hidden = false;
+    filter.addEventListener('click', event => {
+      const button = event.target.closest('button[data-tag]');
+      if (!button) return;
+      filter.querySelectorAll('button').forEach(node => {
+        node.classList.toggle('is-active', node === button);
+        node.setAttribute('aria-pressed', String(node === button));
+      });
+      cards.forEach((card, index) => {
+        card.hidden = button.dataset.tag !== 'Alle' && !tagsByCard[index].includes(button.dataset.tag);
+      });
     });
   });
 

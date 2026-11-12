@@ -1,7 +1,9 @@
 (function () {
   const root = document.querySelector('[data-roles]');
-  const roles = window.siteRoles;
-  if (!root || !Array.isArray(roles) || !roles.length) return;
+  if (!root) return;
+  const viewport = root.querySelector('.roles__viewport');
+  const cards = [...root.querySelectorAll('.role-card')];
+  if (!viewport || !cards.length) return;
   const element = (tag, className, text) => {
     const node = document.createElement(tag);
     node.className = className;
@@ -18,45 +20,9 @@
   position.setAttribute('aria-live', 'polite');
   position.setAttribute('aria-atomic', 'true');
   controls.append(previous, position, next);
-  const viewport = element('div', 'roles__viewport');
-  viewport.id = 'role-cards';
   previous.setAttribute('aria-controls', viewport.id);
   next.setAttribute('aria-controls', viewport.id);
-  const cards = roles.map((role, index) => {
-    const card = element('article', 'role-card');
-    card.setAttribute('aria-roledescription', 'Karte / Slide');
-    card.setAttribute('aria-label', `${index + 1} / ${roles.length}`);
-    const columns = element('div', 'role-card__columns');
-    ['de', 'en'].forEach(lang => {
-      const content = role[lang];
-      const column = element('div', 'role-card__language');
-      column.lang = lang;
-      column.dataset.language = lang;
-      column.append(element('h3', 'role-card__title', content.title));
-      column.append(element('h4', 'role-card__label', lang === 'de' ? 'Verantwortung' : 'Responsibility'));
-      column.append(element('p', 'role-card__responsibility', content.responsibility));
-      column.append(element('h4', 'role-card__label', lang === 'de' ? 'Tätigkeiten' : 'Activities'));
-      const list = element('ul', 'role-card__activities');
-      content.activities.forEach(activity => list.append(element('li', '', activity)));
-      column.append(list);
-      const success = element('div', 'role-card__success');
-      success.append(element('h4', 'role-card__label', lang === 'de' ? (content.success.includes(';') ? 'Erfolge' : 'Erfolg') : 'Results'));
-      success.append(element('p', '', content.success));
-      column.append(success);
-      if (role.url) {
-        const link = element('a', 'button button--secondary', content.articleTitle);
-        // Same-site links remain local in previews, with the site's normal same-tab behaviour.
-        const url = new URL(role.url, location.href);
-        link.href = url.hostname === 'michael-buettner.eu' ? url.pathname + url.search + url.hash : url.href;
-        column.append(link);
-      }
-      columns.append(column);
-    });
-    card.append(columns);
-    viewport.append(card);
-    return card;
-  });
-  root.replaceChildren(controls, viewport);
+  root.prepend(controls);
   let current = 0;
   function show(index) {
     current = (index + cards.length) % cards.length;
@@ -69,7 +35,7 @@
       card.setAttribute('aria-hidden', String(!active));
     });
     position.textContent = `${current + 1} / ${cards.length}`;
-    position.setAttribute('aria-label', `${current + 1} / ${cards.length}: ${roles[current][document.documentElement.dataset.siteLanguage || 'de'].title}`);
+    position.setAttribute('aria-label', `${current + 1} / ${cards.length}: ${cards[current].querySelector('[data-language="' + (document.documentElement.dataset.siteLanguage || 'de') + '"] .role-card__title').textContent}`);
   }
   previous.addEventListener('click', () => show(current - 1));
   next.addEventListener('click', () => show(current + 1));
@@ -102,4 +68,5 @@
   }
   document.addEventListener('site-language-change', updateLanguage);
   updateLanguage();
+  root.classList.add('is-enhanced');
 })();

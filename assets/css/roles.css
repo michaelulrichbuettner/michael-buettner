@@ -35,3 +35,7 @@
   .role-card[data-position="next"] { transform: translateX(calc(100% + 8px)); }
 }
 @media (prefers-reduced-motion: reduce) { .role-card { transition: none; } }
+
+/* Without JavaScript every role remains readable in normal document flow. */
+.roles:not(.is-enhanced) .roles__viewport { gap: 1.5rem; }
+.roles:not(.is-enhanced) .role-card { grid-area: auto; }

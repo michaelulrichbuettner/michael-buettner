@@ -3014,3 +3014,5 @@ button.ki-filter, button.ki-related { cursor: pointer; }
     padding: 1.25rem 0;
   }
 }
+
+.post-card[hidden], .tag-filter[hidden] { display: none; }
