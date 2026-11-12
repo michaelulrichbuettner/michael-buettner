@@ -2,7 +2,7 @@
 window.siteRoles = [
   {
     "id": "leadership",
-    "url": "",
+    "url": "https://michael-buettner.eu/blog-inside-digital-neue-themen-testen.html",
     "de": {
       "title": "Redaktionsleitung und Teamführung",
       "responsibility": "Fachliche und disziplinarische Führung sowie personelle und thematische Entwicklung der Redaktion.",
@@ -18,7 +18,7 @@ window.siteRoles = [
         "Zusammenführung von Teams steuern"
       ],
       "success": "Redaktionsplanung professionalisiert; Team von vier auf über zwölf Mitarbeitende ausgebaut; gezielt Mitarbeitende mit Kompetenzen für unterschiedliche Themen gewonnen; zweites Redaktionsteam erfolgreich integriert und damit die Teamgröße auf über 20 Mitarbeitende erweitert",
-      "articleTitle": "Wie ich das Redaktionsteam aufgebaut habe"
+      "articleTitle": "Wie wir bei inside digital neue Themen testeten"
     },
     "en": {
       "title": "Editorial leadership and team management",
@@ -35,7 +35,7 @@ window.siteRoles = [
         "Manage the integration of teams"
       ],
       "success": "Professionalised editorial planning; grew the team from four to more than twelve employees; specifically recruited employees with skills in different subject areas; successfully integrated a second editorial team, increasing the team to more than 20 employees",
-      "articleTitle": "How I built the editorial team"
+      "articleTitle": "How we tested new topics at inside digital"
     }
   },
   {
