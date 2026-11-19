@@ -1,5 +1,9 @@
 .bilingual-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
 .language-column { min-width: 0; }
+.hero.section {
+  min-height: 0;
+  padding-block: clamp(1.75rem, 4vw, 3.5rem);
+}
 .hero__title { margin-bottom: clamp(2rem, 4vw, 3rem); }
 .bilingual-grid h2 { font-size: clamp(1.65rem, 2.8vw, 2.4rem); }
 .bilingual-grid .text-stack { margin-top: 1.75rem; }
