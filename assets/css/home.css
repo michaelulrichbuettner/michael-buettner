@@ -3,3 +3,11 @@
 .hero__title { margin-bottom: clamp(2rem, 4vw, 3rem); }
 .bilingual-grid h2 { font-size: clamp(1.65rem, 2.8vw, 2.4rem); }
 .bilingual-grid .text-stack { margin-top: 1.75rem; }
+
+.hero-profile { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, 340px); gap: 2.5rem; align-items: center; }
+.hero-profile__copy { min-width: 0; }
+.hero-profile__portrait img { display: block; width: 100%; height: auto; transform: scaleX(-1); }
+@media (max-width: 760px) {
+  .hero-profile { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .hero-profile__portrait { width: min(100%, 300px); justify-self: center; }
+}

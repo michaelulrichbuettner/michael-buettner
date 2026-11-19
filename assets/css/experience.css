@@ -8,3 +8,12 @@
 .experience-pair > * { min-width: 0; }
 .experience-bilingual .credential-card { border-top: 1px solid var(--color-line); }
 .experience-intro .lead { margin-bottom: 0; }
+
+.experience-profile { display: grid; grid-template-columns: minmax(0, 1fr) 210px; align-items: center; gap: 2rem; margin-bottom: 1.5rem; }
+.experience-profile h1 { font-size: 2.5rem; overflow-wrap: break-word; }
+.experience-profile__portrait { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+@media (max-width: 620px) {
+  .experience-profile { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  .experience-profile h1 { font-size: 2rem; }
+  .experience-profile__portrait { width: 180px; justify-self: center; }
+}
