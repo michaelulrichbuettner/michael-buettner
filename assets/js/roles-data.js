@@ -199,7 +199,7 @@ window.siteRoles = [
         "Themen mit einem klaren Aufhänger aufbereiten",
         "Geschichten multimedial aufbereiten"
       ],
-      "success": "Als Experte von ZDF und WDR; Fachbeiträge im Auftrag eines Fotomagazins erstellt; Einladungen zu exklusiven Veranstaltungen der Telekom und von Bosch sowie zum Qualcomm Snapdragon Summit erhalten; Vorabinformationen von unter anderem Samsung, Lenovo, Google und Huawei erhalten",
+      "success": "Experte bei ZDF und WDR; Fachbeiträge im Auftrag eines Fotomagazins erstellt; Einladungen zu exklusiven Veranstaltungen der Telekom und von Bosch sowie zum Qualcomm Snapdragon Summit erhalten; Vorabinformationen von unter anderem Samsung, Lenovo, Google und Huawei erhalten",
       "articleTitle": "Zum Artikel-Portfolio"
     },
     "en": {
@@ -212,7 +212,7 @@ window.siteRoles = [
         "Present topics with a clear hook",
         "Tell stories across multiple media"
       ],
-      "success": "Expert for ZDF and WDR; commissioned to write specialist articles for a photography magazine; invited to exclusive events hosted by Telekom and Bosch and to the Qualcomm Snapdragon Summit; received advance information from Samsung, Lenovo, Google and Huawei, among others",
+      "success": "Expert on ZDF and WDR; commissioned to write specialist articles for a photography magazine; invited to exclusive events hosted by Telekom and Bosch and to the Qualcomm Snapdragon Summit; received advance information from Samsung, Lenovo, Google and Huawei, among others",
       "articleTitle": "Explore my article portfolio"
     }
   }
