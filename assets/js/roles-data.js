@@ -212,7 +212,7 @@ window.siteRoles = [
         "Present topics with a clear hook",
         "Tell stories across multiple media"
       ],
-      "success": "Interviewed as an expert by ZDF and WDR; commissioned to write specialist articles for a photography magazine; invited to exclusive events hosted by Telekom and Bosch and to the Qualcomm Snapdragon Summit; received advance information from Samsung, Lenovo, Google and Huawei, among others",
+      "success": "Expert for ZDF and WDR; commissioned to write specialist articles for a photography magazine; invited to exclusive events hosted by Telekom and Bosch and to the Qualcomm Snapdragon Summit; received advance information from Samsung, Lenovo, Google and Huawei, among others",
       "articleTitle": "Explore my article portfolio"
     }
   }
